@@ -48,7 +48,6 @@
 <style>
   .container {
     padding: 4em 20%;
-    width: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;

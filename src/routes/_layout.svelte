@@ -1,20 +1,3 @@
-<style>
-  :global(*) {
-    box-sizing: border-box;
-  }
-  :global(body) {
-    margin: 0;
-    padding: 0;
-    font-family: Courier, monospace;
-  }
-
-  main {
-    background-color: white;
-    padding: 2em;
-    margin: 0 auto;
-  }
-</style>
-
 <main>
   <slot />
 </main>
