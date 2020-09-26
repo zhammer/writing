@@ -1,13 +1,9 @@
 <script lang="ts">
-  import type { type } from "os";
   import type { Scene } from "../routes/pieces/_pieces";
   export let scene: Scene;
 </script>
 
 <style>
-  .section {
-  }
-
   .Action {
     margin-bottom: 1em;
   }
@@ -64,6 +60,6 @@
 
 <div>
   {#each scene.sections as section}
-    <div class={'section ' + section.type}>{section.content}</div>
+    <div class={section.type}>{section.content}</div>
   {/each}
 </div>
