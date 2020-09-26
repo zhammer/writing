@@ -1,7 +1,6 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import type { Piece } from "../../routes/pieces/_pieces";
-  import Error from "../../routes/_error.svelte";
 
   import Speaker from "./Speaker.svg.svelte";
 
@@ -9,6 +8,15 @@
   export let sceneNumber: number;
 
   $: song = piece.scenes[sceneNumber].meta?.song;
+  // each _unique_ song that appears in the piece
+  let urls = [
+    ...new Set(
+      piece.scenes
+        .map((scene) => scene?.meta?.song)
+        .filter(Boolean)
+        .map((song) => song.url)
+    ),
+  ];
 
   let muted = false;
 
@@ -78,11 +86,28 @@
     </div>
   {/if}
 
-  <!-- we line up the scene songs as an array of cassettes -->
-  {#each piece.scenes as scene, i}
-    {#if ((scene || {}).meta || {}).song && sceneNumber === i}
+  <!--
+    this worked out much better than i expected. essentially, we take
+    each individual song that appears in the piece and put them into
+    a unique array. (we store it as a list of urls since url strings are
+    easier to make a unique set on).
+
+    we make an audio element for each song, like a cassette deck. when a
+    scene is active that has a song, the corresponding cassette is played.
+
+    this gives us two main benefits:
+    1) when the current song changes, the previous cassette will "unload"
+    (dismount from the dom) and transition out while the new cassette will
+    "load" (mount to the dom) and transition in. (this also happens when
+    we go from no song -> song or song -> no song).
+    2) when the scene changes _but_ the song stays the same (e.g. two subsequent
+    scenes have the same song), there will be no fade between songs as the same
+    "casette" stays live in our virtual cassette deck.
+  -->
+  {#each urls as url}
+    {#if song && song.url === url}
       <audio
-        src={song.url}
+        src={url}
         loop
         {muted}
         autoplay
