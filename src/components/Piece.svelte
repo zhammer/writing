@@ -1,5 +1,6 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
+  import swipeable from "../actions/swipeable";
   import SongPlayer from "../components/SongPlayer/index.svelte";
   import Scene from "./Scene.svelte";
   import type { Piece } from "../routes/pieces/_pieces";
@@ -25,6 +26,14 @@
         prevScene();
         break;
     }
+  }
+
+  function handleSwipeRight() {
+    prevScene();
+  }
+
+  function handleSwipeLeft() {
+    nextScene();
   }
 </script>
 
@@ -55,7 +64,11 @@
   }
 </style>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window
+  on:keydown={handleKeydown}
+  use:swipeable
+  on:swiperight={handleSwipeRight}
+  on:swipeleft={handleSwipeLeft} />
 
 <div class="container">
   {#each piece.scenes as scene, i}
