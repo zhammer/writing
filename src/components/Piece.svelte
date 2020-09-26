@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import Scene from "../../components/Scene.svelte";
+  import Scene from "./Scene.svelte";
   import type { Piece } from "../routes/pieces/_pieces";
   // https://open.spotify.com/track/3oSBVpyGQ9N3hPibpw0GkB
   export let piece: Piece;
