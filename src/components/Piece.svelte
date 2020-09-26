@@ -6,16 +6,13 @@
   export let piece: Piece;
 
   let sceneNumber = 0;
-  let direction: "forward" | "backward" = "forward";
 
   function prevScene() {
     sceneNumber = Math.max(sceneNumber - 1, 0);
-    direction = "backward";
   }
 
   function nextScene() {
     sceneNumber = Math.min(sceneNumber + 1, piece.scenes.length - 1);
-    direction = "forward";
   }
 
   function handleKeydown({ key }: KeyboardEvent) {
@@ -45,7 +42,7 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div class={`container ${direction}`}>
+<div class="container">
   {#each piece.scenes as scene, i}
     {#if sceneNumber === i}
       <div in:fade={{ delay: 1000, duration: 1000 }} out:fade class="scene">
