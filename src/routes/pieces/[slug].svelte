@@ -20,4 +20,7 @@
   export let piece: PieceType;
 </script>
 
+<style>
+</style>
+
 <Piece {piece} />
