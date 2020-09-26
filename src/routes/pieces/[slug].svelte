@@ -23,4 +23,8 @@
 <style>
 </style>
 
+<svelte:head>
+  <title>{piece.title}</title>
+</svelte:head>
+
 <Piece {piece} />
