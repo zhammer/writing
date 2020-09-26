@@ -46,6 +46,8 @@
   .container {
     position: relative;
     padding: 4em 20%;
+    width: 60%;
+    margin: 0 auto;
   }
 
   .scene {
