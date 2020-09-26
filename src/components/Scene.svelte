@@ -45,6 +45,7 @@
   }
 
   .Title {
+    transform: translateY(200%);
     text-align: center;
     font-size: 3rem;
     display: flex;
