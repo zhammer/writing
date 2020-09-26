@@ -66,4 +66,4 @@
     {/if}
   {/each}
 </div>
-<SongPlayer />
+<SongPlayer {piece} {sceneNumber} />
