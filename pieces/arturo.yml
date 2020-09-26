@@ -5,7 +5,7 @@ scenes:
   - name: Cover
     sections:
       - type: Title
-        content: arturo
+        content: Arturo
   - name: Gas Station
     sections:
       - type: SceneHeading
