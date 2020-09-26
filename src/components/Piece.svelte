@@ -1,5 +1,6 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
+  import SongPlayer from "../components/SongPlayer/index.svelte";
   import Scene from "./Scene.svelte";
   import type { Piece } from "../routes/pieces/_pieces";
   // https://open.spotify.com/track/3oSBVpyGQ9N3hPibpw0GkB
@@ -65,3 +66,4 @@
     {/if}
   {/each}
 </div>
+<SongPlayer />
