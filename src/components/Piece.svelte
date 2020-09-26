@@ -28,8 +28,22 @@
 </script>
 
 <style>
+  /*
+   * We fadein the entire container because, as far as I can tell,
+   * the in:fade transition doesn't display on initial page load.
+   */
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .container {
     display: relative;
+    animation: fadein 1s ease-in 1.5s backwards;
   }
 
   .scene {
@@ -45,7 +59,7 @@
 <div class="container">
   {#each piece.scenes as scene, i}
     {#if sceneNumber === i}
-      <div in:fade={{ delay: 1000, duration: 1000 }} out:fade class="scene">
+      <div in:fade={{ delay: 1500, duration: 1500 }} out:fade class="scene">
         <Scene {scene} />
       </div>
     {/if}
