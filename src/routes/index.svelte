@@ -12,18 +12,8 @@
 </script>
 
 <style>
-  h1 {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 2.8em;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
+  .container {
+    margin: 8px;
   }
 </style>
 
@@ -31,12 +21,28 @@
   <title>My Writing</title>
 </svelte:head>
 
-<h1>My Writing</h1>
+<div class="container">
+  <h1>Writing</h1>
 
-<div class="piece-container">
-  <ul>
-    {#each pieces as piece}
-      <li><a rel="prefetch" href="pieces/{piece.slug}">{piece.title}</a></li>
-    {/each}
-  </ul>
+  <table>
+    <tbody>
+      <tr>
+        <th valign="top" />
+        <th><a href="">Name</a></th>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <hr />
+        </th>
+      </tr>
+      {#each pieces as piece}
+        <tr>
+          <td valign="top"><img src="/text.gif" alt="[TXT]" /></td>
+          <td>
+            <a rel="prefetch" href="pieces/{piece.slug}">{piece.title}</a>
+          </td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
 </div>
