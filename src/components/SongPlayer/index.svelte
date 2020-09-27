@@ -1,65 +1,34 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import type { Piece } from "../../routes/pieces/_pieces";
 
   import Speaker from "./Speaker.svg.svelte";
+  import { isMobile } from "./util";
+  import VirtualCassetteDeck from "./VirtualCassetteDeck.svelte";
 
   export let piece: Piece;
   export let sceneNumber: number;
+  let mobile: boolean;
+  let muted: boolean;
+
+  // we can only check the userAgent from the browser in JS land
+  // (once the component has mounted on the browser). referencing
+  // `navigator` outside of onMount would throw an error as sapper
+  // would try to reference the browser's narrator in ssr.
+  //
+  // (checking user-agent on the server would be fine, but since the
+  // intention is to publish this as an exported, static site, we want
+  // to force this behavior into the browser.)
+  onMount(() => {
+    mobile = isMobile(navigator.userAgent);
+    muted = mobile;
+  });
 
   $: song = piece.scenes[sceneNumber].meta?.song;
-  // each _unique_ song that appears in the piece
-  let urls = [
-    ...new Set(
-      piece.scenes
-        .map((scene) => scene?.meta?.song)
-        .filter(Boolean)
-        .map((song) => song.url)
-    ),
-  ];
-
-  let muted = false;
 
   function toggleMuted() {
     muted = !muted;
-  }
-
-  function isAudioNode(node: HTMLElement): node is HTMLAudioElement {
-    return node.nodeName === "AUDIO";
-  }
-
-  function isSourceNode(node: HTMLElement): node is HTMLSourceElement {
-    return node.nodeName === "SOURCE";
-  }
-
-  function sourcefade(node: HTMLElement, { delay = 0 }: { delay?: number }) {
-    const parent = node.parentElement;
-    if (!(isSourceNode(node) && isAudioNode(parent))) {
-      throw new Error(
-        "source transition only works with <source /> element that is child of <audio />"
-      );
-    }
-    return {
-      duration: 1000,
-      delay,
-      tick: (t: number) => {
-        parent.volume = t;
-      },
-    };
-  }
-
-  function handleSourcefadeEnd(event: CustomEvent) {
-    let source = event.currentTarget as HTMLElement;
-    let audio = source.parentElement;
-
-    if (!(isSourceNode(source) && isAudioNode(audio))) {
-      throw new Error(
-        "source transition only works with <source /> element that is child of <audio />"
-      );
-    }
-
-    audio.volume = 1;
-    audio.load();
   }
 </script>
 
@@ -103,30 +72,25 @@
       <Speaker />
     </div>
   {/if}
-
-  <!--
-    this worked out much better than i expected. essentially, we take
-    each individual song that appears in the piece and put them into
-    a unique array. (we store it as a list of urls since url strings are
-    easier to make a unique set on).
-
-    we make an audio element for each song, like a cassette deck. when a
-    scene is active that has a song, the corresponding cassette is played.
-
-    this gives us two main benefits:
-    1) when the current song changes, the previous cassette will "unload"
-    (dismount from the dom) and transition out while the new cassette will
-    "load" (mount to the dom) and transition in. (this also happens when
-    we go from no song -> song or song -> no song).
-    2) when the scene changes _but_ the song stays the same (e.g. two subsequent
-    scenes have the same song), there will be no fade between songs as the same
-    "casette" stays live in our virtual cassette deck.
-  -->
-  <audio loop bind:muted autoplay>
-    {#each urls as url}
-      {#if song && song.url === url}
-        <source src={url} out:sourcefade on:outroend={handleSourcefadeEnd} />
-      {/if}
-    {/each}
-  </audio>
 </div>
+
+<!--
+  ideally, we want to use the VirtualCassetteDeck to play songs
+  on scenes, as it has nice crossfades between tracks.
+
+  on mobile we use a more basic rig for two reasons (that have applied
+  to all mobile browsers i've tested on):
+  1. mobile doesn't support programmatically setting an audio element's
+     volume (crossfades) from what i can tell, so most of that logic
+     is wasted.
+  2. mobile needs a user interaction to start playing an audio element.
+     the 'VirtualCassetteDeck' sets up one audio player per song, which
+     means that every time the song changes a new <audio /> element will
+     be added to the DOM, which will need a new user interaction to
+     start playing.
+-->
+{#if mobile}
+  <audio src={song && song.url} loop {muted} autoplay />
+{:else}
+  <VirtualCassetteDeck {piece} currentSong={song} {muted} />
+{/if}
