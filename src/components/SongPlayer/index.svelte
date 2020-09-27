@@ -28,20 +28,38 @@
     return node.nodeName === "AUDIO";
   }
 
-  function audiofade(node: HTMLElement, { delay = 0 }: { delay?: number }) {
-    if (!isAudioNode(node)) {
+  function isSourceNode(node: HTMLElement): node is HTMLSourceElement {
+    return node.nodeName === "SOURCE";
+  }
+
+  function sourcefade(node: HTMLElement, { delay = 0 }: { delay?: number }) {
+    const parent = node.parentElement;
+    if (!(isSourceNode(node) && isAudioNode(parent))) {
       throw new Error(
-        "audiofade transition only works with <audio /> elements"
+        "source transition only works with <source /> element that is child of <audio />"
       );
     }
-
     return {
       duration: 1000,
       delay,
       tick: (t: number) => {
-        node.volume = t;
+        parent.volume = t;
       },
     };
+  }
+
+  function handleSourcefadeEnd(event: CustomEvent) {
+    let source = event.currentTarget as HTMLElement;
+    let audio = source.parentElement;
+
+    if (!(isSourceNode(source) && isAudioNode(audio))) {
+      throw new Error(
+        "source transition only works with <source /> element that is child of <audio />"
+      );
+    }
+
+    audio.volume = 1;
+    audio.load();
   }
 </script>
 
@@ -104,15 +122,11 @@
     scenes have the same song), there will be no fade between songs as the same
     "casette" stays live in our virtual cassette deck.
   -->
-  {#each urls as url}
-    {#if song && song.url === url}
-      <audio
-        src={url}
-        loop
-        {muted}
-        autoplay
-        in:audiofade={{ delay: 1000 }}
-        out:audiofade />
-    {/if}
-  {/each}
+  <audio loop bind:muted autoplay>
+    {#each urls as url}
+      {#if song && song.url === url}
+        <source src={url} out:sourcefade on:outroend={handleSourcefadeEnd} />
+      {/if}
+    {/each}
+  </audio>
 </div>
