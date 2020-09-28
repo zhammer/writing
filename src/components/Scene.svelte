@@ -44,6 +44,10 @@
     margin-bottom: 1em;
   }
 
+  .Text {
+    white-space: pre-wrap;
+  }
+
   .Title {
     transform: translateY(200%);
     text-align: center;
