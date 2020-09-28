@@ -28,6 +28,9 @@ export type Scene = {
 
 export type Piece = {
   title: string;
+  date: string;
+  size: number;
+  description: string;
   slug: string;
   scenes: Scene[];
 };
@@ -37,7 +40,11 @@ export function load(): Piece[] {
   return filenames.map(
     (filename): Piece => {
       let file = fs.readFileSync("pieces/" + filename);
-      return yml.parse(file.toString());
+      let body = file.toString();
+      return {
+        ...yml.parse(body),
+        size: body.length,
+      };
     }
   );
 }
