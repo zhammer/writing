@@ -25,11 +25,11 @@
 </style>
 
 <svelte:head>
-  <title>My Writing</title>
+  <title>Index of Writing/</title>
 </svelte:head>
 
 <div class="container">
-  <h1>Writing</h1>
+  <h1>Index of Writing/</h1>
 
   <table>
     <tbody>
