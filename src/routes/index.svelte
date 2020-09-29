@@ -19,24 +19,24 @@
       order: query.O || "A",
     };
     pieces.sort((a, b) => {
-      let [aField, bField] = [a, b].map<string>((piece) => {
+      let compare = (() => {
         switch (sort.column) {
           case "N":
-            return piece.title;
+            return a.title.localeCompare(b.title);
           case "M":
-            return piece.date;
+            return a.date.localeCompare(b.date);
           case "S":
-            return piece.size.toString();
+            return a.size - b.size;
           case "D":
-            return piece.description;
+            return a.description.localeCompare(b.description);
         }
-      });
+      })();
 
-      let comp = aField.localeCompare(bField);
       if (sort.order === "D") {
-        comp = -comp;
+        compare = -compare;
       }
-      return comp;
+
+      return compare;
     });
     return { pieces, sort };
   }
