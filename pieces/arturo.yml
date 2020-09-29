@@ -1,0 +1,655 @@
+title: Arturo
+slug: arturo
+date: 2018-07-28
+description: ""
+
+scenes:
+  - name: Cover
+    sections:
+      - type: Title
+        content: Arturo
+  - name: Gas Station
+    sections:
+      - type: SceneHeading
+        content: Int. Gas Station.
+      - type: Action
+        content: >-
+          A gas station on the corner of a busy city street. It’s sunny out. ARTURO
+          lays in bed, watching customers peruse through snacks. A nun with an old
+          face wags a bell.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          Chevy. Chevy? Is there something here for us to take? Is there something
+          on the floor?
+      - type: Action
+        content: >-
+          Some of the customers pour out bottles of oil onto the floors. The MANAGER
+          points out one CUSTOMER, in particular, who rubs the oil into the floor so
+          thoroughly oil pours over the top of her fingers. Arturo looks at the
+          customer.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: You are?
+      - type: Action
+        content: >-
+          A reptile crawls out of Arturo’s mouth. The customer smiles. The manager
+          smiles and slowly moves his pointing finger to arturo.
+      - type: Character
+        content: Manager
+      - type: Dialogue
+        content: It’s as if we couldn’t hear you.
+      - type: Action
+        content: >-
+          Arturo puts his hand in his mouth. He’s wearing a long sleeve shirt. A
+          reptile crawls out of his sleeve.
+      - type: Action
+        content: >-
+          A gust of wind blows through the window.
+  - name: Outside Bar
+    sections:
+      - type: SceneHeading
+        content: EXT. NYC BAR. NIGHT.
+      - type: Action
+        content: >-
+          A nun’s hands are projected on a brick building across the street. Arturo
+          sits on a bench smoking a cigarette. The sound of a female vocalist on
+          piano with light accompaniment is heard in the background. A street vendor
+          sells hot dogs.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          Chevy. Chevy? Is this here for us to take? In the mornings, on this
+          morning, I woke up and couldn’t feel my legs.
+      - type: Action
+        content: >-
+          The customer from the gas station crawls out from beneath a parked taxi.
+          Blood is oozing from her purse. The manager crawls out from the street
+          cart. A lizard crawls across Arturo’s face.
+      - type: Character
+        content: Manager
+      - type: Dialogue
+        content: >-
+          It’s as if you hadn’t been heard. We were all there, you know? I once saw
+          a dog maul my neighbor, eyes an all. She had to sell her trumpet; she
+          etched her father’s name in her front yard and doused it in gasoline.
+      - type: Action
+        content: >-
+          The customer from the gas station is stuck in a glass window of a nearby
+          psychic’s shop. The shop has a large glass window, with another pane of
+          glass a foot back, into the store. In the space between the customer is
+          squeezed, slowly slipping down, drenched in olive oil.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: I’m not going to ask again.
+      - type: Action
+        content: Arturo taps off his cigarette.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          I really do not want to ask again, in fact.
+      - type: Action
+        content: >-
+          The manager has a glaring smile. His eyes do not leave the camera. He
+          points at the customer, who is now dry, smiling, standing by a traffic
+          light with her friend.
+    meta:
+      song:
+        name: Imagining My Man
+        artist: Aldous Harding
+        url: https://s3.amazonaws.com/arturo-music/imagining-my-man.mp3
+  - name: Forest
+    sections:
+      - type: SceneHeading
+        content: Int. A Wet Dark Place.
+      - type: Action
+        content: >-
+          It’s as if there is starless skies. A long drooping willow, the cough of
+          the headless horseman, all blades of grass swaying in the wind, as if
+          instructed by song or the baton of the school teacher.
+      - type: Character
+        content: Teacher (Ms. Braerly)
+      - type: Dialogue
+        content: >-
+          I have been found in these blades. Beneath each plant, deep in roots, lies
+          the captive holder. Arturo? Do you remember? And how I put my hand up your
+          sleeves?
+      - type: Action
+        content: >-
+          Arturo is sitting beneath the willow. His back is laid perfectly against
+          the bark. On the bark are etchings: a crown, a cross, the hat of an old
+          politician.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: Chevy? Chevy.
+      - type: Action
+        content: >-
+          Arturo stands, pushing himself off the grass, somewhat unsteadily. Arturo
+          turns towards the tree. New etchings are forming all about the bark, in
+          curves, as if drawn mathematically by a fairy of the night.
+      - type: Character
+        content: Ms. Braerly
+      - type: Dialogue
+        content: >-
+          Oh Arturo. A sad specimin; I’ll put you in my bottle.
+      - type: Action
+        content: >-
+          Ms. Braerly is standing behind Arturo, with her hands over his shoulders,
+          she whispers something unheard into his ear.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: Is there... I’m not yet t–
+      - type: Action
+        content: >-
+          It is immediately apparent where Arturo is. He is in the woods. The camera
+          flies atop the trees. The woods are large; the sky is a black thing;
+          Chevy’s bones are hanging in the air.
+    meta:
+      song:
+        name: The Single Petal Of A Rose
+        artist: Duke Ellington And His Orchestra
+        url: https://s3.amazonaws.com/arturo-music/the-single-petal-of-a-rose.mp3
+  - name: Lake Dock (One)
+    sections:
+      - type: SceneHeading
+        content: Ext. Lake Dock. Night.
+      - type: Action
+        content: >-
+          Arturo and the customer sit at a dock. It’s nice out, night, occasionally
+          a fish splashes the water. The sounds of crickets buzzing are all around,
+          one would be afraid of mosquitos.
+      - type: Character
+        content: Customer
+      - type: Dialogue
+        content: >-
+          Arturo. How often do you think of these trips? When we’re out here now, it
+          also— I don’t know. I feel very connected. Like a little snow globe. Does
+          that make any sense.
+      - type: Action
+        content: >-
+          Arturo is in love. He listens to the customer; he looks at her hair tied
+          back, brunette. He listens to the water splashing.
+      - type: Character
+        content: Customer
+      - type: Dialogue
+        content: >-
+          I remember, when I used to live in Montana, by the mountains, there was a
+          lake by the mountains, behind that old hotel. And I’d lay down there, by
+          the pebbles, with the little waves of the lake splashing up into my hair.
+          I used to, it sounds stupid, I used to imagine that there, the, that the
+          splashes, when I’d close my eyes I imagined the splashes were footsteps of
+          watery kings.
+      - type: Action
+        content: >-
+          Across the lake the manager twirls firey sticks in the air. He draws
+          shapes, like the shapes on the trees. His movements are practiced,
+          traditional, done as if a sensei, the graduation of a martial art.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          Chevy? Chevy. I — is this here for us to take? Is there something on the
+          floor?
+      - type: Action
+        content: >-
+          A lizard goes back into the water, and two arms come out of the water, and
+          they bring him home.
+    meta:
+      song:
+        name: あなたがいるなら
+        artist: Cornelius
+        url: https://s3.amazonaws.com/arturo-music/if-youre-here.mp3
+  - name: Beach
+    sections:
+      - type: SceneHeading
+        content: Ext. Beach. Day.
+      - type: Action
+        content: >-
+          Baby arturo is at the beach with Mother and Mother Dos. It’s sunny out.
+          Mother and Mother Dos are sitting on reclined chairs with a parasol. (They
+          are so brave.) Baby Arturo is fighting the waves like a gallant knight,
+          and he is all lively with the excitement of a boy in the ocean.
+      - type: Character
+        content: Mother
+      - type: Dialogue
+        content: Arturo!
+      - type: Character
+        content: Mother Dos
+      - type: Dialogue
+        content: >-
+          Arturo! Ven aca. We want to show your birthmark to our friends, the one
+          that looks like a jellyfish.
+      - type: Action
+        content: >-
+          Arturo is splashed by a big wave. He plows forward, smiling, saltwater in
+          his mouth.
+      - type: Character
+        content: Mother Dos
+      - type: Parenthetical
+        content: To friends
+      - type: Dialogue
+        content: >-
+          The little arturo out there. He’s what we dreamed of. There’s nothing more
+          charming than that. He’ll be careful of the tides, and I know he will swim
+          back home, sand in his hair, his ears cold, and lay down in the sun.
+      - type: Character
+        content: Mother
+      - type: Dialogue
+        content: >-
+          His sandcastle once reached the moon! The sand at the top was pulled by
+          that gravity, it started floating up. We had to send up a little ladder
+          for arty, he was about to float away. But he would have found the right
+          way, to jump so high, and he would have jumped back, and sailed back down
+          to earth. I think his eyes are like parachutes. Have you ever looked so
+          deeply into something and loved it like that? I think his face is like a
+          precious thing.
+      - type: Action
+        content: >-
+          Arturo is surfing the waves with his belly. He misses one wave. Another is
+          too big, and he closes his nose and ducks under water. And then a big wave
+          comes. And there is a seagull squawking in the air. And the wave picks up
+          Arturo. And he sails home, but he flips, and the camera dives beneath the
+          waves, and we see Arturo there, scraping against the sand. Somewhere in
+          his mind he is smiling.
+      - type: Character
+        content: Mother
+      - type: Dialogue
+        content: >-
+          Arturo. Our little baby. We will let him learn his way. We will give him
+          his sword when he is ready.
+      - type: Action
+        content: >-
+          Mother puts her hand on Mother Dos’ leg. The sun bakes down on the beach,
+          the sand is hot, Arturo is laying on the beach, somewhere in the upper
+          stratosphere there is sand floating towards the moon.
+      - type: Action
+        content: >-
+          An airplane carrying spoons flies up above. Deep in the ocean there is a
+          ship with a whole kitchen preserved, sunken, the gold is beginning to
+          corrode.
+    meta:
+      song:
+        name: A La Claire Fontaine
+        artist: genevoise
+        url: https://s3.amazonaws.com/arturo-music/a-la-claire-fontaine.mp3
+  - name: Pool Bar
+    sections:
+      - type: SceneHeading
+        content: Int. Bar.
+      - type: Action
+        content: >-
+          Arturo is at the bar. Cigarettes in his pocket. All beat up. A bit of
+          scruff. And with a grey plaid shirt. Its afternoon. Some folks are
+          shooting pool in the back. One looks like a walrus with a big belly, his
+          grey hair tied back, when he breaks the rack you’d expect the table to
+          break. That’s how big he is.
+      - type: Action
+        content: >-
+          Another guy back there is with his hair slicked back. One guy has the big
+          blonde braided hair, hippie t-shirt, his name is Waterfall. His girlfriend
+          in his arm, her name is Dawn or Cauliflower.
+      - type: Action
+        content: >-
+          Tirina shoots a rack, she is well connected, Brown hair down to one side,
+          an electric guitarist wails in the back.
+      - type: Character
+        content: Arturo
+      - type: Parenthetical
+        content: Mumbling
+      - type: Dialogue
+        content: >-
+          Anything is fine. I’ll take the pitcher, and throw it down this bar; I’ll
+          stop it here, pour, so, just, I, give, ugh. I’ll take the pint of blue.
+      - type: Action
+        content: >-
+          The bartender pours a cup, it’s blue, it’s not glowing but it stands out
+          in the bar, which is mostly the color of wood, beer, the felt of the pool
+          table, which is green, and a mirror reflecting it all. Chevies bones are
+          below Arturo’s seat.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          Been a while since I called my ma. Been a— Ar— c— gi— ugh.
+      - type: Action
+        content: >-
+          Arturo is fumbling words. He asks for a spicey margarita; he feels the
+          spice buzzing on his lips, and on his tongue, and he sits back and throws
+          his head back, it falls back like it is heavy.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: Ah.
+      - type: Action
+        content: >-
+          Pool balls swirl in circles, concentric. Arturo rubs his hand against the
+          eternal felt. Snap goes a break, and another, and Arturo is almost passed
+          out, laying back in that ecstacy of the bar that never changes, not even
+          now, when everything else is so new.
+      - type: Character
+        content: The Walrus
+      - type: Dialogue
+        content: >-
+          You hear the one about the guy who sealed his socket with a bullet? Shot
+          him right in the nuts.
+      - type: Action
+        content: >-
+          Arturo can barely listen. He tilts his head sideways. The Walrus takes a
+          shot and walks back to the bar.
+      - type: Character
+        content: The Walrus
+      - type: Dialogue
+        content: >-
+          Hear about the pool ball that grew legs? He walked to the store to pick up
+          some cheetos for his wife and kids. Lost his job quick. Couldn’t roll
+          anymore. I guess that was a bad break.
+      - type: Action
+        content: >-
+          The walrus walks back to the table. Hits such a hard break that some pool
+          balls are loosened from the ceiling and fall on the floor. The walrus is
+          going on, someone calls him “Strev”, and Arturo asks for a pint of blue.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          I love this thing. Reminds me of the beach. Love it when it gets dark, the
+          waves get silver, looks like the silver surfer should be there.
+      - type: Action
+        content: >-
+          The walrus is dead on the floor. Someone puts a cue ball on his belly,
+          balanced right on top. They pack up his favorite cue, the house cue with
+          the broken tip, and lay it on him like a wreath. Arturo watches as they
+          carry him outside. And would it be strange then, to see a pool ball walk
+          away? In fact one does stand up, and walks right to the bottom of a chair.
+      - type: Action
+        content: >-
+          A man plays guitar in the corner of the bar. He speaks slowly into the
+          microphone. It’s all like the sendoff of a soldier; the cannons of some
+          imagination are fired gallantly into the air.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: Chevy. Chevy? Is this for us to take.
+      - type: Action
+        content: Arturo looks down.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: Is there something on the floor?
+    meta:
+      song:
+        name: Good Thoughts, Bad Thoughts
+        artist: Funkadelic
+        url: https://s3.amazonaws.com/arturo-music/good-thoughts-bad-thoughts.mp3
+  - name: Lack Dock (Two)
+    sections:
+      - type: SceneHeading
+        content: Ext. Lake Dock. Night.
+      - type: Action
+        content: >-
+          Customer and Arturo. That same type of night. The whistling of animals.
+          Occasionally a squirrel furls in the bush. “But there’s a full moon
+          rising, let’s go dancing in the dark.” It’s just like Harvest Moon.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          You should know that I love you. I mean, I love you. My dreams are so
+          strange. My memories are rattling. I’ve really become a wreck in some
+          regards.
+      - type: Parenthetical
+        content: Pause
+      - type: Dialogue
+        content: >-
+          I love to listen to you. I hope you know that. I could listen to you for
+          ever. I’m sure you hurt, in ways. I’m sure there are things that worry
+          you. I don’t know how anyone could not have that. But when you talk, when
+          we’re out here.. you, you r- it really is like a snowglobe. I never know
+          what day of the week it is. Tonight it’s Sunday. I know who I am around
+          you. It seems selfish, you know? But isn’t that all that we should need, I
+          guess. The best people we know— well, I just wanted to say that. I feel
+          like I say that to myself every night, alone, and I want— you know— you
+          should hear it. And, I, maybe this sounds so weird, I don’t know. I really
+          don’t. But, you know, I, with everything I’ve ever felt, and done, and all
+          the things I know of, and— it all seems to converge, point at this one
+          idea, which is that when there is someone that you love, in some way, you
+          ne— you should let them know. Like that gets all kept up in me. You know?
+          Have you ever sat next to someone at a bar, and you didn’t say hi, and
+          that just fucked you up some how? You know? And, like, I, y— you’re a
+          special person in my life. Does that make sense? You’re one of those
+          people. I feel like some fairy sent you. And I guess, I, d— I — w— yeah. I
+          don’t really know. We’ve known each other forever, it seems. T— there’s a
+          line in Portrait of the Artist as a Young Man. I didn’t read the whole
+          thing. I found this quote, ugh. I, you know, h, I feel like I knew you
+          before I was born. In a past life, so be —
+      - type: Action
+        content: >-
+          And bugs are crawling by the customer’s eyes. Arturo is wrecked. This dock
+          is just a dream. It should have been evident by now. And what happens when
+          he awakes?
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          You’re going to dissappear I imagine. It’s like a true love. They, ugh. I.
+      - type: Action
+        content: >-
+          The water is wrattling, where there once was a house there is a shadow,
+          where the customer once was was a lizard. It’s yellow, it has brown spots.
+          Arturo puts his hands down to hold it, and it scurries right up his hand,
+          up his arm, into his sleeve.
+      - type: Action
+        content: >-
+          Where there once was the manager is smoke from the ashed batons. A beached
+          walrus with a long silky whiskers lays on his back towards the moon. It’s
+          big and white, and even the tips of the grass is white.
+      - type: Action
+        content: >-
+          Arturo and the customer now have their backs touching each other. And you
+          can see in Arturo’s eyes that he is all full of love. And all that pain is
+          gone. And if he turns around she will disappear. So he looks at the
+          walrus. And the walrus, doesn’t even know that arturo is there. The walrus
+          frisks his whiskers, and shoves some sand with his flippers, right up
+          towards the moon.
+    meta:
+      song:
+        name: Harvest Moon
+        artist: Cassandra Wilson
+        url: https://s3.amazonaws.com/arturo-music/harvest-moon.mp3
+  - name: Driving Home
+    sections:
+      - type: SceneHeading
+        content: Int. Car. Night.
+      - type: Action
+        content: >-
+          Mother and Mother Dos drive home from the beach on the highway. It’s
+          night. You can see a few stars, and from out the window the baby arturo
+          watches the street lights fly by.
+      - type: Character
+        content: Mother
+      - type: Parenthetical
+        content: Driving
+      - type: Dialogue
+        content: >-
+          The Bevelones. So nice. I really do love to see them, share some grapes at
+          the beach, chips. They’re —
+      - type: Action
+        content: >-
+          Baby arturo lays in the back seat, and listens to the sounds of the road.
+          His bare feet are touching the window; it’s cold. When he takes his foot
+          away there’s a mark, and a little line of condensation around where his
+          foot had been. He reaches out and puts his hand on the divider, and feels
+          around, and Mother Dos puts her hand on his.
+      - type: Character
+        content: Mother Dos
+      - type: Parenthetical
+        content: Calmly
+      - type: Dialogue
+        content: >-
+          I learned a great recipe the other day. Roast sea bass. A little tomato.
+          Some lemon. Olive oil, garlic, cayenne. I know some people like to eat the
+          eyes; I don’t like to eat the eyes. I, I’m always worried about the bones.
+          But we should go fishing again. Get a snapper popper. Remember that?
+          Styrofoam cone, orange rim, you just pop it in the water and the snappers
+          bite. Are they in season in August? I forget.
+      - type: Action
+        content: >-
+          What is Arturo thinking of? His eyes are closed. Occasionally he lifts his
+          eyelids and looks at his moms. He’s in a space ship, it seems, and Mother
+          Dos holding his hand from the passenger seat makes him feel like it’s all
+          okay.
+      - type: Character
+        content: Mother Dos
+      - type: Parenthetical
+        content: Turning around to Arturo
+      - type: Dialogue
+        content: Arty! Are you falling asleep?
+      - type: Action
+        content: >-
+          Arturo smiles, and closes his eyes. Mother Dos rubs his hand.
+      - type: Character
+        content: Mother
+      - type: Dialogue
+        content: >-
+          I wish there was a place to pull over. It’s always so funny when Arty has
+          to pee, and we pull over on the highway. It’s — funny. I want to lay out
+          on the grass and watch the stars. Why don’t we do it every night? I c— I
+          don’t think it would get old. There are just too many up there. Do you —
+          ha. I, nevermind. Where would you want to go fishing?
+      - type: Action
+        content: >-
+          The highway bumps, buh-bump, buh-bump. It’s smooth and it has a rhythm.
+          Arturo in the back seat, falling asleep, into those dreams, his hand held
+          by Mother Dos, her skin, just the touch, makes him feel safe. Like being
+          in the ocean. As he drifts into sleep, we see images of the beach. Of the
+          waves. They are coming to Arty. Tonight he will dream of the sea. His hair
+          is all puffed up. The window is cold. Mother and Mother Dos talk, to
+          Arturo they sound as calm as cellos. Like the soft playing of a piano. He
+          begins to think of a fish, swimming through the sea, and it comes right to
+          Arty’s face and rubs its fins against his nose.
+      - type: Action
+        content: >-
+          Mother Dos bends down and kisses Arty’s hand, and rubs his hand, and leans
+          over and rests her head on Mother’s shoulder.
+      - type: Action
+        content: >-
+          The fish in Arty’s dream swims off, forward, into the sea, and Arty swims
+          behind.
+    meta:
+      song:
+        name: Rue Saint-Vincent (Rose Blanche)
+        artist: Yves Montand
+        url: https://s3.amazonaws.com/arturo-music/rue-saint-vincent.mp3
+  - name: Dorm
+    sections:
+      - type: SceneHeading
+        content: Int. Dorm Room. Afternoon.
+      - type: Action
+        content: >-
+          Arturo and Cord sit in a dorm room. Arturo’s back is against the bed
+          frame, Cord’s against a wood chair. A rap beat plays, they have some bud
+          lights on the floor, a few are half full and warm, one or two are empty or
+          knocked over.
+      - type: Character
+        content: Cord
+      - type: Dialogue
+        content: >-
+          Cord, come at you fast, like the sword,
+
+          Rosary beads, I make pleads like the lord.
+
+          I’m bored. I could get every thing I need.
+      - type: Character
+        content: Arturo
+      - type: Parenthetical
+        content: Jumping in
+      - type: Dialogue
+        content: Get down on my legs, then knees.
+      - type: Character
+        content: Cord
+      - type: Dialogue
+        content: Please.
+      - type: Action
+        content: >-
+          Neither knows what to say. The beat follows. Cord is working something out
+          in his head. Arturo takes another sip of beer. There’s a bong in the
+          corner, the bowl is caked, dark, smoke is caked in to the interior glass.
+      - type: Character
+        content: Cord
+      - type: Parenthetical
+        content: Points to window
+      - type: Dialogue
+        content: >-
+          Look outside, it’s been a cold winter innit?
+
+          That’s when it’s first day of the month, with three digits.
+
+          Finished? I could survive with old spinach.
+
+          D–
+      - type: Action
+        content: Arturo laughs.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: Degrees out is lower than the migits.
+      - type: Character
+        content: Cord
+      - type: Dialogue
+        content: >-
+          If you don’t shiver, you gon get cold so figit.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          Pass me the mic, it’s like, I like, hot potatos with rice.
+      - type: Action
+        content: >-
+          Arturo and Cord go on. They’re old friends. They’ve only known each other
+          for a few months, maybe a year. Cord opens another beer, Arturo sends a
+          message on his phone. Rhymes come and go in their heads, occasionally one
+          comes out.
+      - type: Character
+        content: Arturo
+      - type: Dialogue
+        content: >-
+          I think a few albums are dropping next week. Maybe Thursday? Chevy?
+      - type: Character
+        content: Cord
+      - type: Parenthetical
+        content: Not paying attention
+      - type: Dialogue
+        content: Dj Cord, my skin dark like the sword.
+      - type: Action
+        content: >-
+          Arturo laughs again. They go on, sharing verses, talking about music,
+          drinking beer. The camera zooms out, through the window. Next door there
+          is a small group of shy students watching tv and playing a board game. As
+          the camera zooms out, we see the whole building, it’s now night, and it is
+          strange to see all of the showers ripped out from the building, laying
+          sideways on the grass. Hands come out of the ground, emerging like the
+          hands of zombies, and begin to wildly turn the nobs, but no water comes
+          out, and more and more hands emerge from the grass, and one of the showers
+          breaks, and if we were to watch forever the grass would be covered by
+          shattered white porcelain and arm-shaped holes.
+    meta:
+      song:
+        name: SheChoseMe!!!!
+        artist: 9th Wonder
+        url: https://s3.amazonaws.com/arturo-music/she-chose-me.mp3
+  - name: End
+    sections:
+      - type: Title
+        content: End
+    meta:
+      song:
+        name: SheChoseMe!!!!
+        artist: 9th Wonder
+        url: https://s3.amazonaws.com/arturo-music/she-chose-me.mp3
