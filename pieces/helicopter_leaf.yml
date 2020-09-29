@@ -1,0 +1,52 @@
+title: Helicopter Leaf
+slug: helicopter_leaf
+date: 2020-09-20
+description: "Scene from the unfinished 'Rising Deloria'"
+
+scenes:
+  - name: Intro
+    sections:
+      - type: Text
+        content: >-
+          The following is a scene from the unfinished 'Rising Deloria'.
+  - name: Helicopter Leaf
+    sections:
+      - type: SceneHeading
+        content: EXT. SUBURBAN ROAD. AFTERNOON. MORE RURAL THAN URBAN.
+      - type: Action
+        content: >-
+          Close up shots of the balls of Deloria’s feet, stepping thoughtfully on the pavement. The pavement is imperfect and recently paved. Bits of its pebbles have dislodged from its body; now they rest on top of the pavement. Some pour into the gutters of the road where they are swept by the ephemeral rivers of rainy days, floating down the streets of the town, like pollen, like things that fall intentionally from trees and plants with intention to move.
+
+
+          Deloria looks to their right. Over a barbed fence is a golf course. On the golf course children kneel on the ground with their hands on the ground over golf balls blowing at the golf balls as if they were birthday candles. They are trying to blow the golf balls into the holes. Processions of people with money march by. There is blood on the barb wire fence.
+      - type: Character
+        content: Narrator
+      - type: Dialogue
+        content: >-
+          What does the leaf of a helicopter plant feel when it disconnects and falls? Does it feel the totality of the end? Promise of the new beginning? The spread of its soil, of its progenitor root? It is what it was meant to do! Everything led to this! Its death is a false concept.
+      - type: Action
+        content: We see the leaf of a helicopter plant dislodge from a tree.
+      - type: Character
+        content: Narrator
+      - type: Dialogue
+        content: But what if its structure does not spin?
+      - type: Action
+        content: >-
+          We want the leaves to twirl and travel, but it shivers and falls straights. One would yell, in their stomach, “twirl, this is what you’re meant to do!” We see a close up shot, for a moment, of the head of a blossomed dandelion missing one of its fuzzy members.
+      - type: Character
+        content: Narrator
+      - type: Dialogue
+        content: >-
+          Is it a haunting thought. The leaf dislodges and falls – is it due to lack of wind? abnormality in its sides? imbalance in the weight of its seeds – it does not twirl!
+      - type: Action
+        content: >-
+          The screen or stage or page goes blank. For a moment we look around to the things around us.
+
+
+          A close up shot of deloria’s foot; the helicopter leaf has fallen on her foot; she takes another thoughtful, careful step.
+
+    meta:
+      song:
+        name: Fake Arms
+        artist: Foreign Fields
+        url: https://s3.amazonaws.com/arturo-music/fake-arms.mp3

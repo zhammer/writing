@@ -6,6 +6,7 @@
 <style>
   .Action {
     margin-bottom: 1em;
+    white-space: pre-wrap;
   }
 
   .Character {
