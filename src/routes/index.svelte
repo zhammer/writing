@@ -43,7 +43,7 @@
 </script>
 
 <script lang="ts">
-  import type { Piece } from "./pieces/_pieces";
+  import type { Piece } from "./_pieces";
   export let pieces: Piece[];
 
   export let sort: Sort;
@@ -94,9 +94,7 @@
       {#each pieces as piece}
         <tr>
           <td><img src="/text.gif" alt="[TXT]" /></td>
-          <td>
-            <a rel="prefetch" href="pieces/{piece.slug}">{piece.title}</a>
-          </td>
+          <td><a rel="prefetch" href={piece.slug}>{piece.title}</a></td>
           <td align="right">{piece.date}</td>
           <td align="right">{format(piece.size)}</td>
           <td>{piece.description}</td>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Scene } from "../routes/pieces/_pieces";
+  import type { Scene } from "../routes/_pieces";
   export let scene: Scene;
 </script>
 

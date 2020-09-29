@@ -3,7 +3,7 @@
   import swipeable from "../actions/swipeable";
   import SongPlayer from "../components/SongPlayer/index.svelte";
   import Scene from "./Scene.svelte";
-  import type { Piece } from "../routes/pieces/_pieces";
+  import type { Piece } from "../routes/_pieces";
   // https://open.spotify.com/track/3oSBVpyGQ9N3hPibpw0GkB
   export let piece: Piece;
 

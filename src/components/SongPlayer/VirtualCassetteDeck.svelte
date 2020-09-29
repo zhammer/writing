@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Piece, Scene } from "../../routes/pieces/_pieces";
+  import type { Piece, Scene } from "../../routes/_pieces";
   import { unique } from "./util";
 
   export let piece: Piece;

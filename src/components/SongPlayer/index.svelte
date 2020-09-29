@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
-  import type { Piece } from "../../routes/pieces/_pieces";
+  import type { Piece } from "../../routes/_pieces";
 
   import Speaker from "./Speaker.svg.svelte";
   import { isMobile } from "./util";
