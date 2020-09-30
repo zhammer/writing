@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import type { Piece } from "../../routes/_pieces";
+  import Arrow from "./Arrow.svg.svelte";
 
   import Speaker from "./Speaker.svg.svelte";
   import { isMobile } from "./util";
@@ -33,6 +34,40 @@
 </script>
 
 <style>
+  @keyframes fadeinout {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes dropdown {
+    from {
+      transform: translateY(-1em) rotate(270deg);
+    }
+    to {
+      transform: translateY(0em) rotate(270deg);
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 70%;
+    height: 100%;
+    width: 100%;
+    fill: green;
+    transform: rotate(270deg);
+    animation: fadeinout 5s ease 0.5s both, dropdown 1s ease-out 0.25s both;
+  }
+
   .container {
     position: fixed;
     cursor: pointer;
@@ -61,13 +96,19 @@
   }
 </style>
 
-<div class="container" on:click={toggleMuted}>
+<div class="container">
   {#if song}
+    {#if mobile}
+      <div class="arrow">
+        <Arrow />
+      </div>
+    {/if}
     <div
       role="button"
       class="speaker"
       class:muted
       transition:fade
+      on:click={toggleMuted}
       title={`${muted ? 'unmute' : 'mute'} audio`}>
       <Speaker />
     </div>
