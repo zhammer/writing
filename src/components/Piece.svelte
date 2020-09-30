@@ -73,7 +73,10 @@
 <div class="container">
   {#each piece.scenes as scene, i}
     {#if sceneNumber === i}
-      <div in:fade={{ delay: 1500, duration: 1500 }} out:fade class="scene">
+      <div
+        in:fade|local={{ delay: 1500, duration: 1500 }}
+        out:fade|local
+        class="scene">
         <Scene {scene} />
       </div>
     {/if}
