@@ -95,7 +95,7 @@
     {#if sceneNumber === i}
       <div
         in:fade|local={{ delay: fadeInDelay, duration: 1500 }}
-        on:outroend={scrollToTop}
+        on:introstart={scrollToTop}
         out:fade|local
         class={`scene ${scene.type}`}>
         <Scene
