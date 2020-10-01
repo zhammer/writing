@@ -646,6 +646,7 @@ scenes:
         artist: 9th Wonder
         url: https://s3.amazonaws.com/arturo-music/she-chose-me.mp3
   - name: End
+    type: Card
     sections:
       - type: Title
         content: End

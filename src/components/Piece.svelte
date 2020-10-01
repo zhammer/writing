@@ -35,6 +35,20 @@
   function handleSwipeLeft() {
     nextScene();
   }
+
+  // this is a bit hacky. the way our scenes transition, when we move
+  // from scene A to scene B, scene A does an out:fade. scene B does an
+  // in:fade, but with a delay, so that scene B only starts fading in once
+  // scene A has fully faded out.
+  // it's at this moment (when there is _nothing_ on the page) that we want
+  // to reset our view so that if the user were scrolled down on scene A,
+  // once scene B fades in they will be at the start of the scene.
+  const fadeInDelay = 1500;
+  function scrollToTop(event: CustomEvent) {
+    setTimeout(() => {
+      (event.target as HTMLDivElement).scrollIntoView(true);
+    }, fadeInDelay);
+  }
 </script>
 
 <style>
@@ -80,7 +94,8 @@
   {#each piece.scenes as scene, i}
     {#if sceneNumber === i}
       <div
-        in:fade|local={{ delay: 1500, duration: 1500 }}
+        in:fade|local={{ delay: fadeInDelay, duration: 1500 }}
+        on:introstart={scrollToTop}
         out:fade|local
         class={`scene ${scene.type}`}>
         <Scene

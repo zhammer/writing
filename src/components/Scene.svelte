@@ -5,7 +5,7 @@
   import { isMobile } from "./SongPlayer/util";
   export let scene: Scene;
   export let showNavHint: boolean;
-  export let mobile: boolean;
+  let mobile: boolean;
 
   onMount(() => {
     mobile = isMobile(navigator.userAgent);
