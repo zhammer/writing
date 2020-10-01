@@ -4,7 +4,6 @@
   import SongPlayer from "../components/SongPlayer/index.svelte";
   import Scene from "./Scene.svelte";
   import type { Piece } from "../routes/_pieces";
-  import Arrow from "./SongPlayer/Arrow.svg.svelte";
   // https://open.spotify.com/track/3oSBVpyGQ9N3hPibpw0GkB
   export let piece: Piece;
 
@@ -63,25 +62,6 @@
     left: 0;
     right: 0;
   }
-
-  .page-navigation {
-    position: absolute;
-    display: flex;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 5em;
-    justify-content: center;
-    align-items: center;
-    color: grey;
-  }
-
-  .arrow {
-    width: 3em;
-  }
-  .arrow.right {
-    transform: scaleX(-1);
-  }
 </style>
 
 <svelte:window
@@ -101,14 +81,5 @@
       </div>
     {/if}
   {/each}
-
-  <div class="page-navigation">
-    <div class="arrow left">
-      <Arrow />
-    </div>
-    <div class="arrow right">
-      <Arrow />
-    </div>
-  </div>
 </div>
 <SongPlayer {piece} {sceneNumber} />
