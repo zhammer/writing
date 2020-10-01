@@ -83,7 +83,9 @@
         in:fade|local={{ delay: 1500, duration: 1500 }}
         out:fade|local
         class={`scene ${scene.type}`}>
-        <Scene {scene} />
+        <Scene
+          {scene}
+          showNavHint={piece.scenes.length > 1 && sceneNumber === 0} />
       </div>
     {/if}
   {/each}
