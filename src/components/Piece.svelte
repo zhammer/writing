@@ -62,6 +62,12 @@
     left: 0;
     right: 0;
   }
+
+  .scene.Card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+  }
 </style>
 
 <svelte:window
@@ -76,7 +82,7 @@
       <div
         in:fade|local={{ delay: 1500, duration: 1500 }}
         out:fade|local
-        class="scene">
+        class={`scene ${scene.type}`}>
         <Scene {scene} />
       </div>
     {/if}

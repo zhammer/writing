@@ -16,6 +16,7 @@ export type Section = {
 
 export type Scene = {
   name: string;
+  type: "Default" | "Card";
   sections: Section[];
   meta?: {
     song?: {
@@ -41,8 +42,13 @@ export function load(): Piece[] {
     (filename): Piece => {
       let file = fs.readFileSync("pieces/" + filename);
       let body = file.toString();
+      let piece: Piece = yml.parse(body);
       return {
-        ...yml.parse(body),
+        ...piece,
+        scenes: piece.scenes.map((scene) => ({
+          ...scene,
+          type: scene.type || "Default",
+        })),
         size: body.length,
       };
     }
