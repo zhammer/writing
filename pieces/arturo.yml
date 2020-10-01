@@ -5,6 +5,7 @@ description: ""
 
 scenes:
   - name: Cover
+    type: Card
     sections:
       - type: Title
         content: Arturo

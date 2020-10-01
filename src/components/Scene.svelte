@@ -1,9 +1,35 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
   import type { Scene } from "../routes/_pieces";
+  import { isMobile } from "./SongPlayer/util";
   export let scene: Scene;
+  export let showNavHint: boolean;
+  export let mobile: boolean;
+
+  onMount(() => {
+    mobile = isMobile(navigator.userAgent);
+  });
 </script>
 
 <style>
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .hint {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.25rem;
+    color: darkgray;
+    animation: fadein 1s ease-in 3s backwards;
+  }
+
   .Action {
     margin-bottom: 1em;
   }
@@ -49,7 +75,6 @@
   }
 
   .Title {
-    transform: translateY(200%);
     text-align: center;
     font-size: 3rem;
     display: flex;
@@ -67,4 +92,9 @@
   {#each scene.sections as section}
     <div class={section.type}>{section.content}</div>
   {/each}
+  {#if showNavHint}
+    <div class="hint">
+      ({mobile ? 'swipe right' : 'press the right arrow key'})
+    </div>
+  {/if}
 </div>
