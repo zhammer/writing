@@ -66,7 +66,7 @@
   .scene.Card {
     display: flex;
     flex-direction: column;
-    margin-top: 30%;
+    top: 20%;
   }
 </style>
 
