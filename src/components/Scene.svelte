@@ -86,15 +86,22 @@
       font-size: 6rem;
     }
   }
+
+  p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
 </style>
 
-<div>
-  {#each scene.sections as section}
-    <div class={section.type}>{section.content}</div>
-  {/each}
-  {#if showNavHint}
-    <div class="hint">
-      ({mobile ? 'swipe right' : 'press the right arrow key'})
-    </div>
-  {/if}
-</div>
+<section>
+  <div>
+    {#each scene.sections as section}
+      <p class={section.type}>{section.content}</p>
+    {/each}
+    {#if showNavHint}
+      <p class="hint">
+        ({mobile ? 'swipe right' : 'press the right arrow key'})
+      </p>
+    {/if}
+  </div>
+</section>
