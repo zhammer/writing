@@ -9,20 +9,33 @@ scenes:
       - type: Text
         content: >-
           what controls the movement of the sun?
+
           the panorama hanging above the baby’s crib?
+
           the hypotheses’ of ceo?
+
           the dusty book, “goodnight moon”, buried beneath games and garbage on a shelf?
+
       - type: Text
         content: >-
+
           last night two planets collided.
+
           no supernova,
+
           no great change,
+
           no ripple through the cosmos.
+
       - type: Text
         content: >-
+
           a great journalist sat outside
+
           on a cloudy night
+
           and set her intentions
+
           for the coming year.
     meta:
       song:
