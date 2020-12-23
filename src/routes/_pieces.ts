@@ -112,7 +112,7 @@ function toListItem(element: Directory | Piece): ListItem {
     };
   }
   return {
-    description: element?.meta?.description,
+    description: element?.meta?.description || "",
     title: element.path,
     size: 0,
     date: "",

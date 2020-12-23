@@ -58,6 +58,9 @@
 
   // https://stackoverflow.com/a/9461657
   function format(num: number) {
+    if (num === 0) {
+      return "-";
+    }
     return Math.abs(num) > 999
       ? (Math.abs(num) / 1000).toFixed(1) + "k"
       : `${Math.abs(num)}`;
