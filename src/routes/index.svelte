@@ -38,13 +38,13 @@
 
       return compare;
     });
-    return { pieces: directory.children, sort };
+    return { entries: directory.children, sort };
   }
 </script>
 
 <script lang="ts">
-  import type { Directory, DirectoryLS, Piece } from "./_pieces";
-  export let pieces: Piece[];
+  import type { ListItem, DirectoryLS } from "./_pieces";
+  export let entries: ListItem[];
 
   export let sort: Sort;
 
@@ -91,13 +91,17 @@
           <hr />
         </th>
       </tr>
-      {#each pieces as piece}
+      {#each entries as entry}
         <tr>
-          <td><img src="/text.gif" alt="[TXT]" /></td>
-          <td><a rel="prefetch" href={piece.slug}>{piece.title}</a></td>
-          <td align="right">{piece.date}</td>
-          <td align="right">{format(piece.size)}</td>
-          <td>{piece.description}</td>
+          <td>
+            {#if entry.type === 'DIR'}
+              <img src="/folder.gif" alt="[DIR]" />
+            {:else}<img src="/text.gif" alt="[TXT]" />{/if}
+          </td>
+          <td><a rel="prefetch" href={entry.slug}>{entry.title}</a></td>
+          <td align="right">{entry.date}</td>
+          <td align="right">{format(entry.size)}</td>
+          <td>{entry.description}</td>
         </tr>
       {/each}
       <tr>

@@ -82,18 +82,25 @@ export function loadPieces(): Piece[] {
     .map((filename): Piece => readPiece("pieces/" + filename.name));
 }
 
-export function loadDirectory(): Directory {
-  let tree = dirTree("pieces/", { extensions: /\.yml$/ });
+function readDirectory(tree: dirTree.DirectoryTree): Directory {
   let pieces = tree.children
-    .filter(
-      (child) => child.type === "file" && !child.name.endsWith("__meta__.yml")
-    )
-    .map((child) => readPiece(child.path));
+    .filter((child) => !child.name.endsWith("__meta__.yml"))
+    .map((child) => {
+      if (child.type === "directory") {
+        return readDirectory(child);
+      }
+      return readPiece(child.path);
+    });
   const directory = {
-    path: tree.path.slice("pieces".length),
+    path: tree.path.slice("pieces/".length) + "/",
     children: pieces,
   };
   return directory;
+}
+
+export function loadDirectory(): Directory {
+  let tree = dirTree("pieces/", { extensions: /\.yml$/ });
+  return readDirectory(tree);
 }
 
 function toListItem(element: Directory | Piece): ListItem {
