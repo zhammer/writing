@@ -24,6 +24,8 @@
     order: query.O || "A",
   };
 
+  let isRoot = directory.slug === "";
+
   $: listItems = sortedListItems(sort);
   function sortedListItems(sort: Sort) {
     let listItems = [...directory.children];
@@ -105,6 +107,13 @@
           <hr />
         </th>
       </tr>
+      <!-- only works for one-deep nested directories at this point, always links to root -->
+      {#if !isRoot}
+        <tr>
+          <td><img src="/back.gif" alt="[PARENTDIR]" /></td>
+          <td><a rel="prefetch" href="">Parent Directory</a></td>
+        </tr>
+      {/if}
       {#each listItems as entry}
         <tr>
           <td>
