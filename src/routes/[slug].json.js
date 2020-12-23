@@ -1,6 +1,6 @@
-import { load } from "./_pieces";
+import { loadPieces } from "./_pieces";
 
-const pieces = load();
+const pieces = loadPieces();
 const lookup = new Map();
 pieces.forEach((piece) => {
   lookup.set(piece.slug, piece);

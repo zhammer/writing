@@ -39,7 +39,7 @@ export type Piece = PieceListItem & {
   scenes: Scene[];
 };
 
-export function load(): Piece[] {
+export function loadPieces(): Piece[] {
   let filenames = fs.readdirSync("pieces", { withFileTypes: true });
   return filenames
     .filter((filename) => filename.isFile())
@@ -58,5 +58,9 @@ export function load(): Piece[] {
         };
       }
     );
+}
+
+export function loadPieceListItems(): PieceListItem[] {
+  return loadPieces().map(({ scenes, ...rest }) => rest);
 }
 }

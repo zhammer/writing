@@ -1,6 +1,6 @@
-import { load } from "./_pieces";
+import { loadPieceListItems } from "./_pieces";
 
-const pieces = load();
+const pieces = loadPieceListItems();
 const contents = JSON.stringify({ pieces });
 
 export function get(req, res) {
