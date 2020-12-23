@@ -13,12 +13,12 @@
   };
   export async function preload({ query }) {
     let resp = await this.fetch("pieces.json");
-    let { pieces }: { pieces: Piece[] } = await resp.json();
+    let { directory }: { directory: DirectoryLS } = await resp.json();
     let sort: Sort = {
       column: query.C || "N",
       order: query.O || "A",
     };
-    pieces.sort((a, b) => {
+    directory.children.sort((a, b) => {
       let compare = (() => {
         switch (sort.column) {
           case "N":
@@ -38,12 +38,12 @@
 
       return compare;
     });
-    return { pieces, sort };
+    return { pieces: directory.children, sort };
   }
 </script>
 
 <script lang="ts">
-  import type { Piece } from "./_pieces";
+  import type { Directory, DirectoryLS, Piece } from "./_pieces";
   export let pieces: Piece[];
 
   export let sort: Sort;
