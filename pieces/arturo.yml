@@ -103,7 +103,7 @@ scenes:
       song:
         name: Imagining My Man
         artist: Aldous Harding
-        url: https://s3.amazonaws.com/arturo-music/imagining-my-man.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/imagining-my-man.mp3
   - name: Forest
     sections:
       - type: SceneHeading
@@ -156,7 +156,7 @@ scenes:
       song:
         name: The Single Petal Of A Rose
         artist: Duke Ellington And His Orchestra
-        url: https://s3.amazonaws.com/arturo-music/the-single-petal-of-a-rose.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/the-single-petal-of-a-rose.mp3
   - name: Lake Dock (One)
     sections:
       - type: SceneHeading
@@ -206,7 +206,7 @@ scenes:
       song:
         name: あなたがいるなら
         artist: Cornelius
-        url: https://s3.amazonaws.com/arturo-music/if-youre-here.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/if-youre-here.mp3
   - name: Beach
     sections:
       - type: SceneHeading
@@ -279,7 +279,7 @@ scenes:
       song:
         name: A La Claire Fontaine
         artist: genevoise
-        url: https://s3.amazonaws.com/arturo-music/a-la-claire-fontaine.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/a-la-claire-fontaine.mp3
   - name: Pool Bar
     sections:
       - type: SceneHeading
@@ -388,7 +388,7 @@ scenes:
       song:
         name: Good Thoughts, Bad Thoughts
         artist: Funkadelic
-        url: https://s3.amazonaws.com/arturo-music/good-thoughts-bad-thoughts.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/good-thoughts-bad-thoughts.mp3
   - name: Lack Dock (Two)
     sections:
       - type: SceneHeading
@@ -463,7 +463,7 @@ scenes:
       song:
         name: Harvest Moon
         artist: Cassandra Wilson
-        url: https://s3.amazonaws.com/arturo-music/harvest-moon.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/harvest-moon.mp3
   - name: Driving Home
     sections:
       - type: SceneHeading
@@ -547,7 +547,7 @@ scenes:
       song:
         name: Rue Saint-Vincent (Rose Blanche)
         artist: Yves Montand
-        url: https://s3.amazonaws.com/arturo-music/rue-saint-vincent.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/rue-saint-vincent.mp3
   - name: Dorm
     sections:
       - type: SceneHeading
@@ -644,7 +644,7 @@ scenes:
       song:
         name: SheChoseMe!!!!
         artist: 9th Wonder
-        url: https://s3.amazonaws.com/arturo-music/she-chose-me.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/she-chose-me.mp3
   - name: End
     type: Card
     sections:
@@ -654,4 +654,4 @@ scenes:
       song:
         name: SheChoseMe!!!!
         artist: 9th Wonder
-        url: https://s3.amazonaws.com/arturo-music/she-chose-me.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/she-chose-me.mp3

@@ -41,4 +41,4 @@ scenes:
       song:
         name: Rain
         artist: Walter Wanderley
-        url: https://s3.amazonaws.com/arturo-music/rain.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/rain.mp3

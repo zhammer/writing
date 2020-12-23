@@ -27,7 +27,7 @@ scenes:
       song:
         name: Avril 14th
         artist: Aphex Twin
-        url: https://s3.amazonaws.com/arturo-music/avril-14th.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/avril-14th.mp3
   - name: "2"
     sections:
       - type: Text
@@ -43,7 +43,7 @@ scenes:
       song:
         name: Avril 14th
         artist: Aphex Twin
-        url: https://s3.amazonaws.com/arturo-music/avril-14th.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/avril-14th.mp3
   - name: "3"
     sections:
       - type: Text
@@ -59,7 +59,7 @@ scenes:
       song:
         name: Avril 14th
         artist: Aphex Twin
-        url: https://s3.amazonaws.com/arturo-music/avril-14th.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/avril-14th.mp3
   - name: "4"
     sections:
       - type: Text
@@ -81,7 +81,7 @@ scenes:
       song:
         name: Avril 14th
         artist: Aphex Twin
-        url: https://s3.amazonaws.com/arturo-music/avril-14th.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/avril-14th.mp3
   - name: "5"
     sections:
       - type: Text
@@ -91,4 +91,4 @@ scenes:
       song:
         name: Avril 14th
         artist: Aphex Twin
-        url: https://s3.amazonaws.com/arturo-music/avril-14th.mp3
+        url: https://s3.amazonaws.com/zhammer-ink/avril-14th.mp3
