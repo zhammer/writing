@@ -1,7 +1,8 @@
-import { load } from "./_pieces";
+import { loadDirectory, ls } from "./_pieces";
 
-const pieces = load();
-const contents = JSON.stringify({ pieces });
+const directory = loadDirectory();
+const directoryLS = ls(directory);
+const contents = JSON.stringify({ directory: directoryLS });
 
 export function get(req, res) {
   res.writeHead(200, {
