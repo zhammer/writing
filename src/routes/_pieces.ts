@@ -27,12 +27,15 @@ export type Scene = {
   };
 };
 
-export type Piece = {
+export type PieceListItem = {
   title: string;
   date: string;
   size: number;
   description: string;
   slug: string;
+};
+
+export type Piece = PieceListItem & {
   scenes: Scene[];
 };
 
