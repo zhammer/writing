@@ -76,20 +76,29 @@
 </style>
 
 <svelte:head>
-  <title>Index of {directory.slug}</title>
+  <title>Index of {directory.slug}/</title>
 </svelte:head>
 
 <div class="container">
-  <h1>Index of {directory.slug}</h1>
+  <h1>Index of {directory.slug}/</h1>
 
   <table>
     <tbody>
       <tr>
         <th valign="top" />
-        <th><a href="?C=N&O={orderParam(sort, 'N')}">Name</a></th>
-        <th><a href="?C=M&O={orderParam(sort, 'M')}">Last modified</a></th>
-        <th><a href="?C=S&O={orderParam(sort, 'S')}">Size</a></th>
-        <th><a href="?C=D&O={orderParam(sort, 'D')}">Description</a></th>
+        <th>
+          <a href="{directory.slug}?C=N&O={orderParam(sort, 'N')}">Name</a>
+        </th>
+        <th>
+          <a href="{directory.slug}?C=M&O={orderParam(sort, 'M')}">Last modified</a>
+        </th>
+        <th>
+          <a href="{directory.slug}?C=S&O={orderParam(sort, 'S')}">Size</a>
+        </th>
+        <th>
+          <a
+            href="{directory.slug}?C=D&O={orderParam(sort, 'D')}">Description</a>
+        </th>
       </tr>
       <tr>
         <th colspan="5">
@@ -103,7 +112,11 @@
               <img src="/folder.gif" alt="[DIR]" />
             {:else}<img src="/text.gif" alt="[TXT]" />{/if}
           </td>
-          <td><a rel="prefetch" href={entry.slug}>{entry.title}</a></td>
+          <td>
+            <a
+              rel="prefetch"
+              href="{directory.slug}/{entry.slug}">{entry.title}</a>
+          </td>
           <td align="right">{entry.date}</td>
           <td align="right">{format(entry.size)}</td>
           <td>{entry.description}</td>

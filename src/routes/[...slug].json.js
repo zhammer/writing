@@ -11,7 +11,7 @@ export function get(req, res, next) {
   // the `slug` parameter is available because
   // this file is called [slug].json.js
   const { slug } = req.params;
-  let item = find(directory, slug);
+  let item = find(directory, slug[0].split(",").filter(Boolean));
 
   if (item) {
     if ("children" in item) {

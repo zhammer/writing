@@ -104,7 +104,7 @@ function readDirectory(tree: dirTree.DirectoryTree): Directory {
     meta = yml.parse(body);
   }
   const directory = {
-    slug: tree.path.slice("pieces/".length) + "/",
+    slug: tree.path.slice("pieces/".length),
     children: pieces,
     meta,
   };
@@ -146,8 +146,7 @@ export function find(
   directory: Directory,
   slug: string[]
 ): Directory | Piece | null {
-  let search = slug[0].replace(",", "/");
-  let found = directory.children.find((child) => child.slug === search);
+  let found = directory.children.find((child) => child.slug === slug[0]);
   if (!found) {
     return null;
   }
@@ -155,5 +154,9 @@ export function find(
   if (slug.length === 1) {
     return found;
   }
-  return find(directory, slug.slice(1));
+  // was expecting directory
+  if ("scenes" in found) {
+    return null;
+  }
+  return find(found, slug.slice(1));
 }
