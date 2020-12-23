@@ -38,13 +38,13 @@
 
       return compare;
     });
-    return { entries: directory.children, sort };
+    return { directory, sort };
   }
 </script>
 
 <script lang="ts">
-  import type { ListItem, DirectoryLS } from "./_pieces";
-  export let entries: ListItem[];
+  import type { DirectoryLS } from "./_pieces";
+  export let directory: DirectoryLS;
 
   export let sort: Sort;
 
@@ -74,7 +74,7 @@
 </style>
 
 <svelte:head>
-  <title>Index of /</title>
+  <title>Index of {directory.path}</title>
 </svelte:head>
 
 <div class="container">
@@ -94,7 +94,7 @@
           <hr />
         </th>
       </tr>
-      {#each entries as entry}
+      {#each directory.children as entry}
         <tr>
           <td>
             {#if entry.type === 'DIR'}
@@ -114,5 +114,7 @@
       </tr>
     </tbody>
   </table>
-  <address>Sapper/0.28.9 Server</address>
+  <address>
+    {(directory.meta || {}).description || 'Sapper/0.28.9 Server'}
+  </address>
 </div>

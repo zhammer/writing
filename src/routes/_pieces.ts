@@ -55,6 +55,7 @@ export type Directory = {
 };
 
 export type DirectoryLS = {
+  path: string;
   meta?: {
     description?: string;
   };
@@ -123,6 +124,7 @@ function toListItem(element: Directory | Piece): ListItem {
 
 export function ls(directory: Directory): DirectoryLS {
   return {
+    path: directory.path,
     meta: directory.meta,
     children: directory.children.map(toListItem),
   };
