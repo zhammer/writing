@@ -111,7 +111,7 @@
       {#if !isRoot}
         <tr>
           <td><img src="/back.gif" alt="[PARENTDIR]" /></td>
-          <td><a rel="prefetch" href="">Parent Directory</a></td>
+          <td><a rel="prefetch" href="/">Parent Directory</a></td>
         </tr>
       {/if}
       {#each listItems as entry}
