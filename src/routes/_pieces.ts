@@ -47,7 +47,7 @@ export type Piece = {
 };
 
 export type Directory = {
-  path: string;
+  slug: string;
   meta: {
     description?: string;
   };
@@ -55,7 +55,7 @@ export type Directory = {
 };
 
 export type DirectoryLS = {
-  path: string;
+  slug: string;
   meta: {
     description?: string;
   };
@@ -104,7 +104,7 @@ function readDirectory(tree: dirTree.DirectoryTree): Directory {
     meta = yml.parse(body);
   }
   const directory = {
-    path: tree.path.slice("pieces/".length) + "/",
+    slug: tree.path.slice("pieces/".length) + "/",
     children: pieces,
     meta,
   };
@@ -126,18 +126,34 @@ function toListItem(element: Directory | Piece): ListItem {
   }
   return {
     description: "",
-    title: element.path,
+    title: element.slug,
     size: 0,
     date: "",
-    slug: element.path,
+    slug: element.slug,
     type: "DIR",
   };
 }
 
 export function ls(directory: Directory): DirectoryLS {
   return {
-    path: directory.path,
+    slug: directory.slug,
     meta: directory.meta,
     children: directory.children.map(toListItem),
   };
+}
+
+export function find(
+  directory: Directory,
+  slug: string[]
+): Directory | Piece | null {
+  let search = slug[0].replace(",", "/");
+  let found = directory.children.find((child) => child.slug === search);
+  if (!found) {
+    return null;
+  }
+
+  if (slug.length === 1) {
+    return found;
+  }
+  return find(directory, slug.slice(1));
 }

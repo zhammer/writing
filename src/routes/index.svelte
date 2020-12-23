@@ -14,4 +14,4 @@
   export let query: any;
 </script>
 
-<Directory {directory} {query} />;
+<Directory {directory} {query} />

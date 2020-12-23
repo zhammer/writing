@@ -76,11 +76,11 @@
 </style>
 
 <svelte:head>
-  <title>Index of {directory.path}</title>
+  <title>Index of {directory.slug}</title>
 </svelte:head>
 
 <div class="container">
-  <h1>Index of {directory.path}</h1>
+  <h1>Index of {directory.slug}</h1>
 
   <table>
     <tbody>

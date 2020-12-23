@@ -90,6 +90,10 @@
   on:swiperight={handleSwipeRight}
   on:swipeleft={handleSwipeLeft} />
 
+<svelte:head>
+  <title>{piece.title}</title>
+</svelte:head>
+
 <div class="container">
   {#each piece.scenes as scene, i}
     {#if sceneNumber === i}
