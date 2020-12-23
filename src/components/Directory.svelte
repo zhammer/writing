@@ -80,7 +80,7 @@
 </svelte:head>
 
 <div class="container">
-  <h1>Index of /</h1>
+  <h1>Index of {directory.path}</h1>
 
   <table>
     <tbody>
