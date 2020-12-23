@@ -37,20 +37,23 @@ export type Piece = {
 };
 
 export function load(): Piece[] {
-  let filenames = fs.readdirSync("pieces");
-  return filenames.map(
-    (filename): Piece => {
-      let file = fs.readFileSync("pieces/" + filename);
-      let body = file.toString();
-      let piece: Piece = yml.parse(body);
-      return {
-        ...piece,
-        scenes: piece.scenes.map((scene) => ({
-          ...scene,
-          type: scene.type || "Default",
-        })),
-        size: body.length,
-      };
-    }
-  );
+  let filenames = fs.readdirSync("pieces", { withFileTypes: true });
+  return filenames
+    .filter((filename) => filename.isFile())
+    .map(
+      (filename): Piece => {
+        let file = fs.readFileSync("pieces/" + filename.name);
+        let body = file.toString();
+        let piece: Piece = yml.parse(body);
+        return {
+          ...piece,
+          scenes: piece.scenes.map((scene) => ({
+            ...scene,
+            type: scene.type || "Default",
+          })),
+          size: body.length,
+        };
+      }
+    );
+}
 }
