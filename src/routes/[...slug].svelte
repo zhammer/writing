@@ -22,8 +22,6 @@
   export let query: any;
 </script>
 
-{@debug item}
-
 {#if 'children' in item}
   <Directory directory={item} {query} />
 {:else}

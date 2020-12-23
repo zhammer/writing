@@ -12,11 +12,11 @@ export function get(req, res, next) {
   // this file is called [slug].json.js
   const { slug } = req.params;
   let item = find(directory, slug);
-  if ("children" in item) {
-    item = ls(item);
-  }
 
   if (item) {
+    if ("children" in item) {
+      item = ls(item);
+    }
     res.writeHead(200, {
       "Content-Type": "application/json",
     });
