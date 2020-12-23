@@ -48,7 +48,7 @@ export type Piece = {
 
 export type Directory = {
   path: string;
-  meta?: {
+  meta: {
     description?: string;
   };
   children: (Directory | Piece)[];
@@ -56,7 +56,7 @@ export type Directory = {
 
 export type DirectoryLS = {
   path: string;
-  meta?: {
+  meta: {
     description?: string;
   };
   children: ListItem[];
@@ -83,18 +83,30 @@ export function loadPieces(): Piece[] {
     .map((filename): Piece => readPiece("pieces/" + filename.name));
 }
 
+function isDirectoryMeta(child: dirTree.DirectoryTree) {
+  return child.name.endsWith("__meta__.yml");
+}
+
 function readDirectory(tree: dirTree.DirectoryTree): Directory {
   let pieces = tree.children
-    .filter((child) => !child.name.endsWith("__meta__.yml"))
+    .filter((child) => !isDirectoryMeta(child))
     .map((child) => {
       if (child.type === "directory") {
         return readDirectory(child);
       }
       return readPiece(child.path);
     });
+  let meta = {};
+  let metaFile = tree.children.find(isDirectoryMeta);
+  if (metaFile) {
+    let file = fs.readFileSync(metaFile.path);
+    let body = file.toString();
+    meta = yml.parse(body);
+  }
   const directory = {
     path: tree.path.slice("pieces/".length) + "/",
     children: pieces,
+    meta,
   };
   return directory;
 }
@@ -113,7 +125,7 @@ function toListItem(element: Directory | Piece): ListItem {
     };
   }
   return {
-    description: element?.meta?.description || "",
+    description: "",
     title: element.path,
     size: 0,
     date: "",
