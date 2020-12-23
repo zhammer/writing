@@ -114,7 +114,5 @@
       </tr>
     </tbody>
   </table>
-  <address>
-    {(directory.meta || {}).description || 'Sapper/0.28.9 Server'}
-  </address>
+  <address>{directory.meta.description || 'Sapper/0.28.9 Server'}</address>
 </div>
