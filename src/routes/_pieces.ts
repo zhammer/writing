@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 import yml from "yaml";
 import dirTree from "directory-tree";
 
@@ -8,6 +9,7 @@ export type SectionType =
   | "Dialogue"
   | "Parenthetical"
   | "SceneHeading"
+  | "Text"
   | "Title";
 
 export type Section = {
@@ -75,13 +77,44 @@ function parsePieceYml(body: string): Piece {
 }
 
 function parsePieceTxt(body: string): Piece {
-  throw new Error("not implmented");
+  let regex = /```piece(.*)```\n*/gs;
+  let match = regex.exec(body);
+  if (match.length !== 2) {
+    throw new Error("didn't find piece info for piece with body: " + body);
+  }
+  let pieceInfo = yml.parse(match[1]);
+  let cleanedBody = body.replace(regex, "");
+  return {
+    ...pieceInfo,
+    scenes: [
+      {
+        name: "main",
+        type: "Default",
+        sections: [
+          {
+            type: "Text",
+            content: cleanedBody,
+          },
+        ],
+      },
+    ],
+  };
 }
 
 function readPiece(filename: string): Piece {
   let file = fs.readFileSync(filename);
   let body = file.toString();
-  return parsePieceYml(body);
+  let extension = path.extname(filename);
+  switch (extension) {
+    case ".yml":
+      return parsePieceYml(body);
+    case ".txt":
+      return parsePieceTxt(body);
+    default:
+      throw new Error(
+        `piece with filename ${filename} has unexpected extension ${extension}`
+      );
+  }
 }
 
 export function loadPieces(): Piece[] {
@@ -120,7 +153,7 @@ function readDirectory(tree: dirTree.DirectoryTree): Directory {
 }
 
 export function loadDirectory(): Directory {
-  let tree = dirTree("pieces/", { extensions: /\.yml$/ });
+  let tree = dirTree("pieces/", { extensions: /\.(yml|txt)$/ });
   return readDirectory(tree);
 }
 
