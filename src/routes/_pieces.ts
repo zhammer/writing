@@ -62,9 +62,7 @@ export type DirectoryLS = {
   children: ListItem[];
 };
 
-function readPiece(filename: string): Piece {
-  let file = fs.readFileSync(filename);
-  let body = file.toString();
+function parsePieceYml(body: string): Piece {
   let piece: Piece = yml.parse(body);
   return {
     ...piece,
@@ -74,6 +72,16 @@ function readPiece(filename: string): Piece {
     })),
     size: body.length,
   };
+}
+
+function parsePieceTxt(body: string): Piece {
+  throw new Error("not implmented");
+}
+
+function readPiece(filename: string): Piece {
+  let file = fs.readFileSync(filename);
+  let body = file.toString();
+  return parsePieceYml(body);
 }
 
 export function loadPieces(): Piece[] {
