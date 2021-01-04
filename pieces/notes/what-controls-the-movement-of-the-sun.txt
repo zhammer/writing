@@ -1,0 +1,26 @@
+```piece
+title: what controls the movement of the sun?
+slug: what-controls-the-movement-of-the-sun
+date: 2020-12-22
+description: ""
+meta:
+  song:
+    name: Rain
+    artist: Walter Wanderley
+    url: https://s3.amazonaws.com/zhammer-ink/rain.mp3
+```
+
+what controls the movement of the sun?
+the panorama hanging above the baby’s crib?
+the hypotheses’ of ceo?
+the dusty book, “goodnight moon”, buried beneath games and garbage on a shelf?
+
+last night two planets collided.
+no supernova,
+no great change,
+no ripple through the cosmos.
+
+a great journalist sat outside
+on a cloudy night
+and set her intentions
+for the coming year.

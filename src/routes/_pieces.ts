@@ -82,7 +82,9 @@ function parsePieceTxt(body: string): Piece {
   if (match.length !== 2) {
     throw new Error("didn't find piece info for piece with body: " + body);
   }
-  let pieceInfo = yml.parse(match[1]);
+  // for now the piece's "meta" stanza gets applied to the first scene,
+  // since we only make one scene out of the entire .txt file body
+  let { meta = {}, ...pieceInfo } = yml.parse(match[1]);
   let cleanedBody = body.replace(regex, "");
   return {
     ...pieceInfo,
@@ -90,6 +92,7 @@ function parsePieceTxt(body: string): Piece {
       {
         name: "main",
         type: "Default",
+        meta,
         sections: [
           {
             type: "Text",
