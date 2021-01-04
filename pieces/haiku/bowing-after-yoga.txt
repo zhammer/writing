@@ -2,6 +2,7 @@
 title: bowing after yoga
 slug: bowing-after-yoga
 date: 2021-01-04
+description: ""
 ```
 bowing after yoga
 i think of
