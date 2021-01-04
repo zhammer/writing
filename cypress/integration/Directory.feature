@@ -15,7 +15,6 @@ Feature: Directory
   Scenario Outline: I got to the piece <name> in the haiku directory
     When I visit "/"
     And I click the link "haiku"
-    And I am on "/haiku"
     And I click the link "<name>"
     Then I am on "/<slug>"
     And I see "<contains>"
