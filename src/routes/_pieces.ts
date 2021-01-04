@@ -64,6 +64,19 @@ export type DirectoryLS = {
   children: ListItem[];
 };
 
+// computes the 'size' of an array of scenes from a piece.
+// the size is the number of characters in the actual text
+// of the piece.
+function computeSize(scenes: Scene[]): number {
+  let size = 0;
+  scenes.forEach((scene) => {
+    scene.sections.forEach((section) => {
+      size += section.content.length;
+    });
+  });
+  return size;
+}
+
 function parsePieceYml(body: string): Piece {
   let piece: Piece = yml.parse(body);
   return {
@@ -72,7 +85,7 @@ function parsePieceYml(body: string): Piece {
       ...scene,
       type: scene.type || "Default",
     })),
-    size: body.length,
+    size: computeSize(piece.scenes),
   };
 }
 
@@ -82,22 +95,27 @@ function parsePieceTxt(body: string): Piece {
   if (match.length !== 2) {
     throw new Error("didn't find piece info for piece with body: " + body);
   }
-  let pieceInfo = yml.parse(match[1]);
+  // for now the piece's "meta" stanza gets applied to the first scene,
+  // since we only make one scene out of the entire .txt file body
+  let { meta = {}, ...pieceInfo } = yml.parse(match[1]);
   let cleanedBody = body.replace(regex, "");
+  let scenes: Scene[] = [
+    {
+      name: "main",
+      type: "Default",
+      meta,
+      sections: [
+        {
+          type: "Text",
+          content: cleanedBody,
+        },
+      ],
+    },
+  ];
   return {
     ...pieceInfo,
-    scenes: [
-      {
-        name: "main",
-        type: "Default",
-        sections: [
-          {
-            type: "Text",
-            content: cleanedBody,
-          },
-        ],
-      },
-    ],
+    size: computeSize(scenes),
+    scenes,
   };
 }
 
