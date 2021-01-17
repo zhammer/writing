@@ -4,7 +4,11 @@ slug: can-i-once-again-find-beauty-in-the-dark
 date: 2021-01-17
 description: ""
 
-# todo: bambuco en si mayor by teresa gomez
+meta:
+  song:
+    name: Bambuco en Si Mayor
+    artist: Teresa Gómez
+    url: https://s3.amazonaws.com/zhammer-ink/bambuco-en-si-minor.mp3
 ```
 
 can i  once again find beauty in the dark?
