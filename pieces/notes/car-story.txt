@@ -1,0 +1,30 @@
+```piece
+title: car story
+slug: car-story
+date: 2021-03-04
+description: ""
+
+meta:
+  song:
+    name: Come Down - Live
+    artist: Sylvan Esso
+    url: https://s3.amazonaws.com/zhammer-ink/come-down-live.mp3
+```
+
+I want to try to get down a story I told to myself while driving home this weekend. It's a short story; I don't remember most of it. I was driving home listening to a song - I can't remember what song - and I was telling this story to myself in a british accent. I had been listening to Life Without Buildings - I love the way she just, kind of speaks over music, stopping herself mid-sentence, repeating herself, occassionally saying something deeply profound - "I thought about you to like the 9th degree" - occasionally saying something that isn't profound, but begins to take meaning, and she repeats it, over and over, weaving it between other feelings, bringing it back into the story after it's faded away, after something has changed.
+
+The story basically went like this:
+
+A man and a woman meet at an ice cream shop. Or maybe it was a bakery. But they are in line to the ice cream shop. They are in line to the ice cream shop but it is maybe a bakery and the man is writing down a note on his phone. It says something like "I'm looking for something." And, they're in line to this coffee shop and he's writing this note about he's looking for something. And the, and, it's a very profound thing to him. He's in line at this coffee shop, or ice cream shop, or bakery, and he's standing in line waiting to be called, and he's writing this note about how he's looking for something. And it's very profound to him.
+
+What, I don't remember exactly how this transitions but then the woman finds a button, it's a slightly stupid line, but she finds a button that had fallen off his shirt, or his sweater, and picks it up, and gives it to him, and... It's a stupid line but they're at this coffee shop, or ice cream shop, and they're standing in line, she gives him this button and he, it becomes clear to him that you know, it's not this profound thing. It's not like he *lost* something. He just lost something, his button.
+
+I'm doing such a poor job telling it again! It came out very clear the first time.
+
+So basically he is quite relived, and there is something special in that she reminds him that, you know, he wasn't looking for *something*, you know, he was looking for a button. So they get some coffee. Who knows who asks whom. But they go out and get a coffee. And there's something very sexual about it. Because, you know, coffee is considered tame, but there's something very sexual about it. You know, you're in this cozy place, you're in a place that lets you feel unguarded, you know, you can feel very young in a coffee shop. All those smells. And, you know, the coffee is warm. And you're both just, sort of, looking at each other in the eyes, drinking something warm. And the coffee, I don't remember what I was getting at, it doesn't taste like anything else except for coffee.
+
+I don't remember what happens. I remember now. They exchange numbers. She goes home. He does as well. And then it's night, and she texts him that she can't find her cat. And that she, that her roommate is gone, and she doesn't know who else to text, so she wants him to come over. And he comes over. And, you know, when he comes over, she's in her apartment, and there's no cat, and he says "well we should look for this cat" and she says that there's *no* cat. That she doesn't have a cat. You know they had met each other at this coffee shop, or this ice cream shop, or this bakery, and now he's at her apartment to help her look for her cat but there's no cat. And at first, you know, it's such a strangely deep lie but at, you know, there's nothing, what I then said, driving in that car, at some point, is: "what's the harm of a little white lie?" Because now they're together. And he thinks, you know, if this is what it took, so be it.
+
+And that's kind of the story, except for the fact that after all of this they wake up the next morning, he wakes up the next morning, and, you know, he's in her apartment but he wakes up the next morning and the woman is gone. And, you know, it's her apartment, so she's not *gone for good* or anything, there's some level of trust there, you know, but she's gone. He looks around the apartment and can't find her. And so he gets some tea, or some water, and drinks a bit, and sits back on the bed. It's sunny out, you know, so he's just kind of waking up into the morning. And, you know, the, what I said in the car, I still don't know what it means but it seemed like a fitting end to the story, is that, you know, where is she? And that, *that* is the moral of the story. That, it doesn't make much sense. But "where is she?".. that that's the moral of the story. It doesn't make much sense. But that's the moral of the story.
+
+(It made a lot more sense in the car.)
