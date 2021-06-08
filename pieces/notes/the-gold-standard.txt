@@ -8,7 +8,7 @@ meta:
   song:
     name: Absent Minded
     artist: Gabríel Ólafs
-    url: /music/absent-minded.mp3
+    url: /audio/absent-minded.mp3
 ```
 
 BEGIN.
