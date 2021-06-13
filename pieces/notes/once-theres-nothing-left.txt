@@ -8,7 +8,7 @@ meta:
   song:
     name: Come Down - Live
     artist: Sylvan Esso
-    url: https://s3.amazonaws.com/zhammer-ink/come-down-live.mp3
+    url: /audio/come-down-live.mp3
 ```
 
 once there’s nothing left

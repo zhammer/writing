@@ -8,7 +8,7 @@ meta:
   song:
     name: Come Down - Live
     artist: Sylvan Esso
-    url: https://s3.amazonaws.com/zhammer-ink/come-down-live.mp3
+    url: /audio/come-down-live.mp3
 ```
 
 I want to try to get down a story I told to myself while driving home this weekend. It's a short story; I don't remember most of it. I was driving home listening to a song - I can't remember what song - and I was telling this story to myself in a british accent. I had been listening to Life Without Buildings - I love the way she just, kind of speaks over music, stopping herself mid-sentence, repeating herself, occassionally saying something deeply profound - "I thought about you to like the 9th degree" - occasionally saying something that isn't profound, but begins to take meaning, and she repeats it, over and over, weaving it between other feelings, bringing it back into the story after it's faded away, after something has changed.
