@@ -1,0 +1,16 @@
+```piece
+title: white bike
+slug: white-bike
+date: 2021-06-13
+description: ""
+
+# meta:
+#   song:
+#     name: 
+#     artist:
+#     url:
+```
+
+white bike on the side of the road
+"camille savoy—
+54 years old."
