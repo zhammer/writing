@@ -24,3 +24,8 @@ Feature: Directory
       | chasidic man        | haiku/chasidic-man        | smells like soup |
       | in my parents house | haiku/in-my-parents-house | time feels old   |
       | Parent Directory    |                           | Arturo           |
+
+  Scenario: I visit a directory with a trailing slash
+    When I visit "haiku/"
+    And I click the link "dream haiku"
+    Then I see "exploding drum"
