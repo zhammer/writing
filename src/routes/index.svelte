@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  export async function preload({ page, fetch }) {
+  export async function load({ page, fetch }) {
     let resp = await fetch("pieces.json");
     let data = await resp.json();
     return { props: { directory: data.directory, query: page.query }};

@@ -8,8 +8,7 @@ pieces.forEach((piece) => {
 });
 
 export function get({ params }) {
-  // the `slug` parameter is available because
-  // this file is called [slug].json.js
+  console.log(params);
   const { slug } = params;
   let item = find(directory, slug[0].split(",").filter(Boolean));
 
