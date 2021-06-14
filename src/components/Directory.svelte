@@ -20,8 +20,8 @@
   export let query: any;
 
   $: sort = {
-    column: query.C || "N",
-    order: query.O || "A",
+    column: query.get('C') || "N",
+    order: query.get('O') || "A",
   };
 
   let isRoot = directory.slug === "";
