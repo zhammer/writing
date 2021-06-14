@@ -96,17 +96,17 @@
       <tr>
         <th valign="top" />
         <th>
-          <a href="{directory.slug}?C=N&O={orderParam(sort, 'N')}">Name</a>
+          <a href="{entryHref(`?C=N&O=${orderParam(sort, 'N')}`)}">Name</a>
         </th>
         <th>
-          <a href="{directory.slug}?C=M&O={orderParam(sort, 'M')}">Last modified</a>
+          <a href="{entryHref(`?C=M&O=${orderParam(sort, 'M')}`)}">Last modified</a>
         </th>
         <th>
-          <a href="{directory.slug}?C=S&O={orderParam(sort, 'S')}">Size</a>
+          <a href="{entryHref(`?C=S&O=${orderParam(sort, 'S')}`)}">Size</a>
         </th>
         <th>
           <a
-            href="{directory.slug}?C=D&O={orderParam(sort, 'D')}">Description</a>
+            href="{entryHref(`?C=D&O=${orderParam(sort, 'D')}`)}">Description</a>
         </th>
       </tr>
       <tr>
