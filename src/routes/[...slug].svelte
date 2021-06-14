@@ -5,7 +5,7 @@
   export async function load({ page, fetch }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
-    const res = await fetch(`/pieces/${page.params.slug}`);
+    const res = await fetch(`/pieces_data/${page.params.slug}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
