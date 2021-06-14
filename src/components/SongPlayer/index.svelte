@@ -15,7 +15,7 @@
 
   // we can only check the userAgent from the browser in JS land
   // (once the component has mounted on the browser). referencing
-  // `navigator` outside of onMount would throw an error as sapper
+  // `navigator` outside of onMount would throw an error as svelte-kit
   // would try to reference the browser's narrator in ssr.
   //
   // (checking user-agent on the server would be fine, but since the
