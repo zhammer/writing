@@ -1,10 +1,10 @@
 .DS_Store
 /node_modules/
 yarn-error.log
-/__sapper__/
 
 # Local Netlify folder
 .netlify
 
 .svelte-kit/
 build/
+cypress/videos/
