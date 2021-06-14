@@ -29,3 +29,9 @@ Feature: Directory
     When I visit "haiku/"
     And I click the link "dream haiku"
     Then I see "exploding drum"
+
+  Scenario: I sort pieces with a trailing slash
+    When I visit "haiku/"
+    And I click the link "Last modified"
+    # just check the page isn't broken
+    Then I see "Index of haiku/"
