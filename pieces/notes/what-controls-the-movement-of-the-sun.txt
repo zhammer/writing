@@ -7,7 +7,7 @@ meta:
   song:
     name: Rain
     artist: Walter Wanderley
-    url: https://s3.amazonaws.com/zhammer-ink/rain.mp3
+    url: /audio/rain.mp3
 ```
 
 what controls the movement of the sun?
