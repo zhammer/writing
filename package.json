@@ -2,22 +2,19 @@
   "name": "writing",
   "description": "zach's writing",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy --concurrent 1",
-    "start": "node __sapper__/build",
-    "validate": "svelte-check --ignore src/node_modules/@sapper",
+    "dev": "svelte-kit dev",
+    "export": "svelte-kit build",
+    "start": "node build",
+    "validate": "svelte-check",
     "new": "node scripts/newPiece.js"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   },
   "dependencies": {
-    "compression": "^1.7.1",
     "directory-tree": "^2.2.5",
-    "polka": "next",
-    "sirv": "^1.0.0",
     "yaml": "^1.10.0"
   },
   "devDependencies": {
@@ -31,6 +28,8 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@rollup/plugin-replace": "^2.2.0",
     "@rollup/plugin-typescript": "^6.0.0",
+    "@sveltejs/adapter-static": "^1.0.0-next.0",
+    "@sveltejs/kit": "^1.0.0-next.1",
     "@tsconfig/svelte": "^1.0.10",
     "@types/compression": "^1.7.0",
     "@types/node": "^14.11.1",
@@ -40,12 +39,12 @@
     "rollup": "^2.3.4",
     "rollup-plugin-svelte": "^6.0.0",
     "rollup-plugin-terser": "^7.0.0",
-    "sapper": "^0.28.0",
     "serve": "^11.3.2",
     "svelte": "^3.17.3",
     "svelte-check": "^1.0.46",
     "svelte-preprocess": "^4.3.0",
     "tslib": "^2.0.1",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "vite": "^2.3.7"
   }
 }
