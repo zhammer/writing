@@ -69,6 +69,13 @@
       ? (Math.abs(num) / 1000).toFixed(1) + "k"
       : `${Math.abs(num)}`;
   }
+
+  function entryHref(entrySlug: string) {
+    if (isRoot) {
+      return `/${entrySlug}`
+    }
+    return `/${directory.slug}/${entrySlug}`
+  }
 </script>
 
 <style>
@@ -124,7 +131,7 @@
           <td>
             <a
               sveltekit:prefetch
-              href="{directory.slug}/{entry.slug}">{entry.title}</a>
+              href="{entryHref(entry.slug)}">{entry.title}</a>
           </td>
           <td align="right">{entry.date}</td>
           <td align="right">{format(entry.size)}</td>
