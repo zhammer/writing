@@ -20,8 +20,8 @@
   export let query: any;
 
   $: sort = {
-    column: query.C || "N",
-    order: query.O || "A",
+    column: query.get('C') || "N",
+    order: query.get('O') || "A",
   };
 
   let isRoot = directory.slug === "";
@@ -111,7 +111,7 @@
       {#if !isRoot}
         <tr>
           <td><img src="/back.gif" alt="[PARENTDIR]" /></td>
-          <td><a rel="prefetch" href="/">Parent Directory</a></td>
+          <td><a sveltekit:prefetch href="/">Parent Directory</a></td>
         </tr>
       {/if}
       {#each listItems as entry}
@@ -123,7 +123,7 @@
           </td>
           <td>
             <a
-              rel="prefetch"
+              sveltekit:prefetch
               href="{directory.slug}/{entry.slug}">{entry.title}</a>
           </td>
           <td align="right">{entry.date}</td>
@@ -138,5 +138,5 @@
       </tr>
     </tbody>
   </table>
-  <address>{directory.meta.description || 'Sapper/0.28.9 Server'}</address>
+  <address>{directory.meta.description || 'SvelteKit/1.0.0-next.115 Server'}</address>
 </div>

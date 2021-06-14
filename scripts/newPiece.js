@@ -1,5 +1,5 @@
-const { writeFileSync } = require("fs");
-const { argv } = require("process");
+import { writeFileSync } from "fs";
+import { argv } from "process";
 
 function slugify(text) {
     return text.toString().toLowerCase()
