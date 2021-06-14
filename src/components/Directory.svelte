@@ -111,7 +111,7 @@
       {#if !isRoot}
         <tr>
           <td><img src="/back.gif" alt="[PARENTDIR]" /></td>
-          <td><a rel="prefetch" href="/">Parent Directory</a></td>
+          <td><a sveltekit:prefetch href="/">Parent Directory</a></td>
         </tr>
       {/if}
       {#each listItems as entry}
@@ -123,7 +123,7 @@
           </td>
           <td>
             <a
-              rel="prefetch"
+              sveltekit:prefetch
               href="{directory.slug}/{entry.slug}">{entry.title}</a>
           </td>
           <td align="right">{entry.date}</td>
