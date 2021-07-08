@@ -1,0 +1,15 @@
+```piece
+title: the night fisherman
+slug: the-night-fisherman
+date: 2021-07-04
+description: ""
+
+meta:
+  song:
+    name: Change Is the Season
+    artist: Willie J Healey
+    url: /audio/change-is-the-season.mp3
+```
+the night fisherman
+i give an awkward wave
+he has the whole shining river
