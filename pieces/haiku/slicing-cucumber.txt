@@ -1,0 +1,15 @@
+```piece
+title: slicing cucumber
+slug: slicing-cucumber
+date: 2021-07-1?
+description: ""
+
+# meta:
+#   song:
+#     name: 
+#     artist:
+#     url:
+```
+slicing cucumber
+a slice rolls off the table
+and falls on the ground
