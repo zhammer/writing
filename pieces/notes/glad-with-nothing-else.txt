@@ -1,0 +1,15 @@
+```piece
+title: glad with nothing else
+slug: glad-with-nothing-else
+date: 2021-08-08
+description: ""
+
+meta:
+  song:
+    name: Quartal Reels
+    artist: Robert Dallas Gray
+    url: /audio/quartal-reels.mp3
+```
+
+glad with nothing else
+Thats how i'll see you
