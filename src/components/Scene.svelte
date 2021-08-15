@@ -102,7 +102,7 @@
 
   .Subtitle {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +112,7 @@
   }
   @media (min-width: 35em) {
     .Subtitle {
-      font-size: 4rem;
+      font-size: 3rem;
     }
   }
 
