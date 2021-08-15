@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import type { Scene } from "../routes/_pieces";
+  import type { ProcessedScene, Scene, Section } from "../routes/_pieces";
   import { isMobile } from "./SongPlayer/util";
   export let scene: Scene;
   export let showNavHint: boolean;
@@ -10,12 +10,41 @@
   onMount(() => {
     mobile = isMobile(navigator.userAgent);
   });
+
+  function processScene(scene: Scene): ProcessedScene {
+    const footnoteRegex = /\{\{\s*footnote\s*"(.+?)"\s*\}\}/g;
+    let processedSections: Section[] = [];
+    let footnotes: string[] = [];
+
+    scene.sections.forEach((section) => {
+      // collect footnotes
+      let match: RegExpExecArray;
+      while ((match = footnoteRegex.exec(section.content))) {
+        footnotes.push(match[1]);
+      }
+
+      processedSections.push({
+        ...section,
+        content: section.content.replace(footnoteRegex, ""),
+      });
+    });
+
+    return {
+      ...scene,
+      sections: processedSections,
+      footnotes,
+    };
+  }
+
+  // https://github.com/sveltejs/svelte/issues/4965, but not important atm since
+  // this isn't dynamic
+  let processedScene = processScene(scene);
 </script>
 
 <section>
   <div>
-    {#each scene.sections as section}
-      <p class={section.type}>{section.content}</p>
+    {#each processedScene.sections as section}
+      <p class={section.type}>{@html section.content}</p>
     {/each}
     {#if showNavHint}
       <p class="hint">
@@ -23,6 +52,13 @@
       </p>
     {/if}
   </div>
+  {#if processedScene.footnotes}
+    <ol>
+      {#each processedScene.footnotes as footnote}
+        <li>{footnote}</li>
+      {/each}
+    </ol>
+  {/if}
 </section>
 
 <style>

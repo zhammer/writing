@@ -30,6 +30,10 @@ export type Scene = {
   };
 };
 
+export type ProcessedScene = Scene & {
+  footnotes: string[];
+}
+
 export type ListItem = {
   title: string;
   date: string;
