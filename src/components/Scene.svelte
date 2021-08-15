@@ -12,6 +12,19 @@
   });
 </script>
 
+<section>
+  <div>
+    {#each scene.sections as section}
+      <p class={section.type}>{section.content}</p>
+    {/each}
+    {#if showNavHint}
+      <p class="hint">
+        ({mobile ? "swipe right" : "press the right arrow key"})
+      </p>
+    {/if}
+  </div>
+</section>
+
 <style>
   @keyframes fadein {
     from {
@@ -27,7 +40,7 @@
     margin-top: 1em;
     font-size: 1.25rem;
     color: darkgray;
-    animation: fadein 1s ease-in 3s backwards;
+    animation: fadein 1s ease-in 5s backwards;
   }
 
   .Action {
@@ -87,21 +100,24 @@
     }
   }
 
+  .Subtitle {
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+
+    animation: fadein 1s ease-in 3s backwards;
+  }
+  @media (min-width: 35em) {
+    .Subtitle {
+      font-size: 4rem;
+    }
+  }
+
   p {
     margin-block-end: 0;
     margin-block-start: 0;
   }
 </style>
-
-<section>
-  <div>
-    {#each scene.sections as section}
-      <p class={section.type}>{section.content}</p>
-    {/each}
-    {#if showNavHint}
-      <p class="hint">
-        ({mobile ? 'swipe right' : 'press the right arrow key'})
-      </p>
-    {/if}
-  </div>
-</section>

@@ -8,9 +8,9 @@ scenes:
     type: Card
     sections:
       - type: Title
-        content: >-
-          DRUM
-          (CASKET)
+        content: DRUM
+      - type: Subtitle
+        content: (CASKET)
   - name: Front Inscription
     type: Card
     sections:
@@ -31,8 +31,11 @@ scenes:
       - type: Text
         content: >-
           where the old men in stores...
+
           where the beach nearby...
+
           phosphorescent night...
+
           selling old trinkets for gold...
   - name: In Back of a Car in the Rain
     meta:
