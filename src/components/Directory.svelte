@@ -72,17 +72,11 @@
 
   function entryHref(entrySlug: string) {
     if (isRoot) {
-      return `/${entrySlug}`
+      return `/${entrySlug}`;
     }
-    return `/${directory.slug}/${entrySlug}`
+    return `/${directory.slug}/${entrySlug}`;
   }
 </script>
-
-<style>
-  .container {
-    margin: 8px;
-  }
-</style>
 
 <svelte:head>
   <title>Index of {directory.slug}/</title>
@@ -96,17 +90,18 @@
       <tr>
         <th valign="top" />
         <th>
-          <a href="{entryHref(`?C=N&O=${orderParam(sort, 'N')}`)}">Name</a>
+          <a href={entryHref(`?C=N&O=${orderParam(sort, "N")}`)}>Name</a>
         </th>
         <th>
-          <a href="{entryHref(`?C=M&O=${orderParam(sort, 'M')}`)}">Last modified</a>
+          <a href={entryHref(`?C=M&O=${orderParam(sort, "M")}`)}
+            >Last modified</a
+          >
         </th>
         <th>
-          <a href="{entryHref(`?C=S&O=${orderParam(sort, 'S')}`)}">Size</a>
+          <a href={entryHref(`?C=S&O=${orderParam(sort, "S")}`)}>Size</a>
         </th>
         <th>
-          <a
-            href="{entryHref(`?C=D&O=${orderParam(sort, 'D')}`)}">Description</a>
+          <a href={entryHref(`?C=D&O=${orderParam(sort, "D")}`)}>Description</a>
         </th>
       </tr>
       <tr>
@@ -124,14 +119,12 @@
       {#each listItems as entry}
         <tr>
           <td>
-            {#if entry.type === 'DIR'}
+            {#if entry.type === "DIR"}
               <img src="/folder.gif" alt="[DIR]" />
             {:else}<img src="/text.gif" alt="[TXT]" />{/if}
           </td>
           <td>
-            <a
-              sveltekit:prefetch
-              href="{entryHref(entry.slug)}">{entry.title}</a>
+            <a sveltekit:prefetch href={entryHref(entry.slug)}>{entry.title}</a>
           </td>
           <td align="right">{entry.date}</td>
           <td align="right">{format(entry.size)}</td>
@@ -145,5 +138,13 @@
       </tr>
     </tbody>
   </table>
-  <address>{directory.meta.description || 'SvelteKit/1.0.0-next.115 Server'}</address>
+  <address>
+    {directory.meta.description || "SvelteKit/1.0.0-next.115 Server"}
+  </address>
 </div>
+
+<style>
+  .container {
+    margin: 8px;
+  }
+</style>
