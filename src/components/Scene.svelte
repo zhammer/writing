@@ -56,18 +56,11 @@
   }
 
   :global(.footnote-ref) {
-    color: inherit;
-    text-decoration: none;
     font-weight: bold;
     cursor: pointer;
 
     vertical-align: top;
     font-size: 0.6em;
-  }
-
-  :global(.footnote-ref:hover) {
-    color: inherit;
-    text-decoration: none;
   }
 
   .hint {
