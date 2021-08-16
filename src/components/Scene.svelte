@@ -4,6 +4,7 @@
   import type { ProcessedScene, Scene, Section } from "../routes/_pieces";
   import { isMobile } from "./SongPlayer/util";
   export let scene: Scene;
+  export let sceneNumber: number;
   export let showNavHint: boolean;
   let mobile: boolean;
 
@@ -17,15 +18,19 @@
     let footnotes: string[] = [];
 
     scene.sections.forEach((section) => {
-      // collect footnotes
-      let match: RegExpExecArray;
-      while ((match = footnoteRegex.exec(section.content))) {
-        footnotes.push(match[1]);
-      }
+      let index = 0;
+      let content = section.content.replaceAll(
+        footnoteRegex,
+        (match, group): string => {
+          index++;
+          footnotes.push(group);
+          return `<a class="footnote-ref" href="#footnote-${sceneNumber}-${index}"><sup>${index}</sup></a>`;
+        }
+      );
 
       processedSections.push({
         ...section,
-        content: section.content.replace(footnoteRegex, ""),
+        content,
       });
     });
 
@@ -54,8 +59,8 @@
   </div>
   {#if processedScene.footnotes}
     <ol>
-      {#each processedScene.footnotes as footnote}
-        <li>{footnote}</li>
+      {#each processedScene.footnotes as footnote, i}
+        <li class="footnote" id="footnote-{sceneNumber}-{i + 1}">{footnote}</li>
       {/each}
     </ol>
   {/if}
@@ -69,6 +74,23 @@
     to {
       opacity: 1;
     }
+  }
+
+  :global(.footnote-ref) {
+    color: inherit;
+    text-decoration: none;
+
+    vertical-align: top;
+    font-size: 0.6em;
+  }
+
+  :global(.footnote-ref:hover) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .footnote:target {
+    font-weight: bold;
   }
 
   .hint {

@@ -51,6 +51,37 @@
   }
 </script>
 
+<svelte:window
+  on:keydown={handleKeydown}
+  use:swipeable
+  on:swiperight={handleSwipeRight}
+  on:swipeleft={handleSwipeLeft}
+/>
+
+<svelte:head>
+  <title>{piece.title}</title>
+</svelte:head>
+
+<div class="container">
+  {#each piece.scenes as scene, i}
+    {#if sceneNumber === i}
+      <div
+        in:fade|local={{ delay: fadeInDelay, duration: 1500 }}
+        on:introstart={scrollToTop}
+        out:fade|local
+        class={`scene ${scene.type}`}
+      >
+        <Scene
+          {scene}
+          sceneNumber={i + 1}
+          showNavHint={piece.scenes.length > 1 && sceneNumber === 0}
+        />
+      </div>
+    {/if}
+  {/each}
+</div>
+<SongPlayer {piece} {sceneNumber} />
+
 <style>
   /*
    * We fadein the entire container because, as far as I can tell,
@@ -83,30 +114,3 @@
     top: 20%;
   }
 </style>
-
-<svelte:window
-  on:keydown={handleKeydown}
-  use:swipeable
-  on:swiperight={handleSwipeRight}
-  on:swipeleft={handleSwipeLeft} />
-
-<svelte:head>
-  <title>{piece.title}</title>
-</svelte:head>
-
-<div class="container">
-  {#each piece.scenes as scene, i}
-    {#if sceneNumber === i}
-      <div
-        in:fade|local={{ delay: fadeInDelay, duration: 1500 }}
-        on:introstart={scrollToTop}
-        out:fade|local
-        class={`scene ${scene.type}`}>
-        <Scene
-          {scene}
-          showNavHint={piece.scenes.length > 1 && sceneNumber === 0} />
-      </div>
-    {/if}
-  {/each}
-</div>
-<SongPlayer {piece} {sceneNumber} />
