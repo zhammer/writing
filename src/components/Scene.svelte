@@ -23,9 +23,6 @@
       });
     })();
   });
-
-  // https://github.com/sveltejs/svelte/issues/4965, but not important atm since
-  // this isn't dynamic
 </script>
 
 <section>
