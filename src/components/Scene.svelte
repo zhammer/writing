@@ -11,9 +11,7 @@
     mobile = isMobile(navigator.userAgent);
 
     (function addFootnoteScrolling() {
-      console.log("updating");
       let footnotes = document.querySelector("#footnotes");
-      console.log(footnotes);
       if (!footnotes) {
         return;
       }
