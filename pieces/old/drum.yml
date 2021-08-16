@@ -117,7 +117,8 @@ scenes:
       - type: Text
         content: "[REMOVED]"
   - name: Back Cover
+    type: Card
     sections:
-      - type: Text
+      - type: TextCenter
         content: >-
           ...i even say before this - "hey we could also walk at night" but we cant & she wants to see me & i want to see her - to my right - with the sea behind her - tranquil - holding each other's hands by just the fingertips almost ready to pull & break grasps - tho to stay like that - like dancing with your lips so close but not kissing - and know both of us how fragile & free our love is - & i would watch her sad eyes look out forward on the beach watching the waves roll in rolls & hearing their faraway crashes & seeing the silentest ones way in the distance like faraway baseballs & birds and say "i just want to go away forever" exactly as she would gentle poetry voice internal & without the beauty of her mouth had i not been there...
