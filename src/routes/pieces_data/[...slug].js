@@ -1,4 +1,4 @@
-import { loadPieces, find, loadDirectory, ls } from "../_pieces";
+import { loadPieces, find, loadDirectory, ls, processPiece } from "../_pieces";
 
 const directory = loadDirectory();
 const pieces = loadPieces();
@@ -14,6 +14,8 @@ export function get({ params }) {
     if (item) {
         if ("children" in item) {
             item = ls(item);
+        } else {
+            item = processPiece(item);
         }
 
         return {

@@ -23,9 +23,9 @@
 <script lang="ts">
   import Directory from "../components/Directory.svelte";
   import Piece from "../components/Piece.svelte";
-  import type { Piece as PieceType, DirectoryLS } from "./_pieces";
+  import type { ProcessedPiece, DirectoryLS } from "./_pieces";
 
-  export let item: PieceType | DirectoryLS;
+  export let item: ProcessedPiece | DirectoryLS;
   export let query: any;
 </script>
 

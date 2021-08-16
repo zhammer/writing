@@ -1,16 +1,49 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import type { Scene } from "../routes/_pieces";
+  import type { ProcessedScene } from "../routes/_pieces";
   import { isMobile } from "./SongPlayer/util";
-  export let scene: Scene;
+  export let scene: ProcessedScene;
   export let showNavHint: boolean;
   let mobile: boolean;
 
   onMount(() => {
     mobile = isMobile(navigator.userAgent);
+
+    (function addFootnoteScrolling() {
+      let footnotes = document.querySelector("#footnotes");
+      if (!footnotes) {
+        return;
+      }
+      let footnoteRefs = document.querySelectorAll(".footnote-ref");
+      footnoteRefs.forEach((footnoteRef) => {
+        footnoteRef.addEventListener("click", () => {
+          footnotes.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    })();
   });
 </script>
+
+<section>
+  <div>
+    {#each scene.sections as section}
+      <p class={section.type}>{@html section.content}</p>
+    {/each}
+    {#if showNavHint}
+      <p class="hint">
+        ({mobile ? "swipe right" : "press the right arrow key"})
+      </p>
+    {/if}
+  </div>
+  {#if scene.footnotes.length > 0}
+    <ol id="footnotes">
+      {#each scene.footnotes as footnote}
+        <i><li class="footnote">{footnote}</li></i>
+      {/each}
+    </ol>
+  {/if}
+</section>
 
 <style>
   @keyframes fadein {
@@ -22,12 +55,25 @@
     }
   }
 
+  :global(.footnote-ref) {
+    font-weight: bold;
+    cursor: pointer;
+
+    vertical-align: top;
+    font-size: 0.6em;
+  }
+
   .hint {
     text-align: center;
     margin-top: 1em;
     font-size: 1.25rem;
     color: darkgray;
     animation: fadein 1s ease-in 3s backwards;
+  }
+
+  .Subtitle + .hint {
+    margin-top: 1.5em;
+    animation-delay: 8s;
   }
 
   .Action {
@@ -74,6 +120,11 @@
     white-space: pre-wrap;
   }
 
+  .TextCenter {
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
   .Title {
     text-align: center;
     font-size: 3rem;
@@ -87,21 +138,25 @@
     }
   }
 
+  .Subtitle {
+    text-align: center;
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.7;
+    color: dimgrey;
+
+    animation: fadein 2s ease-in 3.5s backwards;
+  }
+  @media (min-width: 35em) {
+    .Subtitle {
+      font-size: 3rem;
+    }
+  }
+
   p {
     margin-block-end: 0;
     margin-block-start: 0;
   }
 </style>
-
-<section>
-  <div>
-    {#each scene.sections as section}
-      <p class={section.type}>{section.content}</p>
-    {/each}
-    {#if showNavHint}
-      <p class="hint">
-        ({mobile ? 'swipe right' : 'press the right arrow key'})
-      </p>
-    {/if}
-  </div>
-</section>

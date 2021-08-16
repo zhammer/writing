@@ -128,7 +128,7 @@
           </td>
           <td align="right">{entry.date}</td>
           <td align="right">{format(entry.size)}</td>
-          <td>{entry.description}</td>
+          <td class="description">{entry.description}</td>
         </tr>
       {/each}
       <tr>
@@ -146,5 +146,9 @@
 <style>
   .container {
     margin: 8px;
+  }
+
+  td.description {
+    padding: 0 1em;
   }
 </style>
