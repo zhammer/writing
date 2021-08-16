@@ -57,10 +57,10 @@
       </p>
     {/if}
   </div>
-  {#if processedScene.footnotes}
-    <ol>
-      {#each processedScene.footnotes as footnote, i}
-        <li class="footnote" id="footnote-{sceneNumber}-{i + 1}">{footnote}</li>
+  {#if scene.footnotes}
+    <ol id="footnotes">
+      {#each scene.footnotes as footnote}
+        <li class="footnote">{footnote}</li>
       {/each}
     </ol>
   {/if}
@@ -79,6 +79,7 @@
   :global(.footnote-ref) {
     color: inherit;
     text-decoration: none;
+    font-weight: bold;
 
     vertical-align: top;
     font-size: 0.6em;
@@ -89,8 +90,8 @@
     text-decoration: none;
   }
 
-  .footnote:target {
-    font-weight: bold;
+  .footnote {
+    color: darkgray;
   }
 
   .hint {
@@ -98,7 +99,12 @@
     margin-top: 1em;
     font-size: 1.25rem;
     color: darkgray;
-    animation: fadein 1s ease-in 5s backwards;
+    animation: fadein 1s ease-in 3s backwards;
+  }
+
+  .Subtitle + .hint {
+    margin-top: 1.5em;
+    animation-delay: 8s;
   }
 
   .Action {
@@ -145,6 +151,11 @@
     white-space: pre-wrap;
   }
 
+  .TextCenter {
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
   .Title {
     text-align: center;
     font-size: 3rem;
@@ -164,9 +175,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #666;
+    line-height: 0.7;
+    color: dimgrey;
 
-    animation: fadein 1s ease-in 3s backwards;
+    animation: fadein 2s ease-in 3.5s backwards;
   }
   @media (min-width: 35em) {
     .Subtitle {
