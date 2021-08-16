@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
   /**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
+   * @type {import('@sveltejs/kit').Load}
+   */
   export async function load({ page, fetch }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
@@ -9,7 +9,11 @@
     const data = await res.json();
 
     if (res.status === 200) {
-      return { props: { item: data.item, query: page.query }};
+      let query = new URLSearchParams();
+      try {
+        query = page.query;
+      } catch (e) {}
+      return { props: { item: data.item, query: query } };
     } else {
       return { status: res.status, error: data.message };
     }
@@ -25,7 +29,7 @@
   export let query: any;
 </script>
 
-{#if 'children' in item}
+{#if "children" in item}
   <Directory directory={item} {query} />
 {:else}
   <Piece piece={item} />

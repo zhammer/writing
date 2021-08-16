@@ -2,7 +2,11 @@
   export async function load({ page, fetch }) {
     let resp = await fetch("pieces.json");
     let data = await resp.json();
-    return { props: { directory: data.directory, query: page.query }};
+    let query = new URLSearchParams();
+    try {
+      query = page.query;
+    } catch (e) {}
+    return { props: { directory: data.directory, query: query } };
   }
 </script>
 
