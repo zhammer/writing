@@ -1,54 +1,38 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import type { ProcessedScene, Scene, Section } from "../routes/_pieces";
+  import type { ProcessedScene } from "../routes/_pieces";
   import { isMobile } from "./SongPlayer/util";
-  export let scene: Scene;
-  export let sceneNumber: number;
+  export let scene: ProcessedScene;
   export let showNavHint: boolean;
   let mobile: boolean;
 
   onMount(() => {
     mobile = isMobile(navigator.userAgent);
-  });
 
-  function processScene(scene: Scene): ProcessedScene {
-    const footnoteRegex = /\{\{\s*footnote\s*"(.+?)"\s*\}\}/g;
-    let processedSections: Section[] = [];
-    let footnotes: string[] = [];
-
-    scene.sections.forEach((section) => {
-      let index = 0;
-      let content = section.content.replaceAll(
-        footnoteRegex,
-        (match, group): string => {
-          index++;
-          footnotes.push(group);
-          return `<a class="footnote-ref" href="#footnote-${sceneNumber}-${index}"><sup>${index}</sup></a>`;
-        }
-      );
-
-      processedSections.push({
-        ...section,
-        content,
+    (function addFootnoteScrolling() {
+      console.log("updating");
+      let footnotes = document.querySelector("#footnotes");
+      console.log(footnotes);
+      if (!footnotes) {
+        return;
+      }
+      let footnoteRefs = document.querySelectorAll(".footnote-ref");
+      footnoteRefs.forEach((footnoteRef) => {
+        footnoteRef.addEventListener("click", () => {
+          footnotes.scrollIntoView({ behavior: "smooth" });
+        });
       });
-    });
-
-    return {
-      ...scene,
-      sections: processedSections,
-      footnotes,
-    };
-  }
+    })();
+  });
 
   // https://github.com/sveltejs/svelte/issues/4965, but not important atm since
   // this isn't dynamic
-  let processedScene = processScene(scene);
 </script>
 
 <section>
   <div>
-    {#each processedScene.sections as section}
+    {#each scene.sections as section}
       <p class={section.type}>{@html section.content}</p>
     {/each}
     {#if showNavHint}
@@ -57,10 +41,10 @@
       </p>
     {/if}
   </div>
-  {#if scene.footnotes}
+  {#if scene.footnotes.length > 0}
     <ol id="footnotes">
       {#each scene.footnotes as footnote}
-        <li class="footnote">{footnote}</li>
+        <i><li class="footnote">{footnote}</li></i>
       {/each}
     </ol>
   {/if}
@@ -80,6 +64,7 @@
     color: inherit;
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
 
     vertical-align: top;
     font-size: 0.6em;
@@ -88,10 +73,6 @@
   :global(.footnote-ref:hover) {
     color: inherit;
     text-decoration: none;
-  }
-
-  .footnote {
-    color: darkgray;
   }
 
   .hint {

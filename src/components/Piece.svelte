@@ -3,9 +3,8 @@
   import swipeable from "../actions/swipeable";
   import SongPlayer from "../components/SongPlayer/index.svelte";
   import Scene from "./Scene.svelte";
-  import type { Piece } from "../routes/_pieces";
-  // https://open.spotify.com/track/3oSBVpyGQ9N3hPibpw0GkB
-  export let piece: Piece;
+  import type { ProcessedPiece } from "../routes/_pieces";
+  export let piece: ProcessedPiece;
 
   let sceneNumber = 0;
 
@@ -73,7 +72,6 @@
       >
         <Scene
           {scene}
-          sceneNumber={i + 1}
           showNavHint={piece.scenes.length > 1 && sceneNumber === 0}
         />
       </div>
