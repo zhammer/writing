@@ -20,8 +20,8 @@
   export let query: any;
 
   $: sort = {
-    column: query.get('C') || "N",
-    order: query.get('O') || "A",
+    column: query.get("C") || "N",
+    order: query.get("O") || "A",
   };
 
   let isRoot = directory.slug === "";
@@ -139,7 +139,7 @@
     </tbody>
   </table>
   <address>
-    {directory.meta.description || "SvelteKit/1.0.0-next.115 Server"}
+    {directory.meta.description || "SvelteKit/1.0.0-next.150 Server"}
   </address>
 </div>
 
