@@ -246,7 +246,7 @@ export function processScene(scene: Scene): ProcessedScene {
         return `<sup class="footnote-ref">${index}</sup>`;
       }
     );
-    content = section.content.replaceAll(/\*([^=*]+?)\*/g, "<i>$1</i>")
+    content = content.replaceAll(/\*([^=*]+?)\*/g, "<i>$1</i>")
 
     processedSections.push({
       ...section,
