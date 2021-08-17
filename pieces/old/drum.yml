@@ -114,9 +114,10 @@ scenes:
           PROVIDENCE,
           2015
   - name: Dedication
+    type: Card
     sections:
-      - type: Text
-        content: "[REMOVED]"
+      - type: TextCenter
+        content: Dedicated to my brother
   - name: Back Cover
     type: Card
     sections:
