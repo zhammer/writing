@@ -119,11 +119,21 @@ scenes:
           PROVIDENCE,
           2015
   - name: Dedication
+    meta:
+      song:
+        name: Babys (AIR Studios – 4AD​/​Jagjaguwar Session)
+        artist: Bon Iver
+        url: /audio/babys-air-studio.mp3
     type: Card
     sections:
       - type: TextCenter
         content: Dedicated to my brother
   - name: Back Cover
+    meta:
+      song:
+        name: Babys (AIR Studios – 4AD​/​Jagjaguwar Session)
+        artist: Bon Iver
+        url: /audio/babys-air-studio.mp3
     type: Card
     sections:
       - type: TextCenter
