@@ -1,0 +1,15 @@
+```piece
+title: plane! like a shooting star
+slug: plane-like-a-shooting-star
+date: 2021-08-22
+description: "biking down 12th st, full moon"
+
+meta:
+  song: 
+    name: Transatlantic Flight
+    artist: Leif Vollebekk
+    url: /audio/transatlantic-flight.mp3
+```
+
+plane! like a shooting star
+soars above the moon
