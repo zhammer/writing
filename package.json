@@ -14,7 +14,7 @@
     "nonGlobalStepDefinitions": true
   },
   "dependencies": {
-    "directory-tree": "^2.2.5",
+    "directory-tree": "^3.0.0",
     "yaml": "^1.10.0"
   },
   "devDependencies": {
