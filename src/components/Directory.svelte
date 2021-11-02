@@ -139,7 +139,7 @@
     </tbody>
   </table>
   <address>
-    {directory.meta.description || "SvelteKit/1.0.0-next.192 Server"}
+    {directory.meta.description || "SvelteKit/1.0.0-next.150 Server"}
   </address>
 </div>
 

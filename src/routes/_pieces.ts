@@ -179,7 +179,7 @@ function readDirectory(tree: dirTree.DirectoryTree): Directory {
 }
 
 export function loadDirectory(): Directory {
-  let tree = dirTree("pieces/", { extensions: /\.(yml|txt)$/, attributes: ["type" as any] });
+  let tree = dirTree("pieces/", { extensions: /\.(yml|txt)$/ });
   return readDirectory(tree);
 }
 
