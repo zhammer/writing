@@ -30,6 +30,21 @@ Feature: Directory
     And I click the link "dream haiku"
     Then I see "exploding drum"
 
+  Scenario Outline: I sort pieces by <field>
+    When I visit "haiku"
+    And I click the link "<field>"
+    Then I see the piece "<before>" before "<after>"
+    When I click the link "<field>"
+    Then I see the piece "<after>" before "<before>"
+
+    Examples:
+      | field         | before       | after        |
+      # the 'name' example is in reverse, since when we sort by default by name; when we click "name" we reverse the sort
+      | Name          | dream haiku  | chasidic man |
+      | Last modified | chasidic man | three leaves |
+      | Size          | chasidic man | palisades    |
+      | Description   | chasidic man | palisades    |
+
   Scenario: I sort pieces with a trailing slash
     When I visit "haiku/"
     And I click the link "Last modified"

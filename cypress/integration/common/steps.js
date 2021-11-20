@@ -20,3 +20,11 @@ Then(`I am on {string}`, (path) => {
 Then(`I see {string}`, (text) => {
   cy.contains(text);
 });
+
+Then(`I see the piece {string} before {string}`, (before, after) => {
+  cy.get("table").children().contains(before).parents('tr').invoke('index').then(beforeIndex => {
+    cy.get("table").children().contains(after).parents('tr').invoke('index').then(afterIndex => {
+      expect(afterIndex).greaterThan(beforeIndex);  
+    })
+  })
+});
