@@ -2,7 +2,7 @@ Feature: Directory
 
   Scenario Outline: I go to the piece <name>
     When I visit "/"
-    And I click the link "<name>"
+    And I click the link "<name>" and refresh
     Then I am on "/<slug>"
     And I see "<contains>"
 
@@ -14,8 +14,8 @@ Feature: Directory
 
   Scenario Outline: I got to the piece <name> in the haiku directory
     When I visit "/"
-    And I click the link "haiku"
-    And I click the link "<name>"
+    And I click the link "haiku" and refresh
+    And I click the link "<name>" and refresh
     Then I am on "/<slug>"
     And I see "<contains>"
 
@@ -27,7 +27,7 @@ Feature: Directory
 
   Scenario: I visit a directory with a trailing slash
     When I visit "haiku/"
-    And I click the link "dream haiku"
+    And I click the link "dream haiku" and refresh
     Then I see "exploding drum"
 
   Scenario Outline: I sort pieces by <field>
