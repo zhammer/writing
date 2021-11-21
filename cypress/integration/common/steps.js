@@ -10,6 +10,13 @@ When(`I click the link {string}`, (text) => {
   cy.get("a").contains(text).click();
 });
 
+When(`I click the link {string} and refresh`, (text) => {
+  // manually reloading after clicks because for some reason
+  // when cypress clicks a link, sometimes the url location changes
+  // but the page content doesn't change.
+  cy.get("a").contains(text).click().reload();
+});
+
 Then(`I am on {string}`, (path) => {
   cy.location("pathname").should("eq", path);
 });
