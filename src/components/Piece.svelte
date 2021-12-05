@@ -13,10 +13,8 @@
 
   export let piece: ProcessedPiece;
 
-  let writingPiece: ProcessedWritingPiece | null = null;
   $: writingPiece = isProcessedWritingPiece(piece) ? piece : null;
 
-  let bookplaylist: ProcessedBookPlaylist | null;
   $: bookPlaylist = isProcessedBookPlaylist(piece) ? piece : null;
 </script>
 
