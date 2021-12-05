@@ -317,7 +317,7 @@ function processWritingPiece(piece: WritingPiece): ProcessedWritingPiece {
 
 export function processPiece(piece: Piece): ProcessedPiece {
   if (isWritingPiece(piece)) {
-    processWritingPiece(piece)
+    return processWritingPiece(piece)
   } else if (isBookPlaylist(piece)) {
     return processBookPlaylist(piece)
   } else {
