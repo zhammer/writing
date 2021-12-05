@@ -8,7 +8,9 @@
   <div class="page">
     <div>
       <h1>{piece.book.title} <i>by {piece.book.author}</i></h1>
-      <img src={piece.book.image} alt="book cover" />
+      <a href={piece.book.url} title="view on google books"
+        ><img src={piece.book.image} alt="book cover" /></a
+      >
       <p>{piece.note}</p>
       <iframe
         title="playlist"

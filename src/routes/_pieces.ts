@@ -335,6 +335,7 @@ export type Book = {
   title: string;
   author: string;
   image: string;
+  url: string;
 }
 
 export type BookPlaylist = Piece & {

@@ -3,13 +3,14 @@ import fetch from "node-fetch";
 import { argv } from "process";
 import yml from "yaml";
 
-function pluckBook(payload) {
+function pluckBook(isbn, payload) {
     let firstBook = payload.items[0];
     let volumeInfo = firstBook.volumeInfo;
     return {
         title: volumeInfo.title,
         author: volumeInfo.authors[0],
         image: volumeInfo.imageLinks.thumbnail,
+        url: `https://books.google.com/books?vid=ISBN${isbn}`
     }
 }
 
@@ -23,7 +24,7 @@ if (!bookplaylist.isbn) {
 }
 let res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${bookplaylist.isbn}`);
 let resJson = await res.json();
-let book = pluckBook(resJson);
+let book = pluckBook(bookplaylist.isbn, resJson);
 let hydrated = {
     ...bookplaylist,
     book,
