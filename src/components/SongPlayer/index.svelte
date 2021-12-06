@@ -1,14 +1,14 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
-  import type { Piece } from "../../routes/_pieces";
+  import type { WritingPiece } from "../../routes/_pieces";
   import Arrow from "./Arrow.svg.svelte";
 
   import Speaker from "./Speaker.svg.svelte";
   import { isMobile } from "./util";
   import VirtualCassetteDeck from "./VirtualCassetteDeck.svelte";
 
-  export let piece: Piece;
+  export let piece: WritingPiece;
   export let sceneNumber: number;
   let mobile: boolean;
   let muted: boolean;
@@ -32,6 +32,47 @@
     muted = !muted;
   }
 </script>
+
+<div class="container">
+  {#if song}
+    {#if mobile}
+      <div class="arrow">
+        <Arrow />
+      </div>
+    {/if}
+    <div
+      role="button"
+      class="speaker"
+      class:muted
+      transition:fade
+      on:click={toggleMuted}
+      title={`${muted ? "unmute" : "mute"} audio`}
+    >
+      <Speaker />
+    </div>
+  {/if}
+</div>
+
+<!--
+  ideally, we want to use the VirtualCassetteDeck to play songs
+  on scenes, as it has nice crossfades between tracks.
+
+  on mobile we use a more basic rig for two reasons (that have applied
+  to all mobile browsers i've tested on):
+  1. mobile doesn't support programmatically setting an audio element's
+     volume (crossfades) from what i can tell, so most of that logic
+     is wasted.
+  2. mobile needs a user interaction to start playing an audio element.
+     the 'VirtualCassetteDeck' sets up one audio player per song, which
+     means that every time the song changes a new <audio /> element will
+     be added to the DOM, which will need a new user interaction to
+     start playing.
+-->
+{#if mobile}
+  <audio src={song && song.url} loop {muted} autoplay />
+{:else}
+  <VirtualCassetteDeck {piece} currentSong={song} {muted} />
+{/if}
 
 <style>
   @keyframes fadeinout {
@@ -95,43 +136,3 @@
     fill: grey;
   }
 </style>
-
-<div class="container">
-  {#if song}
-    {#if mobile}
-      <div class="arrow">
-        <Arrow />
-      </div>
-    {/if}
-    <div
-      role="button"
-      class="speaker"
-      class:muted
-      transition:fade
-      on:click={toggleMuted}
-      title={`${muted ? 'unmute' : 'mute'} audio`}>
-      <Speaker />
-    </div>
-  {/if}
-</div>
-
-<!--
-  ideally, we want to use the VirtualCassetteDeck to play songs
-  on scenes, as it has nice crossfades between tracks.
-
-  on mobile we use a more basic rig for two reasons (that have applied
-  to all mobile browsers i've tested on):
-  1. mobile doesn't support programmatically setting an audio element's
-     volume (crossfades) from what i can tell, so most of that logic
-     is wasted.
-  2. mobile needs a user interaction to start playing an audio element.
-     the 'VirtualCassetteDeck' sets up one audio player per song, which
-     means that every time the song changes a new <audio /> element will
-     be added to the DOM, which will need a new user interaction to
-     start playing.
--->
-{#if mobile}
-  <audio src={song && song.url} loop {muted} autoplay />
-{:else}
-  <VirtualCassetteDeck {piece} currentSong={song} {muted} />
-{/if}

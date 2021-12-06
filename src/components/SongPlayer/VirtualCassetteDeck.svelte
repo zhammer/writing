@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Piece, Scene } from "../../routes/_pieces";
+  import type { WritingPiece, Scene } from "../../routes/_pieces";
   import { unique } from "./util";
 
-  export let piece: Piece;
+  export let piece: WritingPiece;
   export let currentSong: Scene["meta"]["song"] | undefined;
   export let muted: boolean;
 
@@ -59,6 +59,7 @@
       {muted}
       autoplay
       in:audiofade={{ delay: 1000, duration: 250 }}
-      out:audiofade={{ duration: 1000 }} />
+      out:audiofade={{ duration: 1000 }}
+    />
   {/if}
 {/each}
