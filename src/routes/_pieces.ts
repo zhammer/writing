@@ -166,6 +166,7 @@ function parsePieceTxt(body: string): WritingPiece {
     ...pieceInfo,
     size: computeSize(scenes),
     scenes,
+    pieceType: "WritingPiece",
   };
 }
 
