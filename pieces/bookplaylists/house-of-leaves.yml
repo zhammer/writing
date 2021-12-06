@@ -21,5 +21,5 @@ note: >-
 book:
   title: Mark Z. Danielewski's House of Leaves
   author: Mark Z. Danielewski
-  image: http://books.google.com/books/content?id=qGA_3RGqTkQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+  image: https://books.google.com/books/content?id=qGA_3RGqTkQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
   url: https://books.google.com/books?vid=ISBN0375420525

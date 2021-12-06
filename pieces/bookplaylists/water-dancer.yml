@@ -15,5 +15,5 @@ isbn: "0399590609"
 book:
   title: The Water Dancer
   author: Ta-Nehisi Coates
-  image: http://books.google.com/books/content?id=iUmHDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+  image: https://books.google.com/books/content?id=iUmHDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
   url: https://books.google.com/books?vid=ISBN0399590609

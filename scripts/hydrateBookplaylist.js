@@ -9,7 +9,7 @@ function pluckBook(isbn, payload) {
     return {
         title: volumeInfo.title,
         author: volumeInfo.authors[0],
-        image: volumeInfo.imageLinks.thumbnail,
+        image: volumeInfo.imageLinks.thumbnail.replace(/^http/, "https"),
         url: `https://books.google.com/books?vid=ISBN${isbn}`
     }
 }

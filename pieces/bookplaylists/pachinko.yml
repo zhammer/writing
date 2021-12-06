@@ -14,5 +14,5 @@ isbn: "1455563919"
 book:
   title: Pachinko (National Book Award Finalist)
   author: Min Jin Lee
-  image: http://books.google.com/books/content?id=cxteDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+  image: https://books.google.com/books/content?id=cxteDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
   url: https://books.google.com/books?vid=ISBN1455563919

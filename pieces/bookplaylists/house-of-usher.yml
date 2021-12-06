@@ -16,5 +16,5 @@ isbn: "0451526759"
 book:
   title: The Fall of the House of Usher and Other Tales
   author: Edgar Allan Poe
-  image: http://books.google.com/books/content?id=4YOQvgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+  image: https://books.google.com/books/content?id=4YOQvgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
   url: https://books.google.com/books?vid=ISBN0451526759

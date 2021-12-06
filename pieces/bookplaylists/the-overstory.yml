@@ -16,5 +16,5 @@ isbn: "0393635538"
 book:
   title: "The Overstory: A Novel"
   author: Richard Powers
-  image: http://books.google.com/books/content?id=_zQsDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+  image: https://books.google.com/books/content?id=_zQsDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
   url: https://books.google.com/books?vid=ISBN0393635538
