@@ -274,6 +274,19 @@ export function find(
   return find(found, slug.slice(1));
 }
 
+// a very bad replacement for node 16 string.replaceAll
+function replaceAll(str: string, regex: RegExp, replacer: (substring: string, ...args: any[]) => string): string {
+  let prev = str;
+  for (let i = 0; i < 1000; i++) {
+    let curr = prev.replace(regex, replacer);
+    if (prev === curr) {
+      return curr;
+    }
+    prev = curr;
+  }
+  throw new Error("we may be recurring")
+}
+
 // ideally this would go in the svelte code, i guess? but i want this preprocessing
 // to always happen on the backend, or, more specifically, i don't want it to happen
 // on the browser.
@@ -284,7 +297,8 @@ export function processScene(scene: Scene): ProcessedScene {
 
   scene.sections.forEach((section) => {
     let index = 0;
-    let content = section.content.replaceAll(
+    let content = replaceAll(
+      section.content,
       footnoteRegex,
       (_, group): string => {
         index++;
@@ -292,7 +306,7 @@ export function processScene(scene: Scene): ProcessedScene {
         return `<sup class="footnote-ref">${index}</sup>`;
       }
     );
-    content = content.replaceAll(/\*([^=*]+?)\*/g, "<i>$1</i>")
+    content = content.replace(/\*([^=*]+?)\*/g, "<i>$1</i>")
 
     processedSections.push({
       ...section,
