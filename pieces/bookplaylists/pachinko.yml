@@ -1,0 +1,18 @@
+pieceType: BookPlaylist
+title: Pachinko
+slug: pachinko
+description: ""
+date: 2020-05-10
+playlist: https://open.spotify.com/playlist/7ja8Ei0SC27Y0cmzaaMQAi
+note: >
+  I just started reading Pachinko for my company's new monthly bookclub. I'm
+  reading Pachinko over Yiruma's album "Healing Piano". Yiruma is a modern
+  Korean composer / pianist; the only reason I copied the album into a playlist
+  is that a few of the songs have full band arrangements, which I find a bit
+  distracting while reading.
+isbn: "1455563919"
+book:
+  title: Pachinko (National Book Award Finalist)
+  author: Min Jin Lee
+  image: https://books.google.com/books/content?id=cxteDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+  url: https://books.google.com/books?vid=ISBN1455563919

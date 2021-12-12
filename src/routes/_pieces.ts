@@ -44,6 +44,22 @@ export type ListItem = {
 };
 
 export type Piece = {
+  pieceType: string;
+  slug: string;
+  title: string;
+  description: string;
+  size: number;
+  date: string;
+}
+
+export type Processed = {
+  processed: true;
+}
+
+export type ProcessedPiece = Piece & Processed;
+
+export type WritingPiece = Piece & {
+  pieceType: "WritingPiece";
   title: string;
   date: string;
   size: number;
@@ -52,7 +68,15 @@ export type Piece = {
   scenes: Scene[];
 };
 
-export type ProcessedPiece = Piece & {
+export function isWritingPiece(piece: Piece): piece is WritingPiece {
+  return piece.pieceType == "WritingPiece";
+}
+
+export function isProcessedWritingPiece(piece: Piece): piece is ProcessedWritingPiece {
+  return isWritingPiece(piece) && piece["processed"] === true;
+}
+
+export type ProcessedWritingPiece = WritingPiece & Processed & {
   scenes: ProcessedScene[];
 }
 
@@ -86,7 +110,25 @@ function computeSize(scenes: Scene[]): number {
 }
 
 function parsePieceYml(body: string): Piece {
-  let piece: Piece = yml.parse(body);
+  let piece: Piece =
+  {
+    // default piece type
+    pieceType: "WritingPiece",
+    ...yml.parse(body)
+  };
+  if (isWritingPiece(piece)) {
+    return parseWritingPiece(piece);
+  } else if (isBookPlaylist(piece)) {
+    return {
+      ...piece,
+      size: piece.note.length,
+    };
+  } else {
+    throw new Error(`Can't parse piece: ${body}`);
+  }
+}
+
+function parseWritingPiece(piece: WritingPiece): WritingPiece {
   return {
     ...piece,
     scenes: piece.scenes.map((scene) => ({
@@ -94,10 +136,10 @@ function parsePieceYml(body: string): Piece {
       type: scene.type || "Default",
     })),
     size: computeSize(piece.scenes),
-  };
+  }
 }
 
-function parsePieceTxt(body: string): Piece {
+function parsePieceTxt(body: string): WritingPiece {
   let regex = /```piece(.*)```\n*/gs;
   let match = regex.exec(body);
   if (match.length !== 2) {
@@ -124,6 +166,7 @@ function parsePieceTxt(body: string): Piece {
     ...pieceInfo,
     size: computeSize(scenes),
     scenes,
+    pieceType: "WritingPiece",
   };
 }
 
@@ -184,10 +227,13 @@ export function loadDirectory(): Directory {
 }
 
 function toListItem(element: Directory | Piece): ListItem {
-  if ("scenes" in element) {
-    const { scenes, ...rest } = element;
+  if ("pieceType" in element) {
     return {
-      ...rest,
+      title: element.title,
+      date: element.date,
+      size: element.size,
+      description: element.description,
+      slug: element.slug,
       type: "TXT",
     };
   }
@@ -222,7 +268,7 @@ export function find(
     return found;
   }
   // was expecting directory
-  if ("scenes" in found) {
+  if (!("meta" in found)) {
     return null;
   }
   return find(found, slug.slice(1));
@@ -261,9 +307,60 @@ export function processScene(scene: Scene): ProcessedScene {
   };
 }
 
-export function processPiece(piece: Piece): ProcessedPiece {
+
+function processWritingPiece(piece: WritingPiece): ProcessedWritingPiece {
   return {
     ...piece,
-    scenes: piece.scenes.map(processScene)
+    scenes: piece.scenes.map(processScene),
+    processed: true,
+  }
+}
+
+export function processPiece(piece: Piece): ProcessedPiece {
+  if (isWritingPiece(piece)) {
+    return processWritingPiece(piece)
+  } else if (isBookPlaylist(piece)) {
+    return processBookPlaylist(piece)
+  } else {
+    throw new Error(`can't process piece: ${JSON.stringify(piece)}`)
+  }
+}
+
+/*
+-~-+=-~-+=-~-
+P L U G I N S
+-~-+=-~-+=-~-
+*/
+
+export type Book = {
+  title: string;
+  author: string;
+  image: string;
+  url: string;
+}
+
+export type BookPlaylist = Piece & {
+  pieceType: "BookPlaylist";
+  isbn: string;
+  playlist: string;
+  note: string;
+  book: Book;
+}
+
+
+export type ProcessedBookPlaylist = BookPlaylist & Processed;
+
+export function isBookPlaylist(piece: Piece): piece is BookPlaylist {
+  return piece.pieceType == "BookPlaylist";
+}
+
+export function isProcessedBookPlaylist(piece: Piece): piece is ProcessedBookPlaylist {
+  return isBookPlaylist(piece) && piece["processed"] === true;
+}
+
+function processBookPlaylist(piece: BookPlaylist): ProcessedBookPlaylist {
+  return {
+    ...piece,
+    processed: true,
   }
 }
