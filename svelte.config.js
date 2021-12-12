@@ -6,6 +6,7 @@ const config = {
     kit: {
         adapter: adapter(),
         target: '#svelte',
+        router: false,
     },
     preprocess: preprocess(),
 };
