@@ -1,7 +1,7 @@
 ```piece
 title: falling asleep at pinnacle lodge
 slug: falling-asleep-at-pinnacle-lodge
-date: 10-03-2021
+date: 2021-09-16
 description: "during my long trail hike"
 
 # meta:
