@@ -1,4 +1,7 @@
 <script context="module" lang="ts">
+  export const router = false;
+  export const hydrate = false;
+
   // query params from apache index directory
   type Sort = {
     column:
