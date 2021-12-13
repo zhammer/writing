@@ -1,6 +1,4 @@
 ```piece
-title: genesis
-slug: genesis
 date: 2021-03-15
 description: "written in a british accent"
 

@@ -1,8 +1,5 @@
 ```piece
-title: ice falls off
-slug: ice-falls-off
 date: 2021-02-04
-description: ""
 ```
 two pieces of ice
 fall off the williamsburg bridge

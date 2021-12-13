@@ -1,8 +1,5 @@
 ```piece
-title: glad with nothing else
-slug: glad-with-nothing-else
 date: 2021-08-08
-description: ""
 
 meta:
   song:

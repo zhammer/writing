@@ -1,8 +1,5 @@
 ```piece
-title: ice in a cup
-slug: ice-in-a-cup
 date: 2021-07-17
-description: ""
 ```
 ice in a cup
 hasn't been touched

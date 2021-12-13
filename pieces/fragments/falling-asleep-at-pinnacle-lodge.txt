@@ -1,6 +1,4 @@
 ```piece
-title: falling asleep at pinnacle lodge
-slug: falling-asleep-at-pinnacle-lodge
 date: 2021-09-16
 description: "during my long trail hike"
 

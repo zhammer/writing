@@ -174,15 +174,27 @@ function readPiece(filename: string): Piece {
   let file = fs.readFileSync(filename);
   let body = file.toString();
   let extension = path.extname(filename);
+  let piece: Piece;
   switch (extension) {
     case ".yml":
-      return parsePieceYml(body);
+      piece = parsePieceYml(body);
+      break;
     case ".txt":
-      return parsePieceTxt(body);
+      piece = parsePieceTxt(body);
+      break;
     default:
       throw new Error(
         `piece with filename ${filename} has unexpected extension ${extension}`
       );
+  }
+  // defaults
+  let basename = filename.split("/").reverse()[0].split(".")[0];
+  let title = basename.replace(/-/g, " ");
+  return {
+    description: "",
+    slug: basename,
+    title,
+    ...piece,
   }
 }
 
