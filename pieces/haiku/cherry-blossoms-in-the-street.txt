@@ -1,8 +1,5 @@
 ```piece
-title: cherry blossoms in the street
-slug: cherry-blossoms-in-the-street
 date: 2021-04-21
-description: ""
 ```
 night—
 cherry blossoms in the street

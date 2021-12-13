@@ -1,8 +1,5 @@
 ```piece
-title: to zoey
-slug: to-zoey
 date: 2021-03-19
-description: ""
 ```
 there’s a dog digging a hole; it’s my dog.
 

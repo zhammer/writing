@@ -1,8 +1,5 @@
 ```piece
-title: dream haiku
-slug: dream-haiku
 date: 2021-05-26
-description: ""
 
 meta:
   song:

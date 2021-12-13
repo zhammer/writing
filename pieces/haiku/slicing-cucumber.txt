@@ -1,8 +1,5 @@
 ```piece
-title: slicing cucumber
-slug: slicing-cucumber
 date: 2021-07-1?
-description: ""
 
 # meta:
 #   song:

@@ -1,8 +1,5 @@
 ```piece
-title: car story
-slug: car-story
 date: 2021-03-04
-description: ""
 
 meta:
   song:

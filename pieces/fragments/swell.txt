@@ -1,7 +1,4 @@
 ```piece
-title: swell
-slug: swell
 date: 2021-07-16
-description: ""
 ```
 swell on me toofpicks

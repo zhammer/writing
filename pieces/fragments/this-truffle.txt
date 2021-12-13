@@ -1,8 +1,5 @@
 ```piece
-title: this truffle
-slug: this-truffle
 date: 2021-11-22
-description: ""
 
 # meta:
 #   song:
