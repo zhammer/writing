@@ -1,14 +1,6 @@
 ```piece
-title: longtrail
-slug: longtrail
-date: 2021-11-23
-description: ""
-
-# meta:
-#   song:
-#     name: 
-#     artist:
-#     url:
+date: 2021-10-02
+description: "haiku i wrote on my longtrail hike"
 ```
 
 9/12
@@ -361,6 +353,8 @@ i dream of my parents' warm car
 walking uphill
   into the tall green maples-
 luminous green dome
+
+10/2
 
 11:01am
 
