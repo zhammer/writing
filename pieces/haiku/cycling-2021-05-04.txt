@@ -1,8 +1,6 @@
 ```piece
 title: cycling 2021-05-04
-slug: cycling-2021-05-04
 date: 2021-05-04
-description: ""
 ```
 
 shaking my tuches-

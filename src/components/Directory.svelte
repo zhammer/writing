@@ -1,4 +1,7 @@
 <script context="module" lang="ts">
+  export const router = false;
+  export const hydrate = false;
+
   // query params from apache index directory
   type Sort = {
     column:
@@ -141,7 +144,7 @@
     </tbody>
   </table>
   <address>
-    {directory.meta.description || "SvelteKit/1.0.0-next.196 Server"}
+    {directory.meta.description || "SvelteKit/1.0.0-next.201 Server"}
   </address>
 </div>
 

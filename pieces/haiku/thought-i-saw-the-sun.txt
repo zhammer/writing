@@ -1,8 +1,5 @@
 ```piece
-title: thought i saw the sun
-slug: thought-i-saw-the-sun
 date: 2020-12-23
-description: ""
 ```
 thought i saw
 the sun

@@ -1,50 +1,53 @@
 {
-  "name": "writing",
-  "description": "zach's writing",
-  "version": "0.0.1",
-  "type": "module",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "export": "svelte-kit build",
-    "start": "node build",
-    "validate": "svelte-check",
-    "new": "node scripts/newPiece.js"
-  },
-  "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
-  },
-  "dependencies": {
-    "directory-tree": "^2.2.5",
-    "yaml": "^1.10.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
-    "@rollup/plugin-babel": "^5.0.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "@rollup/plugin-replace": "^2.2.0",
-    "@rollup/plugin-typescript": "^6.0.0",
-    "@sveltejs/adapter-static": "^1.0.0-next.21",
-    "@sveltejs/kit": "^1.0.0-next.196",
-    "@tsconfig/svelte": "^2.0.1",
-    "@types/compression": "^1.7.0",
-    "@types/node": "^14.11.1",
-    "@types/polka": "^0.5.1",
-    "cypress": "^9.0.0",
-    "cypress-cucumber-preprocessor": "^4.3.0",
-    "rollup": "^2.3.4",
-    "rollup-plugin-svelte": "^6.0.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "serve": "^13.0.2",
-    "svelte": "^3.44.2",
-    "svelte-check": "^2.2.4",
-    "svelte-preprocess": "^4.7.4",
-    "tslib": "^2.0.1",
-    "typescript": "^4.0.3",
-    "vite": "^2.3.7"
-  }
+    "name": "writing",
+    "description": "zach's writing",
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "dev": "svelte-kit dev",
+        "build": "svelte-kit build",
+        "preview": "svelte-kit preview",
+        "netlify": "netlify dev -d build/ -f ./netlify/functions-internal",
+        "start": "node build",
+        "validate": "svelte-check",
+        "new": "node scripts/newPiece.js"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    },
+    "dependencies": {
+        "@sveltejs/adapter-netlify": "^1.0.0-next.35",
+        "directory-tree": "^2.2.5",
+        "yaml": "^1.10.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+        "@babel/plugin-transform-runtime": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/runtime": "^7.0.0",
+        "@rollup/plugin-babel": "^5.0.0",
+        "@rollup/plugin-commonjs": "^14.0.0",
+        "@rollup/plugin-node-resolve": "^8.0.0",
+        "@rollup/plugin-replace": "^2.2.0",
+        "@rollup/plugin-typescript": "^6.0.0",
+        "@sveltejs/kit": "^1.0.0-next.201",
+        "@tsconfig/svelte": "^2.0.1",
+        "@types/compression": "^1.7.0",
+        "@types/node": "^14.11.1",
+        "@types/polka": "^0.5.1",
+        "cypress": "^9.0.0",
+        "cypress-cucumber-preprocessor": "^4.3.0",
+        "node-fetch": "^3.1.0",
+        "rollup": "^2.61.1",
+        "rollup-plugin-svelte": "^7.1.0",
+        "rollup-plugin-terser": "^7.0.0",
+        "serve": "^13.0.2",
+        "svelte": "^3.44.2",
+        "svelte-check": "^2.2.10",
+        "svelte-preprocess": "^4.9.8",
+        "tslib": "^2.0.1",
+        "typescript": "^4.0.3",
+        "vite": "^2.7.1"
+    }
 }

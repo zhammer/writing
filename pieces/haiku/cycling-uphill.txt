@@ -1,8 +1,5 @@
 ```piece
-title: cycling uphill
-slug: cycling-uphill
 date: 2020-12-13
-description: ""
 ```
 cycling uphill
 breathing through my nose

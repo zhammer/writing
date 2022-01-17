@@ -1,8 +1,6 @@
 ```piece
 title: once there's nothing left
-slug: once-theres-nothing-left
 date: 2020-12-23
-description: ""
 
 meta:
   song:

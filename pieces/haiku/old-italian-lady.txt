@@ -1,8 +1,5 @@
 ```piece
-title: old italian lady
-slug: old-italian-lady
 date: 2021-06-26
-description: ""
 ```
 old italian lady
 smelling fennel

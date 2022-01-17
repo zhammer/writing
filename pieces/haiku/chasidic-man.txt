@@ -1,8 +1,5 @@
 ```piece
-title: chasidic man
-slug: chasidic-man
 date: 2020-11-04
-description: ""
 ```
 chasidic man
 walks by me

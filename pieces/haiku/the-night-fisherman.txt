@@ -1,8 +1,5 @@
 ```piece
-title: the night fisherman
-slug: the-night-fisherman
 date: 2021-07-04
-description: ""
 
 meta:
   song:

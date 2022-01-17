@@ -1,8 +1,5 @@
 ```piece
-title: what controls the movement of the sun?
-slug: what-controls-the-movement-of-the-sun
 date: 2020-12-22
-description: ""
 meta:
   song:
     name: Rain

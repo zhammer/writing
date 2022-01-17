@@ -11,6 +11,7 @@ export function get({ params }) {
     const { slug } = params;
     let item = find(directory, slug.split(".")[0].split("/").filter(Boolean));
 
+
     if (item) {
         if ("children" in item) {
             item = ls(item);
