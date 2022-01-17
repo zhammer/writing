@@ -1,10 +1,10 @@
 <script context="module" lang="ts">
-  export async function load({ page, fetch }) {
+  export async function load({ url, fetch }) {
     let resp = await fetch("pieces.json");
     let data = await resp.json();
     let query = new URLSearchParams();
     try {
-      query = page.query;
+      query = url.searchParams;
     } catch (e) {}
     return { props: { directory: data.directory, query: query } };
   }
