@@ -1,0 +1,20 @@
+```piece
+title: flower! die!
+slug: flower-die
+date: 2022-01-19
+
+meta:
+  song:
+    name: Cello Sonata in G Minor, Op. 19: III. Andante
+    artist: François Guye & David Lively
+    url: /audio/rachmaninoff-cello-sonata-iii.mp3
+```
+
+flower! die!
+let me mourn you no more!
+but let me also perceive your beauty
+dry and withered
+drooping downwards
+as i rush to the sink
+to fetch you water
+- to save you.
