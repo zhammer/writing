@@ -1,11 +1,11 @@
 ```piece
-title: flower! die!
+title: "flower! die!"
 slug: flower-die
 date: 2022-01-19
 
 meta:
   song:
-    name: Cello Sonata in G Minor, Op. 19: III. Andante
+    name: "Cello Sonata in G Minor, Op. 19: III. Andante"
     artist: François Guye & David Lively
     url: /audio/rachmaninoff-cello-sonata-iii.mp3
 ```
