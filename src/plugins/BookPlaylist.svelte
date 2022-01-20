@@ -11,7 +11,9 @@
       <a href={piece.book.url} title="view on google books"
         ><img src={piece.book.image} alt="book cover" /></a
       >
-      <p>{piece.note}</p>
+      {#if piece.note}
+        <p>{piece.note}</p>
+      {/if}
       <iframe
         title="playlist"
         src={piece.playlist.replace(".com/", ".com/embed/")}
