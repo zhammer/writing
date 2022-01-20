@@ -3,11 +3,9 @@ date: 2020-07-13
 pieceType: BookPlaylist
 isbn: "9780307744050"
 playlist: https://open.spotify.com/playlist/6zzsb3qqHt7rRuJVD1NxQO
-note: 'Another rec from Gabe. From a message I sent him, about the Lee Konitz
-  album: "Sorta neurotic album by jewish saxophonist." I believe Lee had just
-  died of covid earlier that year.'
 book:
   title: Portnoy's Complaint
   author: Philip Roth
   image: https://books.google.com/books/content?id=k8jJbm5WB8kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
   url: https://books.google.com/books?vid=ISBN9780307744050
+  pageCount: 304

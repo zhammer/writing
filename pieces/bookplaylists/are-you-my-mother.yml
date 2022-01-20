@@ -3,9 +3,9 @@ date: 2021-06-27
 pieceType: BookPlaylist
 isbn: "9780547524368"
 playlist: https://open.spotify.com/album/0W1pQKJAQvk1PUJoGp5vfO
-note: Yes!
 book:
   title: Are You My Mother?
   author: Alison Bechdel
   image: https://books.google.com/books/content?id=4YbBBcdXFgQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
   url: https://books.google.com/books?vid=ISBN9780547524368
+  pageCount: 304

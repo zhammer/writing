@@ -10,7 +10,8 @@ function pluckBook(isbn, payload) {
         title: volumeInfo.title,
         author: volumeInfo.authors[0],
         image: volumeInfo.imageLinks.thumbnail.replace(/^http/, "https"),
-        url: `https://books.google.com/books?vid=ISBN${isbn}`
+        url: `https://books.google.com/books?vid=ISBN${isbn}`,
+        pageCount: volumeInfo.pageCount,
     }
 }
 

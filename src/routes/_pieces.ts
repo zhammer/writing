@@ -121,7 +121,7 @@ function parsePieceYml(body: string): Piece {
   } else if (isBookPlaylist(piece)) {
     return {
       ...piece,
-      size: piece.note.length,
+      size: piece.book.pageCount,
     };
   } else {
     throw new Error(`Can't parse piece: ${body}`);
@@ -363,13 +363,14 @@ export type Book = {
   author: string;
   image: string;
   url: string;
+  pageCount: number;
 }
 
 export type BookPlaylist = Piece & {
   pieceType: "BookPlaylist";
   isbn: string;
   playlist: string;
-  note: string;
+  note?: string;
   book: Book;
 }
 

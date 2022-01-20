@@ -3,9 +3,9 @@ date: 2021-12-19
 pieceType: BookPlaylist
 isbn: "9780810112001"
 playlist: https://open.spotify.com/playlist/4jvutaaXfDkMiPynk63QAK
-note: Not my fave!
 book:
   title: Moscow to the End of the Line
   author: Venedikt Erofeev
   image: https://books.google.com/books/content?id=9B7aarMNw4AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
   url: https://books.google.com/books?vid=ISBN9780810112001
+  pageCount: 164
