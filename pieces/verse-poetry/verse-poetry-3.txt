@@ -1,5 +1,5 @@
 ```piece
-title: verse poetry #3 (don't move to upset leviathan)
+title: "verse poetry #3 (don't move to upset leviathan)"
 slug: verse-poetry-3
 date: 2022-02-17
 ```

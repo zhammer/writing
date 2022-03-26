@@ -84,6 +84,7 @@ export type Directory = {
   slug: string;
   meta: {
     description?: string;
+    title?: string;
   };
   children: (Directory | Piece)[];
 };
@@ -251,7 +252,7 @@ function toListItem(element: Directory | Piece): ListItem {
   }
   return {
     description: "",
-    title: element.slug,
+    title: element.meta.title || element.slug,
     size: 0,
     date: "",
     slug: element.slug,

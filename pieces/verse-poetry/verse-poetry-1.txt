@@ -1,5 +1,5 @@
 ```piece
-title: verse poetry #1
+title: 'verse poetry #1'
 date: 2022-02-02
 ```
 
