@@ -1,0 +1,14 @@
+```piece
+date: 2022-04-22
+description: "walking to kula down 3rd"
+
+meta:
+  song:
+    name: Northern Sky
+    artist: Nick Drake
+    url: /audio/northern-sky.mp3
+```
+
+the trees are low
+you can smell each flower
+as you walk under it
