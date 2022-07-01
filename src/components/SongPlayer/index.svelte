@@ -46,7 +46,9 @@
       class:muted
       transition:fade
       on:click={toggleMuted}
-      title={`${muted ? "unmute" : "mute"} audio`}
+      title={`${muted ? "unmute" : "mute"} audio (${song.name} by ${
+        song.artist
+      })`}
     >
       <Speaker />
     </div>
