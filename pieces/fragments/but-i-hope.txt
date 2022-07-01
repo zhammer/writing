@@ -1,0 +1,11 @@
+```piece
+date: 2022-07-01
+
+meta:
+  song:
+    name: six white horses
+    artist: me!
+    url: /audio/six-white-horses.mp3
+```
+
+but i hope the nazi got to see the beauty of a jewish face
