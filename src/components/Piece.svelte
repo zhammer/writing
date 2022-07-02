@@ -6,21 +6,17 @@
 <script lang="ts">
   import BookPlaylist from "../plugins/BookPlaylist.svelte";
   import {
-    isProcessedBookPlaylist,
-    isProcessedWritingPiece,
-  } from "../routes/_pieces";
-  import type {
-    ProcessedBookPlaylist,
-    ProcessedPiece,
-    ProcessedWritingPiece,
+    isBookPlaylist,
+    isWritingPiece,
+    type Piece,
   } from "../routes/_pieces";
   import WritingPiece from "./WritingPiece.svelte";
 
-  export let piece: ProcessedPiece;
+  export let piece: Piece;
 
-  $: writingPiece = isProcessedWritingPiece(piece) ? piece : null;
+  $: writingPiece = isWritingPiece(piece) ? piece : null;
 
-  $: bookPlaylist = isProcessedBookPlaylist(piece) ? piece : null;
+  $: bookPlaylist = isBookPlaylist(piece) ? piece : null;
 </script>
 
 {#if !!writingPiece}

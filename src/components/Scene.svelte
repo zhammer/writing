@@ -1,9 +1,10 @@
 <script lang="ts">
+  import type { Scene } from "src/routes/_pieces";
+
   import { onMount } from "svelte";
 
-  import type { ProcessedScene } from "../routes/_pieces";
   import { isMobile } from "./SongPlayer/util";
-  export let scene: ProcessedScene;
+  export let scene: Scene;
   export let showNavHint: boolean;
   let mobile: boolean;
 
@@ -36,13 +37,6 @@
       </p>
     {/if}
   </div>
-  {#if scene.footnotes.length > 0}
-    <ol id="footnotes">
-      {#each scene.footnotes as footnote}
-        <i><li class="footnote">{footnote}</li></i>
-      {/each}
-    </ol>
-  {/if}
 </section>
 
 <style>

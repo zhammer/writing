@@ -30,10 +30,6 @@ export type Scene = {
   };
 };
 
-export type ProcessedScene = Scene & {
-  footnotes: string[];
-}
-
 export type ListItem = {
   title: string;
   date: string;
@@ -52,12 +48,6 @@ export type Piece = {
   date: string;
 }
 
-export type Processed = {
-  processed: true;
-}
-
-export type ProcessedPiece = Piece & Processed;
-
 export type WritingPiece = Piece & {
   pieceType: "WritingPiece";
   title: string;
@@ -70,14 +60,6 @@ export type WritingPiece = Piece & {
 
 export function isWritingPiece(piece: Piece): piece is WritingPiece {
   return piece.pieceType == "WritingPiece";
-}
-
-export function isProcessedWritingPiece(piece: Piece): piece is ProcessedWritingPiece {
-  return isWritingPiece(piece) && piece["processed"] === true;
-}
-
-export type ProcessedWritingPiece = WritingPiece & Processed & {
-  scenes: ProcessedScene[];
 }
 
 export type Directory = {
@@ -287,72 +269,6 @@ export function find(
   return find(found, slug.slice(1));
 }
 
-// a very bad replacement for node 16 string.replaceAll
-function replaceAll(str: string, regex: RegExp, replacer: (substring: string, ...args: any[]) => string): string {
-  let prev = str;
-  for (let i = 0; i < 1000; i++) {
-    let curr = prev.replace(regex, replacer);
-    if (prev === curr) {
-      return curr;
-    }
-    prev = curr;
-  }
-  throw new Error("we may be recurring")
-}
-
-// ideally this would go in the svelte code, i guess? but i want this preprocessing
-// to always happen on the backend, or, more specifically, i don't want it to happen
-// on the browser.
-export function processScene(scene: Scene): ProcessedScene {
-  const footnoteRegex = /\{\{\s*footnote\s*"(.+?)"\s*\}\}/g;
-  let processedSections: Section[] = [];
-  let footnotes: string[] = [];
-
-  scene.sections.forEach((section) => {
-    let index = 0;
-    let content = replaceAll(
-      section.content,
-      footnoteRegex,
-      (_, group): string => {
-        index++;
-        footnotes.push(group);
-        return `<sup class="footnote-ref">${index}</sup>`;
-      }
-    );
-    content = content.replace(/\*([^=*]+?)\*/g, "<i>$1</i>")
-
-    processedSections.push({
-      ...section,
-      content,
-    });
-  });
-
-  return {
-    ...scene,
-    sections: processedSections,
-    footnotes,
-  };
-}
-
-
-function processWritingPiece(piece: WritingPiece): ProcessedWritingPiece {
-  return {
-    ...piece,
-    scenes: piece.scenes.map(processScene),
-    processed: true,
-  }
-}
-
-export function processPiece(piece: Piece): ProcessedPiece {
-  if (isWritingPiece(piece)) {
-    return processWritingPiece(piece)
-  } else if (isBookPlaylist(piece)) {
-    return processBookPlaylist(piece)
-  } else {
-    throw new Error(`can't process piece: ${JSON.stringify(piece)}`)
-  }
-}
-
 /*
 -~-+=-~-+=-~-
 P L U G I N S
@@ -376,19 +292,6 @@ export type BookPlaylist = Piece & {
 }
 
 
-export type ProcessedBookPlaylist = BookPlaylist & Processed;
-
 export function isBookPlaylist(piece: Piece): piece is BookPlaylist {
   return piece.pieceType == "BookPlaylist";
-}
-
-export function isProcessedBookPlaylist(piece: Piece): piece is ProcessedBookPlaylist {
-  return isBookPlaylist(piece) && piece["processed"] === true;
-}
-
-function processBookPlaylist(piece: BookPlaylist): ProcessedBookPlaylist {
-  return {
-    ...piece,
-    processed: true,
-  }
 }
