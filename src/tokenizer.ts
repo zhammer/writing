@@ -1,6 +1,6 @@
 export function tokenizer(text: string): string[] {
   let out: string[] = [];
-  let state: "in_bracket" | "idle" = "idle";
+  let state: "idle" | "in_bracket" = "idle";
   let curr = text;
   while (curr) {
     let before: string, after: string;
@@ -13,12 +13,15 @@ export function tokenizer(text: string): string[] {
         break;
       case "in_bracket":
         [before, after] = curr.split(/\s+}}/, 2);
+        if (!after) {
+          throw new Error("finished parsing without closing brackets");
+        }
         out.push(before);
         curr = after;
         state = "idle";
         break;
-
     }
   }
+
   return text.split(/\{\{\s+|\s+\}\}/);
 }
