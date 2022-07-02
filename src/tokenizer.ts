@@ -1,3 +1,3 @@
 export function tokenizer(text: string): string[] {
-  return [text];
+  return text.split(/\{\{\s+|\s+\}\}/);
 }
