@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import yml from "yaml";
 import dirTree from "directory-tree";
+import { tokenizer } from "./../tokenizer";
 
 export type SectionType =
   | "Action"
@@ -15,6 +16,7 @@ export type SectionType =
 export type Section = {
   type: SectionType;
   content: string;
+  tokens: string[];
 };
 
 export type Scene = {
@@ -117,6 +119,10 @@ function parseWritingPiece(piece: WritingPiece): WritingPiece {
     scenes: piece.scenes.map((scene) => ({
       ...scene,
       type: scene.type || "Default",
+      sections: scene.sections.map(section => ({
+        ...section,
+        tokens: tokenizer(section.content)
+      }))
     })),
     size: computeSize(piece.scenes),
   }
@@ -141,6 +147,7 @@ function parsePieceTxt(body: string): WritingPiece {
         {
           type: "Text",
           content: cleanedBody,
+          tokens: tokenizer(cleanedBody)
         },
       ],
     },

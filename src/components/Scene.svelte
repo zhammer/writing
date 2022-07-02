@@ -29,7 +29,11 @@
 <section>
   <div>
     {#each scene.sections as section}
-      <p class={section.type}>{@html section.content}</p>
+      <p class={section.type}>
+        {#each section.tokens as token}
+          {@html token}
+        {/each}
+      </p>
     {/each}
     {#if showNavHint}
       <p class="hint">
