@@ -1,8 +1,18 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
+  "extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
-    "lib": ["DOM", "ES2021", "WebWorker"]
+    "lib": [
+      "DOM",
+      "ES2021",
+      "WebWorker"
+    ]
   },
-  "include": ["src/**/*", "src/node_modules/**/*"],
-  "exclude": ["node_modules/*", "static/*"]
+  "include": [
+    "src/**/*",
+    "src/node_modules/**/*"
+  ],
+  "exclude": [
+    "node_modules/*",
+    "static/*"
+  ]
 }

@@ -21,6 +21,7 @@
   export let directory: DirectoryLS;
 
   export let query: any;
+  console.log(query);
 
   $: sort = {
     column: query.get("C") || "N",
@@ -144,7 +145,7 @@
     </tbody>
   </table>
   <address>
-    {directory.meta.description || "SvelteKit/1.0.0-next.201 Server"}
+    {directory.meta.description || "SvelteKit/1.0.0-next.357 Server"}
   </address>
 </div>
 

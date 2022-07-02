@@ -2,16 +2,16 @@
   /**
    * @type {import('@sveltejs/kit').Load}
    */
-  export async function load({ page, fetch }) {
+  export async function load({ params, url, fetch }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
-    const res = await fetch(`/pieces_data/${page.params.slug}.json`);
+    const res = await fetch(`/pieces_data/${params.slug}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
       let query = new URLSearchParams();
       try {
-        query = page.query;
+        query = url.searchParams;
       } catch (e) {}
       return { props: { item: data.item, query: query } };
     } else {

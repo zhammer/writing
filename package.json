@@ -16,8 +16,12 @@
         "nonGlobalStepDefinitions": true
     },
     "dependencies": {
-        "@sveltejs/adapter-netlify": "^1.0.0-next.35",
+        "@sveltejs/adapter-netlify": "^1.0.0-next.66",
+        "@sveltejs/kit": "^1.0.0-next.357",
         "directory-tree": "^2.2.5",
+        "svelte": "^3.48.0",
+        "svelte-check": "^2.8.0",
+        "svelte-preprocess": "^4.10.7",
         "yaml": "^1.10.0"
     },
     "devDependencies": {
@@ -31,8 +35,7 @@
         "@rollup/plugin-node-resolve": "^8.0.0",
         "@rollup/plugin-replace": "^2.2.0",
         "@rollup/plugin-typescript": "^6.0.0",
-        "@sveltejs/kit": "^1.0.0-next.201",
-        "@tsconfig/svelte": "^2.0.1",
+        "@tsconfig/svelte": "^3.0.0",
         "@types/compression": "^1.7.0",
         "@types/node": "^14.11.1",
         "@types/polka": "^0.5.1",
@@ -43,11 +46,11 @@
         "rollup-plugin-svelte": "^7.1.0",
         "rollup-plugin-terser": "^7.0.0",
         "serve": "^13.0.2",
-        "svelte": "^3.44.2",
-        "svelte-check": "^2.2.10",
-        "svelte-preprocess": "^4.9.8",
         "tslib": "^2.0.1",
-        "typescript": "^4.0.3",
-        "vite": "^2.7.1"
+        "typescript": "^4.7.4",
+        "vite": "^2.9.13"
+    },
+    "volta": {
+        "node": "16.15.1"
     }
 }

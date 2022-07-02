@@ -5,8 +5,9 @@ import preprocess from 'svelte-preprocess';
 const config = {
     kit: {
         adapter: adapter(),
-        target: '#svelte',
-        router: false,
+        browser: {
+            router: false,
+        },
     },
     preprocess: preprocess(),
 };
