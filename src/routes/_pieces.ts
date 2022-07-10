@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import yml from "yaml";
 import dirTree from "directory-tree";
-import { tokenizer } from "./../tokenizer";
+import { tokenizer, type Token } from "./../tokenizer";
 
 export type SectionType =
   | "Action"
@@ -16,7 +16,7 @@ export type SectionType =
 export type Section = {
   type: SectionType;
   content: string;
-  tokens: string[];
+  tokens: Token[];
 };
 
 export type Scene = {

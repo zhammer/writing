@@ -7,14 +7,24 @@ export type TokenFunction = {
   type: "function";
   functionName: string;
   args: string[];
+  meta: {
+    // how many times has this function appeared (used for footnote)
+    functionIndex: number;
+  }
 }
 
+
 export type Token = TokenLiteral | TokenFunction;
+
+export function isTokenFunction(token: Token): token is TokenFunction {
+  return token.type === "function"
+}
 
 export function tokenizer(text: string): Token[] {
   let out: Token[] = [];
   let state: "idle" | "in_bracket" = "idle";
   let curr = text;
+  let occurrenceByFunction = {};
   while (!!curr) {
     let before: string, after: string;
     switch (state) {
@@ -33,11 +43,16 @@ export function tokenizer(text: string): Token[] {
           throw new Error("finished parsing without closing brackets");
         }
         let [functionName, argText] = splitOnce(before.trim(), " ");
+        functionName = functionName.trim();
         let args = [...(argText || "").matchAll(/\"([^\"]*)\"/g)].map(match => match[1])
+        occurrenceByFunction[functionName] = (occurrenceByFunction[functionName] || -1) + 1;
         out.push({
           type: "function",
-          functionName: functionName.trim(),
+          functionName,
           args,
+          meta: {
+            functionIndex: occurrenceByFunction[functionName]
+          }
         });
         curr = after;
         state = "idle";
