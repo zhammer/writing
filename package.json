@@ -16,7 +16,7 @@
         "nonGlobalStepDefinitions": true
     },
     "dependencies": {
-        "@sveltejs/adapter-netlify": "^1.0.0-next.66",
+        "@sveltejs/adapter-netlify": "^1.0.0-next.67",
         "@sveltejs/kit": "^1.0.0-next.357",
         "directory-tree": "^2.2.5",
         "svelte": "^3.48.0",
