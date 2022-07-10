@@ -1682,10 +1682,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sveltejs/adapter-netlify@^1.0.0-next.66":
-  version "1.0.0-next.66"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.66.tgz#55c1bf03af3a8d38afaacaeacec766043d81fb5f"
-  integrity sha512-UypTRnTd+R1O6SaDdc8l3A3c9/mQF8xLNoVb3Ay5ipb7uPU5WmjVYjfLVGyeVy67gztFfeFC/9Esu4OI2Ayx1A==
+"@sveltejs/adapter-netlify@^1.0.0-next.67":
+  version "1.0.0-next.67"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.67.tgz#284b2366fb6c9e322d4145a09215a4da0beb3df2"
+  integrity sha512-0C4TlePu1grsY/rhYUiQUwU8pFK9ImvI0u/T8KpwwXAeMjmxCfZa8B1syil389iAykBoiKlx0mxIzT7tawwFzg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     esbuild "^0.14.42"
