@@ -4,13 +4,3 @@
 
 [functions]
   included_files = ["pieces/**"]
-  AWS_LAMBDA_JS_RUNTIME = "nodejs16.x"
-  NODE_VERSION = "14"
-
-[context.production.environment]
-  AWS_LAMBDA_JS_RUNTIME = "nodejs16.x"
-  NODE_VERSION = "14"
-
-[context.deploy-preview.environment]
-  AWS_LAMBDA_JS_RUNTIME = "nodejs16.x"
-  NODE_VERSION = "14"
