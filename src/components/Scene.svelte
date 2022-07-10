@@ -1,34 +1,59 @@
 <script lang="ts">
+  import type { Scene } from "src/routes/_pieces";
+  import { isTokenFunction } from "../tokenizer";
+
   import { onMount } from "svelte";
 
-  import type { ProcessedScene } from "../routes/_pieces";
   import { isMobile } from "./SongPlayer/util";
-  export let scene: ProcessedScene;
+  export let scene: Scene;
   export let showNavHint: boolean;
   let mobile: boolean;
 
+  $: footnotes = scene.sections
+    .map((section) => section.tokens)
+    .flat()
+    .filter(isTokenFunction)
+    .filter((token) => token.functionName === "footnote");
+  let footnoteElements: HTMLElement[] = [];
+  let footnoteRefElements: HTMLElement[] = [];
+
+  function onFootnoteRefClick(event, index: number) {
+    event.preventDefault();
+    footnoteElements[index].focus({ preventScroll: true });
+    footnoteElements[index].scrollIntoView({ behavior: "smooth" });
+  }
+
+  function onFootnoteClick(event, index: number) {
+    event.preventDefault();
+    footnoteRefElements[index].focus({ preventScroll: true });
+    footnoteRefElements[index].scrollIntoView({ behavior: "smooth" });
+  }
+
   onMount(() => {
     mobile = isMobile(navigator.userAgent);
-
-    (function addFootnoteScrolling() {
-      let footnotes = document.querySelector("#footnotes");
-      if (!footnotes) {
-        return;
-      }
-      let footnoteRefs = document.querySelectorAll(".footnote-ref");
-      footnoteRefs.forEach((footnoteRef) => {
-        footnoteRef.addEventListener("click", () => {
-          footnotes.scrollIntoView({ behavior: "smooth" });
-        });
-      });
-    })();
   });
 </script>
 
 <section>
   <div>
     {#each scene.sections as section}
-      <p class={section.type}>{@html section.content}</p>
+      <p class={section.type}>
+        {#each section.tokens as token}
+          {#if token.type === "literal"}
+            {@html token.text}{/if}{#if isTokenFunction(token)}
+            {#if token.functionName === "footnote"}
+              <sup
+                class="footnote-ref"
+                tabindex="-1"
+                bind:this={footnoteRefElements[token.meta.functionIndex]}
+                on:click={(event) =>
+                  onFootnoteRefClick(event, token.meta.functionIndex)}
+                >{token.meta.functionIndex + 1}</sup
+              >
+            {/if}
+          {/if}
+        {/each}
+      </p>
     {/each}
     {#if showNavHint}
       <p class="hint">
@@ -36,10 +61,19 @@
       </p>
     {/if}
   </div>
-  {#if scene.footnotes.length > 0}
+  {#if footnotes.length > 0}
     <ol id="footnotes">
-      {#each scene.footnotes as footnote}
-        <i><li class="footnote">{footnote}</li></i>
+      {#each footnotes as footnote, i}
+        <i
+          ><li
+            class="footnote"
+            tabindex="-1"
+            bind:this={footnoteElements[i]}
+            on:click={(event) => onFootnoteClick(event, i)}
+          >
+            {footnote.args[0]}
+          </li></i
+        >
       {/each}
     </ol>
   {/if}
@@ -55,12 +89,33 @@
     }
   }
 
-  :global(.footnote-ref) {
+  .footnote-ref {
     font-weight: bold;
     cursor: pointer;
 
+    display: inline-block;
     vertical-align: top;
     font-size: 0.6em;
+  }
+
+  @keyframes highlight {
+    from {
+      background-color: rgba(255, 255, 173, 1);
+    }
+    to {
+      background-color: rgba(255, 255, 173, 0);
+    }
+  }
+  .footnote:focus {
+    animation: highlight 1s linear;
+  }
+  .footnote-ref:focus {
+    animation: highlight 1s linear;
+  }
+
+  .footnote {
+    cursor: pointer;
+    margin-left: 0px;
   }
 
   .hint {

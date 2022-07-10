@@ -15,8 +15,6 @@ export function get({ params }) {
     if (item) {
         if ("children" in item) {
             item = ls(item);
-        } else {
-            item = processPiece(item);
         }
 
         return {

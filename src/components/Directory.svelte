@@ -21,7 +21,6 @@
   export let directory: DirectoryLS;
 
   export let query: any;
-  console.log(query);
 
   $: sort = {
     column: query.get("C") || "N",
