@@ -1,4 +1,4 @@
-import { loadPieces, find, loadDirectory, ls, processPiece } from "../_pieces";
+import { loadPieces, find, loadDirectory, ls } from "../_pieces";
 
 const directory = loadDirectory();
 const pieces = loadPieces();
