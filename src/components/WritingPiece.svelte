@@ -111,4 +111,8 @@
     flex-direction: column;
     top: 20%;
   }
+
+  .scene.Card:has(.Image) {
+    top: initial;
+  }
 </style>

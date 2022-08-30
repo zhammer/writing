@@ -4,20 +4,37 @@ import yml from "yaml";
 import dirTree from "directory-tree";
 import { tokenizer, type Token } from "./../tokenizer";
 
-export type SectionType =
+export type TextSectionType =
   | "Action"
   | "Character"
   | "Dialogue"
   | "Parenthetical"
   | "SceneHeading"
   | "Text"
-  | "Title";
+  | "Title"
+  | "Subtitle";
 
-export type Section = {
-  type: SectionType;
+export type TextSection = {
+  type: TextSectionType;
   content: string;
   tokens: Token[];
 };
+
+export type ImageSection = {
+  type: "Image";
+  url: string;
+  caption: string;
+}
+
+export type Section = TextSection | ImageSection;
+
+export function isTextSection(section: Section): section is TextSection {
+  return ["Action", "Character", "Dialogue", "Parenthetical", "SceneHeading", "Text", "Title", "Subtitle"].includes(section.type)
+}
+
+export function isImageSection(section: Section): section is ImageSection {
+  return section.type == "Image"
+}
 
 export type Scene = {
   name: string;
@@ -87,7 +104,7 @@ export type DirectoryLS = {
 function computeSize(scenes: Scene[]): number {
   let size = 0;
   scenes.forEach((scene) => {
-    scene.sections.forEach((section) => {
+    scene.sections.filter(isTextSection).forEach((section) => {
       size += section.content.length;
     });
   });
@@ -121,7 +138,7 @@ function parseWritingPiece(piece: WritingPiece): WritingPiece {
       type: scene.type || "Default",
       sections: scene.sections.map(section => ({
         ...section,
-        tokens: tokenizer(section.content)
+        tokens: tokenizer(isTextSection(section) ? section.content : "")
       }))
     })),
     size: computeSize(piece.scenes),

@@ -1,0 +1,16 @@
+title: intercontinental bus
+date: 2019-12-08
+description: "a mad thought sweeps across a burning world"
+
+scenes:
+  - name: Cover
+    type: Card
+    sections:
+      - type: Title
+        content: Intercontinental Bus
+      - type: Image
+        url: /images/dall-e-burning-bus.png
+        caption: an intercontinental bus wrapped around a burning globe, oil painting
+      - type: Subtitle
+        content: By Gabe & Zach
+
