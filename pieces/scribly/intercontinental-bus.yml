@@ -1,0 +1,275 @@
+title: intercontinental bus
+date: 2019-12-08
+description: "a mad thought sweeps across a burning world"
+
+scenes:
+  - name: Cover
+    type: Card
+    sections:
+      - type: Title
+        content: Intercontinental Bus
+      - type: Image
+        url: /images/scribly/dall-e-burning-bus.png
+        caption: an intercontinental bus wrapped around a burning globe, oil painting
+      - type: Subtitle
+        content: By Gabe & Zach
+  - name: Intro
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Text
+        content: >-
+          It only took a few years for the teleportation fad to wear out. First - folks didn’t want to get to places too quickly. There was a mass realization of the benefit of “the commute.” Work gets done. Thoughts are had. We transition gracefully from the home to the office, or from one land to the next.
+
+
+          What jarred populations on a deeper level was something less expected by the folks who had been alive before the discovery. The human mind, mapped at its roots to a spatial understanding of the world, in which one cubic foot leads to another, adjacent, without gaps, struggled to adapt the the groundbreaking shift in spatiality. A person who teleported as simply as from one end of the block to the next could grow immediately ill, have trouble orienting, and in extreme cases lose their ability to speak! (The tongue itself being a calibrator of fine motion, attuned as if fixed directly to the inner compass of the mind with no interference from the thinker and therefore no ability to override unless the neural paths re-formed.)
+
+
+          Yet to give the earthbound population the capacity for teleportation, which allowed the masses (and not just the wealthy elite) the ability to easily travel the world, to eat in a diner in France and then watch the moon rise in Sudan, engendered a massive yearning for travel in the people. Planes had been restricted, of course, due to environmental regulations. (Not those of the past, which tried to regulate the skies by the will of man, but by the regulation of the earth itself, which had long held atmospheric pressure and mercurial winds so strong just a thousand feet up that airplanes, helicopter & hot air balloons were no longer feasible options for transportation.)
+
+
+          A mad thought swept amongst the various internet cafes, from thailand to the beaches of the arctic, of a bus, like that of the cities and more affectionately of the olden times, that could carry a person from one end of the globe to the other, to open up the gates, as it were, for people to know each other once again, before the End.
+  - name: Puttens
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-moon-editor.png
+        caption: an editor on the moon with glistening skin, oil painting
+      - type: Text
+        content: >-
+          The usual complaints were raised from the usual corners of a population holding steady at 690,000. Fongle Puttens, editor for the Foundation for Freedom of Speech for the Moon Emperors, argued that public modes of transportation were a vestigial organ of a bygone, vulgar age. Mankind was more refined now: it had been a low point in our history when one fleshbag, jostled and pulled by something as banal as the physical effects of velocity, could brush against another. Puttens' skin glistened. No oils from the meaty exteriors of the undeserving had marred those pores in over a hundred years. To regress, to touch, just at the moment when humanity needed to preserve its pure glands in the face of the final cosmic kiss it would receive, would be an unpardonable shame. A population in the double digits read his critique: one wept.
+
+
+          Moon Emperors aside, the idea quickly caught on. Bunkers were raided to find ancient devices holding mostly uncorrupted data about multi-car buses. One design seemed to be meant for traversing the Siberian grasslands; another, for a car apparently called the J%e 8id$#, would have covered ground not far from the eastern coast of America, although what slept there, under a mile-deep blanket of warm and salty water, posed a question that no one wanted to answer anymore; a rotted library book with one scrap of paper left made some reference to a "Sunset Express." Gnostics assumed it was a ritual, or a metaphor for death.
+  - name: Report
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-burning-books.png
+        caption: libraries burned by fires and soaked by waves, oil painting
+      - type: Text
+        content: >-
+          >>> REPORT, 2074@55.22(LOC)[IMAGISTRATE], ON DEFORTIFICATION OF EASTERN COST
+
+
+          >>> WRITTEN BY Fongle Tappens
+
+
+          >>> CONFIRMED BY Garve Holding, Llc FOR IMMEDIATE RELEASE TO CITIES WITH BAROMETRIC PRESSURES DEEMED "REVERSABLE, IN DUE TIME"
+
+
+          >
+
+          >
+
+          >
+
+          > We find ourselves here today! Whirling our last thoughts to the wind! Embrace. Those without access to these documentarial notice shall not survive. We know this! We embrace! Like the ice age of the past. Like the roaring magma of the planet when it was just born. Embrace!
+
+          >
+
+          >
+
+          > Do not hold on to our walls. They were created by an unbelieving people. They were defined by politics. They were defined by fear!
+
+          >
+
+          >
+
+          > Embrace! Those who shall perish have not been given notice. You have. Most west. Abandon children who cannot walk, and whom you cannot carry. We are lucky to be deemed safe. We shall bring their memories to the next world, if our minds shall be lucky enough to be let to speak.
+
+          >
+
+          >
+
+          > Embrace. A fire roars to the east. The libraries are burned and then soaked. The temples have been lit aflame and anointed and then salted.
+
+          >
+
+          >
+
+          > Unlike Pompeii, those who perished were not preserved. But you are not perished, and you are still here; move west!
+
+          >
+
+          >
+
+          > Embrace.
+
+          >
+
+          >
+
+          > Garve Holding, Llc has deemed it financially unsustainable to continue to fortify the eastern coast.
+
+          >
+
+          >
+
+          > - Fongle Tappens
+  - name: Caravans
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-caravan.png
+        caption: caravan of twenty to fifty people marching towards sunset in the harsh desert, oil painting
+      - type: Text
+        content: >-
+          A happy generation waits for Judgement Day. Every unhappy generation secretly hopes for some other apocalypse, one that they deserve. A death by fire is painful, but there is some comfort in it: the knowledge that others burn together with you, and that the traces of a life led worse than you hoped will never be uncovered by the future's probing tendrils. The only thing better than dying in such an apocalypse is surviving and rising from its ashes, free of all your secret shame. So it was at this moment. Tappens' missive promised what a certain pasty, clammy cohort had always been waiting for. This was manifest destiny sanctified anew, a final race towards the sunset with irradiated sunrise at their backs. They would outdo their great ancestors.
+
+
+          Caravans formed. Some numbered in the hundreds, but those larger groups were quickly pared down by razor-sharp wind and the sharper nails of their fellow travelers. A successful clan claimed between twenty and fifty dependents, with the possibility of additional independent contractors if market conditions allowed. Each of these neo-barbarian tribes identified themselves by a code of two or three premodern symbols: they were unreadable to my eyes, but somehow horrifying to look at. The more fanciful blonde beasts developed flags or ink tattoos: the man I met, out there somewhere in the blackened Dakota wastes, had scarred his eyelids with two ominous symbols. I have lived a long life, if not a full one; I have forgotten more than I have learned, sometimes out of necessity and sometimes thanks to nonchalance; I will never forget those symbols.
+
+
+          ΔΘ
+  - name: Melchem
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-cyclists.png
+        caption: caravan of twenty to fifty people marching towards sunset in the harsh desert, oil painting
+      - type: Text
+        content: >-
+          Think of Melchem, a young boy, bouncing and doing semi circles in the air, on the moon, attached to base by the umbilical cord of his oxygen tank, smiling, as his mothers watched him from afar.
+
+
+          Think of Yosemite, covered in mud, irradiated, with all of its trees bent 45 degrees to the west, with people climbed up in the trees, with fish on their side burnt in the sun. There was a week where each one was good to eat, slow cooked, after two weeks they were dried, like dried eel, they were good to eat too. Some would say they were over salted.
+
+
+          Think of Hiram. Think of the past. Think of all that brought us to now. All the struggle for our destiny, for the warring interests of the minds. Think of the oppression, the persecution, the vast dreams to overcome it, the hope that one day what was good within us would rightfully be restored.
+
+
+          In pockets of the burning world there still was progress. People relearnt what it meant to dream reading old books of buses. Tires were assembled like the olden days. Hinges were bent. Lucky ones donned raggy clothes, laid on their back on a wheeled machine, pushed with their knees and feet just a foot or two backwards, sliding under the jagged curves of the buses engine, tinkered with a knob.
+
+
+          Think of those who awoke in their sleep and watched the stars. They were still there. That starry thing of the sky would never leave earth, and if there were no earth, the starry sky still would stay, but it wouldn’t be a sky no more. Sky was something we had made, it was an invention of us.
+
+
+          Sun another star, not orange or yellow or creating pinks and blues, or greens and white in the northern sky by the electricity it produced, not white in the far distance of another planet, not hot (it is not hot in space) not warm, not with triangular rays shooting out in all directions in an ancient embedding, or the drawing of a child.
+
+
+          “Wear this crown that we have made” said the elders. For it is burning. For soon it will be as if it had never existed.
+
+
+          The irradiated sun at their backs. Rebirth from a botched apocalypse only to bring them westward to a water that would bring no relief. The lucky few on the moon. A whole vast ocean under which you could still find, somewhere, floating, a whole group of cyclists, suspended and rotting, the salt water corroding the tires and the gears.
+  - name: Grandfather
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-ants.png
+        caption: caravan of twenty to fifty people marching towards sunset in the harsh desert, oil painting
+      - type: Text
+        content: >-
+          There is an image, burned onto the wall of a 21st century theater. A hand stretches towards the moon, so close to caressing or crushing it that the final centimeter could break your heart. Think of the last flight to the moon, of Melchem's older twin, crying and cursing from the muddy Earth. Given: humans are naturally good. Given: they do not die thus. What happens to us in that last centimeter before we make it to base?
+
+
+          Once, we were too scared to give the fourth law of thermodynamics: every crown melts. In the year it took to bend and break metal until it would carry the last of them to Las Vegas, the sun yielded to that natural order, dripping down into the water and leaving pillars of salt where it fell. So there were no more crowns. They could finally go west, leaving the deaths and rebirths behind. So they went.
+
+
+          I remember a story from my grandfather, one of the last - when names and faces slipped away, he held onto the soft boy that he was when he first watched a line of ants carry sugar and cacao across a sundial. He held onto the wonder of the elementary realization that they cared about each other when they lived and died for each other. He carried that feeling somewhere inside him for ninety years and gave it to me as a whispered gift. I hope that the Moon Emperors looked down and saw that long metal bus the way he would. I hope they saw a line of shining ants carry their future lifeblood across the tired flesh of the West, and I hope one of those little boys on the moon shivered without knowing why when those ants curled up together, hugging each other so tightly that they got hot and burned.
+  - name: I1
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-newspaper.png
+        caption: old newspaper called “Foundation for Freedom of Speech for the Moon Emperors”, oil painting
+  - name: I2
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-moon-editor-alt.png
+        caption: an editor on the moon with glistening skin, oil painting
+  - name: I3
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-temples-lit.png
+        caption: temples lit aflaime, oil painting
+  - name: I4
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-desert-eyes.png
+        caption: in the blackened dakota wastes, a man with symbols on his eyes, oil painting
+  - name: I5
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-cyclists-2.png
+        caption: in the ocean a group of cyclists is floating, oil painting
+  - name: I6
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-cyclists-3.png
+        caption: in the ocean a group of cyclists is gazing at the moon, oil painting
+  - name: I7
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-hand-to-moon.png
+        caption: a hand stretches towards the moon, oil painting
+  - name: I8
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    type: Card
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-bus-moon.png
+        caption: a shining bus rides across the planet in the moonlight, oil painting
+      - type: Subtitle
+        content: The End

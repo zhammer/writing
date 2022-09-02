@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { Scene } from "src/routes/_pieces";
+  import type { Scene, TextSection } from "src/routes/_pieces";
+  import { isTextSection, isImageSection } from "../routes/_pieces";
   import { isTokenFunction } from "../tokenizer";
 
   import { onMount } from "svelte";
@@ -10,6 +11,7 @@
   let mobile: boolean;
 
   $: footnotes = scene.sections
+    .filter(isTextSection)
     .map((section) => section.tokens)
     .flat()
     .filter(isTokenFunction)
@@ -29,6 +31,14 @@
     footnoteRefElements[index].scrollIntoView({ behavior: "smooth" });
   }
 
+  function getTextSectionClass(section: TextSection): string {
+    let classes: string[] = [section.type];
+    if (section.type === "Title" && section.content.length > 10) {
+      classes.push("Oversized");
+    }
+    return classes.join(" ");
+  }
+
   onMount(() => {
     mobile = isMobile(navigator.userAgent);
   });
@@ -37,23 +47,28 @@
 <section>
   <div>
     {#each scene.sections as section}
-      <p class={section.type}>
-        {#each section.tokens as token}
-          {#if token.type === "literal"}
-            {@html token.text}{/if}{#if isTokenFunction(token)}
-            {#if token.functionName === "footnote"}
-              <sup
-                class="footnote-ref"
-                tabindex="-1"
-                bind:this={footnoteRefElements[token.meta.functionIndex]}
-                on:click={(event) =>
-                  onFootnoteRefClick(event, token.meta.functionIndex)}
-                >{token.meta.functionIndex + 1}</sup
-              >
+      {#if isTextSection(section)}
+        <p class={getTextSectionClass(section)}>
+          {#each section.tokens as token}
+            {#if token.type === "literal"}
+              {@html token.text}{/if}{#if isTokenFunction(token)}
+              {#if token.functionName === "footnote"}
+                <sup
+                  class="footnote-ref"
+                  tabindex="-1"
+                  bind:this={footnoteRefElements[token.meta.functionIndex]}
+                  on:click={(event) =>
+                    onFootnoteRefClick(event, token.meta.functionIndex)}
+                  >{token.meta.functionIndex + 1}</sup
+                >
+              {/if}
             {/if}
-          {/if}
-        {/each}
-      </p>
+          {/each}
+        </p>
+      {/if}
+      {#if isImageSection(section)}
+        <img class="Image" src={section.url} alt={section.caption} />
+      {/if}
     {/each}
     {#if showNavHint}
       <p class="hint">
@@ -187,9 +202,17 @@
     justify-content: center;
     align-items: center;
   }
+
+  .Title.Oversized {
+    font-size: 2rem;
+  }
+
   @media (min-width: 35em) {
     .Title {
       font-size: 6rem;
+    }
+    .Title.Oversized {
+      font-size: 3rem;
     }
   }
 
@@ -213,5 +236,18 @@
   p {
     margin-block-end: 0;
     margin-block-start: 0;
+  }
+
+  .Image {
+    width: 100%;
+    margin: auto;
+    display: block;
+
+    padding: 1em;
+  }
+  @media (min-width: 35em) {
+    .Image {
+      width: 60%;
+    }
   }
 </style>
