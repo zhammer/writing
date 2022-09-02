@@ -190,7 +190,77 @@ scenes:
 
 
           I remember a story from my grandfather, one of the last - when names and faces slipped away, he held onto the soft boy that he was when he first watched a line of ants carry sugar and cacao across a sundial. He held onto the wonder of the elementary realization that they cared about each other when they lived and died for each other. He carried that feeling somewhere inside him for ninety years and gave it to me as a whispered gift. I hope that the Moon Emperors looked down and saw that long metal bus the way he would. I hope they saw a line of shining ants carry their future lifeblood across the tired flesh of the West, and I hope one of those little boys on the moon shivered without knowing why when those ants curled up together, hugging each other so tightly that they got hot and burned.
-  - name: End
+  - name: I1
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-newspaper.png
+        caption: old newspaper called “Foundation for Freedom of Speech for the Moon Emperors”, oil painting
+  - name: I2
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-moon-editor-alt.png
+        caption: an editor on the moon with glistening skin, oil painting
+  - name: I3
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-temples-lit.png
+        caption: temples lit aflaime, oil painting
+  - name: I4
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-desert-eyes.png
+        caption: in the blackened dakota wastes, a man with symbols on his eyes, oil painting
+  - name: I5
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-cyclists-2.png
+        caption: in the ocean a group of cyclists is floating, oil painting
+  - name: I6
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-cyclists-3.png
+        caption: in the ocean a group of cyclists is gazing at the moon, oil painting
+  - name: I7
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
+    sections:
+      - type: Image
+        url: /images/scribly/dall-e-hand-to-moon.png
+        caption: a hand stretches towards the moon, oil painting
+  - name: I8
     meta:
       song:
         name: Claire de Lune
