@@ -222,7 +222,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 0.7;
+    line-height: 0.9;
     color: dimgrey;
 
     animation: fadein 2s ease-in 3.5s backwards;
@@ -248,6 +248,7 @@
   @media (min-width: 35em) {
     .Image {
       width: 60%;
+      padding: initial;
     }
   }
 </style>
