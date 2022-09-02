@@ -14,6 +14,11 @@ scenes:
       - type: Subtitle
         content: By Gabe & Zach
   - name: Intro
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Text
         content: >-
@@ -28,6 +33,11 @@ scenes:
 
           A mad thought swept amongst the various internet cafes, from thailand to the beaches of the arctic, of a bus, like that of the cities and more affectionately of the olden times, that could carry a person from one end of the globe to the other, to open up the gates, as it were, for people to know each other once again, before the End.
   - name: Puttens
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-moon-editor.png
@@ -39,6 +49,11 @@ scenes:
 
           Moon Emperors aside, the idea quickly caught on. Bunkers were raided to find ancient devices holding mostly uncorrupted data about multi-car buses. One design seemed to be meant for traversing the Siberian grasslands; another, for a car apparently called the J%e 8id$#, would have covered ground not far from the eastern coast of America, although what slept there, under a mile-deep blanket of warm and salty water, posed a question that no one wanted to answer anymore; a rotted library book with one scrap of paper left made some reference to a "Sunset Express." Gnostics assumed it was a ritual, or a metaphor for death.
   - name: Report
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-burning-books.png
@@ -104,6 +119,11 @@ scenes:
 
           > - Fongle Tappens
   - name: Caravans
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-caravan.png
@@ -118,6 +138,11 @@ scenes:
 
           ΔΘ
   - name: Melchem
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-cyclists.png
@@ -147,6 +172,11 @@ scenes:
 
           The irradiated sun at their backs. Rebirth from a botched apocalypse only to bring them westward to a water that would bring no relief. The lucky few on the moon. A whole vast ocean under which you could still find, somewhere, floating, a whole group of cyclists, suspended and rotting, the salt water corroding the tires and the gears.
   - name: Grandfather
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-ants.png
@@ -161,41 +191,81 @@ scenes:
 
           I remember a story from my grandfather, one of the last - when names and faces slipped away, he held onto the soft boy that he was when he first watched a line of ants carry sugar and cacao across a sundial. He held onto the wonder of the elementary realization that they cared about each other when they lived and died for each other. He carried that feeling somewhere inside him for ninety years and gave it to me as a whispered gift. I hope that the Moon Emperors looked down and saw that long metal bus the way he would. I hope they saw a line of shining ants carry their future lifeblood across the tired flesh of the West, and I hope one of those little boys on the moon shivered without knowing why when those ants curled up together, hugging each other so tightly that they got hot and burned.
   - name: I1
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-newspaper.png
         caption: old newspaper called “Foundation for Freedom of Speech for the Moon Emperors”, oil painting
   - name: I2
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-moon-editor-alt.png
         caption: an editor on the moon with glistening skin, oil painting
   - name: I3
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-temples-lit.png
         caption: temples lit aflaime, oil painting
   - name: I4
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-desert-eyes.png
         caption: in the blackened dakota wastes, a man with symbols on his eyes, oil painting
   - name: I5
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-cyclists-2.png
         caption: in the ocean a group of cyclists is floating, oil painting
   - name: I6
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-cyclists-3.png
         caption: in the ocean a group of cyclists is gazing at the moon, oil painting
   - name: I7
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     sections:
       - type: Image
         url: /images/scribly/dall-e-hand-to-moon.png
         caption: a hand stretches towards the moon, oil painting
   - name: I8
+    meta:
+      song:
+        name: Claire de Lune
+        artist: Claude Debussy
+        url: /audio/claire-de-lune.mp3
     type: Card
     sections:
       - type: Image
