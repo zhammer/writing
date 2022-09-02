@@ -242,13 +242,11 @@
     width: 100%;
     margin: auto;
     display: block;
-
-    padding: 1em;
   }
   @media (min-width: 35em) {
     .Image {
       width: 60%;
-      padding: initial;
+      padding: 1em;
     }
   }
 </style>
