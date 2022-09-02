@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Scene } from "src/routes/_pieces";
+  import type { Scene, TextSection } from "src/routes/_pieces";
   import { isTextSection, isImageSection } from "../routes/_pieces";
   import { isTokenFunction } from "../tokenizer";
 
@@ -31,6 +31,14 @@
     footnoteRefElements[index].scrollIntoView({ behavior: "smooth" });
   }
 
+  function getTextSectionClass(section: TextSection): string {
+    let classes: string[] = [section.type];
+    if (section.type === "Title" && section.content.length > 10) {
+      classes.push("Oversized");
+    }
+    return classes.join(" ");
+  }
+
   onMount(() => {
     mobile = isMobile(navigator.userAgent);
   });
@@ -40,7 +48,7 @@
   <div>
     {#each scene.sections as section}
       {#if isTextSection(section)}
-        <p class={section.type}>
+        <p class={getTextSectionClass(section)}>
           {#each section.tokens as token}
             {#if token.type === "literal"}
               {@html token.text}{/if}{#if isTokenFunction(token)}
@@ -194,9 +202,17 @@
     justify-content: center;
     align-items: center;
   }
+
+  .Title.Oversized {
+    font-size: 2rem;
+  }
+
   @media (min-width: 35em) {
     .Title {
       font-size: 6rem;
+    }
+    .Title.Oversized {
+      font-size: 3rem;
     }
   }
 
@@ -223,10 +239,15 @@
   }
 
   .Image {
-    width: 60%;
+    width: 100%;
     margin: auto;
     display: block;
 
     padding: 1em;
+  }
+  @media (min-width: 35em) {
+    .Image {
+      width: 60%;
+    }
   }
 </style>
