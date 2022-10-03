@@ -1,0 +1,140 @@
+title: letters, 1
+date: 2022-09-03
+
+scenes:
+  - name: Cover
+    type: Card
+    sections:
+      - type: Title
+        content: letters, 1
+  - name: "To Ma, From Pip"
+    sections:
+      - type: Text
+        content: >-
+          hi ma,
+
+
+          i guess i wont be here in the morning. the levee broke. water shimmers and i’m just hankering for a time to split.
+
+
+          where there once were bananastands and ice cream shops i see mossy rocks. its not a bad thing, i kick a quarter down the road, roll a can from the top of the hill downwards, sunlight sometimes seems to reflect off the windows of old doc brooters building behind me and jag me from both sides. its a silly wash, you know?
+
+
+          well, send my love to the brothers and the onion patch. i love them a lot and can’t wait to eat them when the time is right. (the onions, that is)
+
+
+          dad was a sweet man but it’s his time to dance in the clouds now. sometimes when i look to the puddlic earth i see him say something to me. god be damned if i could know what it is. i really should have learned to speak the asl in my time at prep school, but dogs be damned, i seemed to be getting off this train.
+
+
+          with lots of love,
+
+          pip
+    meta:
+      song:
+        name: "Eno/Entrance & Diems/Martyn"
+        artist: Whin
+        url: /audio/eno-diems.mp3
+  - name: "To Jo, From Jim"
+    sections:
+      - type: Text
+        content: >-
+          hey jo
+
+
+          i think its time we let the spirits spake to one another, for theyve all found me in this body and this mind and this breath, they come to me like moths in the mossy night yet non of em seem to like to too much, and to talk to me they just began to yell, and i began to yell too, til i cower beneath my  blanket and watch the cave rust, its rusty stalagmites bead on my brain anf im not alloidto toucem, for feR of dosturbing the brim{{footnote "'and i'm not allowed to touchem, for fear of disturbing the brim' (i wrote this while walking)"}}.
+
+
+          so let em send eir letters i hope. maybe theyre just hear for the ride. i’lll listen in of course, and right down what i can. i’ll be like a group of swedes or nigerians walkin down battery park in new york coty. i’ll spake alloud but no one will ear me better and then i’ll fall asleep in some swate hotel that reminds me more of home than my mothers lap at a dinner party.
+
+
+          hope they arent too loud, for i’ve still gotta get the groceries, tend to the onion grove, and pick bananas on a pretty tuesday, and such, the strange pulls and bonds of bein an adult and all, and this tender age of 82. the next thirty years’ll be a wash. i hopein when they bury me they dont put too much sand beetween my legs. always was scared of being scratchy and all weoghed down with mollusks at sea.
+
+
+          lots of love, as per the day,
+
+          jim
+    meta:
+      song:
+        name: "Eno/Entrance & Diems/Martyn"
+        artist: Whin
+        url: /audio/eno-diems.mp3
+  - name: "To Bruchi, From Zach"
+    sections:
+      - type: Text
+        content: >-
+          my dearest bruchi,
+
+
+          yesterday in services i saw a shadow move from behind the curtains that divides us from the women and knew it to be your dances. i hear you have been rading the talmid. that’s good, but if elder mooshe finds out he’ll have your neck. so be like the maccabees and slip beneath the bellies of the elephants into the quietness of that desert night.
+
+
+          as for me i drinks the words of hashem and feel them course beneath me.  sometimes i drame i see you from the desert night, antiochus, i see a crop of asparagus spurt up in the midst od the sand and then i find myself wandering to you, tears in yours eyes, or are they mine? i find so many tears in puddles and shadows on the floor of williamsburg.  i followed a trail of tears and it learnt me to your door, but the shabbis candles were burning, and without a goy in sight i knew i couldnt change the state of your sorrows.
+
+
+          til the next time our punims touch, under that foggy brooklyn light,
+
+          zach
+    meta:
+      song:
+        name: "Eno/Entrance & Diems/Martyn"
+        artist: Whin
+        url: /audio/eno-diems.mp3
+  - name: "To Old Dale, From David"
+    sections:
+      - type: Text
+        content: >-
+          old dale,
+
+
+          what i’ve larned about language so far is that the second you find it it burrows from high, stows away and laves you left wonderin if youd really found anythin at all, or if just the trace of ghost left from the chase laft you laughin and gigglin the same way i get dizzy when i stand up after sittin down, and all the blood comes to my head, and i realizw what the locks of love of that paris bridgw meant, it meant that i could dissappear with ya, dale, if your lips aver got close enogh to my groin to let me luv ya tha way that i drame about when i slape by the bay, letting to waves of that dirty water splash against the collor above my bones, so that its all lije some great hairy thing? you know…
+
+
+          tell yar wife i love her,
+
+          david
+
+
+
+          p.s. i was talkin about my pubis, i hope that wasnt all too clear
+    meta:
+      song:
+        name: "Eno/Entrance & Diems/Martyn"
+        artist: Whin
+        url: /audio/eno-diems.mp3
+  - name: "To Bess, From Banji"
+    sections:
+      - type: Text
+        content: >-
+          dare bess,
+
+
+          the country whare the crows are is so gosh darn beautiful, i wish you could be hear beside me to take it all in, your pretty little legs danglin off a bench or somethin of the sorts, untouched an unbruised, just danglin in that sunlight, and i just darn know your smile would help me feel the wind in me
+
+
+          anyway i wanted to say that i kno ya cant be hare with me, that ya were raped and beaten by the city clerk and left by that river whare i found ya, walkin out, and the picture got ripped apart on the news, ya know, me with my inability to cry and your arm in a different place or object than where your mouth was.
+
+
+          but i wannad to say that when i think of ya, i think of ya the way i always did, one lil angel, my sister, ya taugut me how to tend to the fire and how to lay upside down on a hammock
+
+
+          i wont let what those people did to ya destroy ya
+
+
+          always your better,
+
+          banji
+    meta:
+      song:
+        name: "Eno/Entrance & Diems/Martyn"
+        artist: Whin
+        url: /audio/eno-diems.mp3
+  - name: End
+    type: Card
+    sections:
+      - type: Title
+        content: End
+    meta:
+      song:
+        name: "Eno/Entrance & Diems/Martyn"
+        artist: Whin
+        url: /audio/eno-diems.mp3
