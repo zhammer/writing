@@ -20,6 +20,10 @@ export function isTokenFunction(token: Token): token is TokenFunction {
   return token.type === "function"
 }
 
+function makeItalics(text: string): string {
+  return text.replaceAll(/\*([^=*]+?)\*/g, "<i>$1</i>")
+}
+
 export function tokenizer(text: string): Token[] {
   let out: Token[] = [];
   let state: "idle" | "in_bracket" = "idle";
@@ -32,7 +36,7 @@ export function tokenizer(text: string): Token[] {
         [before, after] = splitOnce(curr, "{{")
         out.push({
           type: "literal",
-          text: before,
+          text: makeItalics(before),
         });
         curr = after;
         state = "in_bracket";
