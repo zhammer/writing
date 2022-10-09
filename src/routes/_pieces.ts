@@ -11,6 +11,7 @@ export type TextSectionType =
   | "Parenthetical"
   | "SceneHeading"
   | "Text"
+  | "TextCenter"
   | "Title"
   | "Subtitle";
 
@@ -29,7 +30,7 @@ export type ImageSection = {
 export type Section = TextSection | ImageSection;
 
 export function isTextSection(section: Section): section is TextSection {
-  return ["Action", "Character", "Dialogue", "Parenthetical", "SceneHeading", "Text", "Title", "Subtitle"].includes(section.type)
+  return ["Action", "Character", "Dialogue", "Parenthetical", "SceneHeading", "Text", "TextCenter", "Title", "Subtitle"].includes(section.type)
 }
 
 export function isImageSection(section: Section): section is ImageSection {
