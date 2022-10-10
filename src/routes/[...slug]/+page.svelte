@@ -21,12 +21,13 @@
 </script>
 
 <script lang="ts">
-  import Directory from "../components/Directory.svelte";
-  import Piece from "../components/Piece.svelte";
-  import type { ProcessedPiece, DirectoryLS } from "./_pieces";
+  import Directory from "../../components/Directory.svelte";
+  import Piece from "../../components/Piece.svelte";
+  import type { PageData } from "./$types";
 
-  export let item: ProcessedPiece | DirectoryLS;
-  export let query: any;
+  export let data: PageData;
+
+  let { item, query } = data;
 </script>
 
 {#if "children" in item}

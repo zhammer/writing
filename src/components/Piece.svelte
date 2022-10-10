@@ -1,8 +1,3 @@
-<script context="module" lange="ts">
-  export const router = false;
-  export const prerender = true;
-</script>
-
 <script lang="ts">
   import BookPlaylist from "../plugins/BookPlaylist.svelte";
   import {

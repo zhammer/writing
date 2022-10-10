@@ -1,6 +1,4 @@
-// like.. the minimum distance of x/y diff between two touches
-// that we consider to be a swipe in a direction?
-const CANT_THINK_OF_THE_RIGHT_WORD = 100;
+const MIN_THRESHOLD = 100;
 
 // see:
 // - touch events: https://developer.mozilla.org/en-US/docs/Web/API/Touch_events
@@ -44,8 +42,8 @@ function swipeable(node: Element) {
       let xDiff = touch.clientX - touchStart.clientX;
       let yDiff = touch.clientY - touchStart.clientY;
 
-      let horizontalSwipe = Math.abs(xDiff) > CANT_THINK_OF_THE_RIGHT_WORD;
-      let verticalSwipe = Math.abs(yDiff) > CANT_THINK_OF_THE_RIGHT_WORD;
+      let horizontalSwipe = Math.abs(xDiff) > MIN_THRESHOLD;
+      let verticalSwipe = Math.abs(yDiff) > MIN_THRESHOLD;
 
       let swipeEvent:
         | ""

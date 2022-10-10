@@ -2,9 +2,9 @@
   import { fade } from "svelte/transition";
   import swipeable from "../actions/swipeable";
   import SongPlayer from "../components/SongPlayer/index.svelte";
+  import type { WritingPiece } from "../routes/_pieces";
   import Scene from "./Scene.svelte";
-  import type { ProcessedWritingPiece } from "../routes/_pieces";
-  export let piece: ProcessedWritingPiece;
+  export let piece: WritingPiece;
 
   let sceneNumber = 0;
 
