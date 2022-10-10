@@ -1,7 +1,4 @@
 <script context="module" lang="ts">
-  export const router = false;
-  export const hydrate = false;
-
   // query params from apache index directory
   type Sort = {
     column:
@@ -93,18 +90,28 @@
       <tr>
         <th valign="top" />
         <th>
-          <a href={`/${directory.slug}?C=N&O=${orderParam(sort, "N")}`}>Name</a>
+          <a
+            data-sveltekit-reload
+            href={`/${directory.slug}?C=N&O=${orderParam(sort, "N")}`}>Name</a
+          >
         </th>
         <th>
-          <a href={`/${directory.slug}?C=M&O=${orderParam(sort, "M")}`}
+          <a
+            data-sveltekit-reload
+            href={`/${directory.slug}?C=M&O=${orderParam(sort, "M")}`}
             >Last modified</a
           >
         </th>
         <th>
-          <a href={`/${directory.slug}?C=S&O=${orderParam(sort, "S")}`}>Size</a>
+          <a
+            data-sveltekit-reload
+            href={`/${directory.slug}?C=S&O=${orderParam(sort, "S")}`}>Size</a
+          >
         </th>
         <th>
-          <a href={`/${directory.slug}?C=D&O=${orderParam(sort, "D")}`}
+          <a
+            data-sveltekit-reload
+            href={`/${directory.slug}?C=D&O=${orderParam(sort, "D")}`}
             >Description</a
           >
         </th>
@@ -118,7 +125,7 @@
       {#if !isRoot}
         <tr>
           <td><img src="/back.gif" alt="[PARENTDIR]" /></td>
-          <td><a sveltekit:prefetch href="/">Parent Directory</a></td>
+          <td><a data-sveltekit-prefetch href="/">Parent Directory</a></td>
         </tr>
       {/if}
       {#each listItems as entry}
@@ -129,7 +136,9 @@
             {:else}<img src="/text.gif" alt="[TXT]" />{/if}
           </td>
           <td>
-            <a sveltekit:prefetch href={entryHref(entry.slug)}>{entry.title}</a>
+            <a data-sveltekit-prefetch href={entryHref(entry.slug)}
+              >{entry.title}</a
+            >
           </td>
           <td align="right">{entry.date}</td>
           <td align="right">{format(entry.size)}</td>

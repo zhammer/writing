@@ -4,9 +4,9 @@
     "version": "0.0.1",
     "type": "module",
     "scripts": {
-        "dev": "svelte-kit dev",
-        "build": "svelte-kit build",
-        "preview": "svelte-kit preview",
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
         "netlify": "netlify dev -d build/ -f ./netlify/functions-internal",
         "start": "node build",
         "validate": "svelte-check",
@@ -16,11 +16,11 @@
         "nonGlobalStepDefinitions": true
     },
     "dependencies": {
-        "@sveltejs/adapter-netlify": "^1.0.0-next.67",
-        "@sveltejs/kit": "^1.0.0-next.357",
+        "@sveltejs/adapter-netlify": "^1.0.0-next.78",
+        "@sveltejs/kit": "^1.0.0-next.511",
         "directory-tree": "^2.2.5",
-        "svelte": "^3.48.0",
-        "svelte-check": "^2.8.0",
+        "svelte": "^3.50.1",
+        "svelte-check": "^2.9.1",
         "svelte-preprocess": "^4.10.7",
         "yaml": "^1.10.0"
     },
@@ -51,8 +51,8 @@
         "ts-jest": "^28.0.5",
         "ts-node": "^10.8.2",
         "tslib": "^2.0.1",
-        "typescript": "^4.7.4",
-        "vite": "^2.9.13"
+        "typescript": "^4.8.4",
+        "vite": "^3.1.6"
     },
     "volta": {
         "node": "16.16.0"
