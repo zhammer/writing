@@ -125,7 +125,11 @@
       {#if !isRoot}
         <tr>
           <td><img src="/back.gif" alt="[PARENTDIR]" /></td>
-          <td><a data-sveltekit-prefetch href="/">Parent Directory</a></td>
+          <td
+            ><a data-sveltekit-prefetch data-sveltekit-reload href="/"
+              >Parent Directory</a
+            ></td
+          >
         </tr>
       {/if}
       {#each listItems as entry}
@@ -136,8 +140,10 @@
             {:else}<img src="/text.gif" alt="[TXT]" />{/if}
           </td>
           <td>
-            <a data-sveltekit-prefetch href={entryHref(entry.slug)}
-              >{entry.title}</a
+            <a
+              data-sveltekit-prefetch
+              data-sveltekit-reload
+              href={entryHref(entry.slug)}>{entry.title}</a
             >
           </td>
           <td align="right">{entry.date}</td>
