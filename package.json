@@ -5,8 +5,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite dev",
-        "build": "svelte-kit build",
-        "preview": "svelte-kit preview",
+        "build": "vite build",
+        "preview": "vite preview",
         "netlify": "netlify dev -d build/ -f ./netlify/functions-internal",
         "start": "node build",
         "validate": "svelte-check",
