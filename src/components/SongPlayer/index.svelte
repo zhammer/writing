@@ -71,7 +71,7 @@
      start playing.
 -->
 {#if mobile}
-  <audio src={song && song.url} loop {muted} autoplay />
+  <audio src={song && song.url} loop {muted} autoplay></audio>
 {:else}
   <VirtualCassetteDeck {piece} currentSong={song} {muted} />
 {/if}
