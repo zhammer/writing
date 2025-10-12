@@ -51,10 +51,10 @@
 </script>
 
 <svelte:window
-  on:keydown={handleKeydown}
+  onkeydown={handleKeydown}
   use:swipeable
-  on:swiperight={handleSwipeRight}
-  on:swipeleft={handleSwipeLeft}
+  onswiperight={handleSwipeRight}
+  onswipeleft={handleSwipeLeft}
 />
 
 <svelte:head>
@@ -66,7 +66,7 @@
     {#if sceneNumber === i}
       <div
         in:fade|local={{ delay: fadeInDelay, duration: 1500 }}
-        on:introstart={scrollToTop}
+        onintrostart={scrollToTop}
         out:fade|local
         class={`scene ${scene.type}`}
       >

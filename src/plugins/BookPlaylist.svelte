@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { ProcessedBookPlaylist } from "../routes/_pieces";
+  import type { BookPlaylist } from "../routes/_pieces";
 
-  export let piece: ProcessedBookPlaylist;
+  export let piece: BookPlaylist;
 </script>
 
 <div class="body">
@@ -22,7 +22,7 @@
         frameborder="0"
         allowtransparency={true}
         allow="encrypted-media"
-      />
+      ></iframe>
     </div>
   </div>
 </div>

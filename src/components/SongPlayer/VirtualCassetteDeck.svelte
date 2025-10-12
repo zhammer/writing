@@ -60,6 +60,6 @@
       autoplay
       in:audiofade={{ delay: 1000, duration: 250 }}
       out:audiofade={{ duration: 1000 }}
-    />
+    ></audio>
   {/if}
 {/each}
