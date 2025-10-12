@@ -15,7 +15,7 @@ module.exports = {
       return config;
     },
     specPattern: "cypress/e2e/**/*.feature",
-    baseUrl: "http://localhost:5173",
+    baseUrl: "http://localhost:4173",
     projectId: "uhomii",
   },
 };
