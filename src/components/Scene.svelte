@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Scene, TextSection } from "src/routes/_pieces";
+  import type { Scene, TextSection } from "../routes/_pieces";
   import { isTextSection, isImageSection } from "../routes/_pieces";
   import { isTokenFunction } from "../tokenizer";
 
@@ -57,7 +57,7 @@
                   class="footnote-ref"
                   tabindex="-1"
                   bind:this={footnoteRefElements[token.meta.functionIndex]}
-                  on:click={(event) =>
+                  onclick={(event) =>
                     onFootnoteRefClick(event, token.meta.functionIndex)}
                   >{token.meta.functionIndex + 1}</sup
                 >
@@ -84,7 +84,7 @@
             class="footnote"
             tabindex="-1"
             bind:this={footnoteElements[i]}
-            on:click={(event) => onFootnoteClick(event, i)}
+            onclick={(event) => onFootnoteClick(event, i)}
           >
             {footnote.args[0]}
           </li></i

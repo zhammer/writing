@@ -13,7 +13,7 @@ export const load: PageServerLoad = ({ params }) => {
   const { slug } = params;
   let item = find(directory, slug.split(".")[0].split("/").filter(Boolean));
   if (!item) {
-    throw error(404, 'Not found')
+    error(404, 'Not found')
   }
 
   if (isDirectory(item)) {

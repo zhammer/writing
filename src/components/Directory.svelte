@@ -88,7 +88,7 @@
   <table>
     <tbody>
       <tr>
-        <th valign="top" />
+        <th style="vertical-align: top"></th>
         <th>
           <a
             data-sveltekit-reload
