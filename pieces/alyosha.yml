@@ -1,0 +1,336 @@
+title: ALYOSHA
+slug: alyosha
+date: 2021-10-15
+description: ""
+
+scenes:
+  - name: Cover
+    type: Card
+    sections:
+      - type: Title
+        content: ALYOSHA
+  - name: Mountain
+    type: Card
+    sections:
+      - type: TextCenter
+        content: >-
+          image of a crushed violin being blown off a mountaintop by wind.
+    meta:
+      song:
+        name: Mountain Dance
+        artist: Evalina Petrova
+        url: /audio/mountain-dance.mp3
+  - name: Quote
+    type: Card
+    sections:
+      - type: TextCenter
+        content: >-
+          Is it only the sun that shines once for the mind, only the flash of existence,
+
+          than none ever was?
+
+          - Alyosha Fyodorich Karamzov, 1752
+    meta:
+      song:
+        name: Mountain Dance
+        artist: Evalina Petrova
+        url: /audio/mountain-dance.mp3
+  - name: Microsoft Safe
+    sections:
+      - type: Action
+        content: >-
+          soi soi soi. the flying of the copter above. soi soi soi. the flying of the copter from above the sky.
+      - type: Character
+        content: Microsoft Safe (Narrator)
+      - type: Dialogue
+        content: >-
+          oh, dearest alyosha, do you remember what was to come? do you remember the valley behind the boulder field? the table of the treats... by the river crossing.
+      - type: Action
+        content: >-
+          soi soi soi. the crashing of the plane in the woods. soi soi soi. the burning of the apes in their trees, reaching upwards, up up up. reaching upwards into the beginnings of the last blow of wind.
+      - type: Character
+        content: Microsoft Safe
+      - type: Dialogue
+        content: >-
+          oh, dearest of alyosha. oh and the last breath and the first breath the same. oh dearest of the stars, the drooping dims of the northern star, the hidden stars of the south too, the secret star basin glowing at the bottom of our roots, that's it, there. soi soi soi. let the sound of wind of coming be under you. let the cage unbreaked unshackled by the wind. slowly. but revealing the light. so speak so sayeth so then so speak so sayeth so say thy breath thy first thy last thy only.
+      - type: Action
+        content: >-
+          soi soi soi. speaketh thou before t
+    meta:
+      song:
+        name: Mountain Dance
+        artist: Evalina Petrova
+        url: /audio/mountain-dance.mp3
+  - name: The eyes (1)
+    sections:
+      - type: Action
+        content: >-
+          ALYOSHA opens his eyes.
+    meta:
+      song:
+        name: Mountain Dance
+        artist: Evalina Petrova
+        url: /audio/mountain-dance.mp3
+  - name: The eyes (2)
+    sections:
+      - type: Action
+        content: >-
+          in his pupils we see something brighter than the sun.
+    meta:
+      song:
+        name: Mountain Dance
+        artist: Evalina Petrova
+        url: /audio/mountain-dance.mp3
+  - name: Alyosha and Lise (The Battery)
+    sections:
+      - type: Action
+        content: >-
+          ALYOSHA is in battery park. 26 years old. He’s young and athletic. Covered in the sweat from a morning jog. He turns to LISE.
+      - type: Character
+        content: ALYOSHA
+      - type: Dialogue
+        content: >-
+          The city is magnificient, Lise. Really. I remember when we were young. I’d come home, I’d come to you, and tell you stories.
+      - type: Action
+        content: >-
+          Some wind blows by, furrying Alyosha’s hair. Some autumn leaves crisp against the pavement and patter by.
+      - type: Character
+        content: Alyosha
+      - type: Parenthetical
+        content: Continuing
+      - type: Dialogue
+        content: >-
+          And you would just light up, you know? You’d just… I, I feel that way here sometimes.
+      - type: Action
+        content: >-
+          A flash of a woman in the wind.
+      - type: Character
+        content: Alyosha
+      - type: Dialogue
+        content: >-
+          I cycle home in the rain, sometimes. And the wind is in my face. And there’s a little drizzle all on me, you know? There’s a little drizzle on my brow and I’m smiling and the rain follows the shape of my face, my smile, and goes to my ears, and maybe a little drop goes in my right ear. I look out at the water. Sometimes I imagine that there is, you know, made of water… another me, another me made of water, cycling beside me above the east riv… the williamsburg bridge, Lise. It’s… it’s as if it were made by the Gods, you know?
+      - type: Dialogue
+        content: >-
+          I’ve seen onions floating in it Lise! I’ve seen fish pulled up by the families in Chinatown, under the manhattan bridge! I’ve seen those fish sold in the market, at Union Square, where on a hot sunny day you can smell the stench of fish. What was it we ate at the monastary? What was t…
+      - type: Dialogue
+        content: >-
+          I’d like to put my whole face in the East River, as, like Kramer. Like they did in the 19th century. Lise. I’d like to put my face in the East River but I’m scared it’d pull away. How quickly do the tides move, Lise? I… run to the battery and back. The grotesque battery is melting, lise. The eiffel tower and the freedom tower look at each other in disgust with their eyes.
+      - type: Action
+        content: >-
+          The wind has stopped. The entire east river is dry. There is a shattered mandolin on the rocks. There is a squid flailing on the rocks. There is a crown of flowers betwixt its tentacles. To ALYOSHA it looks as beautiful as Lise’s decrepet hair.
+    meta:
+      song:
+        name: Change
+        artist: Big Thief
+        url: /audio/change.mp3
+  - name: The teacher
+    sections:
+      - type: Action
+        content: >-
+          a giant bird with pink and purple feathers flies across the sky. a flock of white birds flies across the sky. alyosha looks up at the sky. alyosha’s ankles are in the water, and the sand is sinking.
+      - type: Action
+        content: >-
+          there is a professor with a white board standing by the light house, about half a mile from the light house, under the george washington bridge. his hair is long and powdered and down to his feet, it pours out in the water, from which, like an electric eel, it gains electricty, which frizzles up his powdered white hair back into his head. he has a strange smile.
+      - type: Character
+        content: The Teacher
+      - type: Dialogue
+        content: >-
+          So this is where we go!
+      - type: Action
+        content: >-
+          He smacks his baton into the white board. It is stood up on two legs, three legs, like an easel. The sound of the smack ruffles the ears of a chipmunk on the potomac. It is a very delicate sound. On the whiteboard is an image of the sun being engulfed by the octopus.
+      - type: Character
+        content: The Teacher
+      - type: Dialogue
+        content: >-
+          Is not life oneself one shackle after the next? A series of keys? And one key, “in the window”, which sheds its shadow across the city. Ah! I feel pink in my eyes! Have I drunk the electric water once again?
+      - type: Action
+        content: >-
+          The teacher does a strange dance, as if some passing swirling wind, clicks his heels, so as to say “this is the only place I’ve ever lived” and smacks his baton against the whiteboard. Now it is an image of night. And a knight in shining armor. But the light of the stars are piercing the armor and the knight is feeling alone.
+      - type: Character
+        content: The Teacher
+      - type: Dialogue
+        content: >-
+          Is not the graceful ascent of the moon more beautiful than the setting of the sun. On the tallest coldest mountain, if you spin and blink your eyes, you make look like a fool but you may see the sun set and the moon rise in one graceful motion. I once walked by… I’ve never walked anywhere, but if I were to close my eyes… I am seeing pink! Have I drunk the wrong concotion of gatorade? Would the face of mars be as pink as the glitter in the… bottom of my eyes? Would I see it then? Oh taddy! Oh father! I live I laugh I long I love A long the
+      - type: Action
+        content: >-
+          ALYOSHA turns around and looks at the teacher. The bottom of the teachers eyes, only when viewed through the eyes of the teacher, are turning pink. Alyosha puts his pen to his journal but it only digs a hole through the pages. A man runs wildly down the river bank. A quarter mile up the riverbank we see that his wife has pulled a grouper from the water. It is slimy and slapping itself madly against the cement. The man trips. The fish slowly succumbs to death.
+      - type: Action
+        content: >-
+          A giant tree branch, perhaps even a tree, floats down the hudson. If it were a sendoff to a great warrior, or daughter, it would slowly begin to sink.
+    meta:
+      song:
+        name: Tezeta
+        artist: Mulatu Astatke
+        url: /audio/tezeta.mp3
+  - name: Alyosha and Lise (Stratton Pond)
+    sections:
+      - type: Action
+        content: >-
+          ALYOSHA is tired, beaten, a hand full of woodchips and is shitting in an outhouse in vermont by stratton pond. He’s tired. And his eyes are drooping. He’s deprived of the calories he needs to pray and he’s in the dark, watching a spider build a new web against the wooden corner of the outhouse door. Lise waits with grasped hands.
+      - type: Character
+        content: Alyosha
+      - type: Dialogue
+        content: >-
+          Lise, I. Lise, it. Can I say something strange? Can I say something strange to you? My therapist, I think, sometimes I think that the ultimate goal of my therapist at least within the confines of her couch is to stop even having to ask that. “Can I say something strange?” But I want to say it to you! To you! To you! Not I! Not me some... I’m, it reminds me that you’re some, that I can ask you. Th, each, I, ugh.
+      - type: Action
+        content: >-
+          The spider draws its line across the... we see spiders shooting down the sunny trail in the daytime woods. We don’t know where they’re coming from. We don’t know how they move.
+      - type: Character
+        content: Microsoft Safe
+      - type: Dialogue
+        content: >-
+          Oh dearest Alyosha. I learned how to love when I had you. I learned how to love when you gave my voice a . I didn’t know if they listened to me. They disobeyed me! They disobeyed me with the
+      - type: Character
+        content: Alyosha
+      - type: Dialogue
+        content: >-
+          I have this image in my head, sometimes, when I thin... it’s adam and eve. And adam is clutching his right rib. And Eve is all young and strong and running. Like you! Like you! Like the way I know you to be!
+      - type: Action
+        content: >-
+          Lise is grasping the edge of her chair!
+      - type: Character
+        content: Alyosha
+      - type: Dialogue
+        content: >-
+          Just like you Lise! Just like you! But that’s not even it. That’s not the painting I see. You know. Jesus has not yet been born then. You know? T... I don’t know Lise. I used to, when we were kids, I could think of a painting and tell it to you. And now I’m in the woods, Lise. And there’s beauty all around me. And I’m watching a spider. It terrifies me. I think of it shooting through the woods. You know. Sometimes I am in an open field and I see a caterpillar hanging down from the heavens, the sun on it, waiting for a metamorphosis that will never come, for someone will surely walk into it, Lise! S, and perhaps I’ve destrung some caterpillars without even my knowing! Oh Lise, in this image, in this painting, and maybe you could paint it for me! Just you! Just you!
+      - type: Action
+        content: >-
+          Lise is clasping her hands, she can barely keep herself from bursting forth through a wall. A spider shoots its web down the forest, like Spider Man, and projects itself forward down onto the trail. And the leaves don’t crunch. For the spider has no feet.
+      - type: Action
+        content: >-
+          We see ALYOSHA and LISE in a field, there are trees, it’s by the coast. LISE is running out before ALYOSHA. There are some semblance of a cage on her wrist. And ALYOSHA is running behind her. Looking at awe at her, and also sometimes looking down, and looking in awe at the pieces of that cage, which are being shed.
+      - type: Character
+        content: Microsoft Safe
+      - type: Dialogue
+        content: >-
+          I was all alone then! I’m not making a point.
+      - type: Action
+        content: >-
+          And then we see LISE at the apple. And the snake is wrapped around her waiste. And for a moment, it’s as if a young child is holding her there, arms wrapped around. And ALYOSHA is holding her back, he’s grabbed that back of her blouse, by her shoulders. Her arm reaches out to the apple.
+      - type: Character
+        content: Alyosha
+      - type: Dialogue
+        content: >-
+          This is very important, Lise! I’m worried that I can’t do what I used to do. I used to come to you and tell you paintings. I feel like there’s less light there. I feel like the light there is fading. Like a camera that’s underexposed. So I just have to say it now. I think there needs to be more of *me* now. Because the image is not as present! I’m too tired to pray, Lise! Do you remember... I still pray for you Lise. But I’m too tired to pray. I just need to say it. I think where the light is fading there needs to be more of me now. I do hope I’m...
+      - type: Action
+        content: >-
+          ALYOSHA has left the outhouse and with the still present smell of his own shit, mixed with that of many others, with a trowel and toilet paper and hand sanitizer in his right hand he buries his face into the autumn leaves.
+      - type: Action
+        content: >-
+          ALYOSHA has moved his hands to LISE’s waiste. His right hand is wrapped around her and is on her belly. It’s warm. LISE is on the precipice of pulling... the apple from the branch. But just on the moment of the stem meeting the apple, there is a caterpillar. We cannot see if ALYOSHA is looking at her hand, the caterpillar, or up at the tree, through the leaves, at God.
+    meta:
+      song:
+        name: Sparrow
+        artist: Big Thief
+        url: /audio/sparrow.mp3
+  - name: Kolya and Karamazov
+    sections:
+      - type: Action
+        content: >-
+          ALYOSHA and KOLYA are by the water. Behind them are their bikes, and on their bikes are their helmets, blue and gray. The sun is out. Kolya is lost in his talking thoughts, ALYOSHA is listening but also fixated at something else. Occasionally he smiles. The water is all speckled with glaring white sunlight. ALYOSHA thinks of MADAME KOLOKHOV. ALYOSHA thinks of a moment on his bike ride in which he saw a wild falling leaf fall before him before he knew it to be a bird. ALYOSHA stares at a pidgeon walking along the cement.
+      - type: Character
+        content: Kolya
+      - type: Parenthetical
+        content: Continuing a thought
+      - type: Dialogue
+        content: >-
+          ...and that's just it! I, Karamazov! W, I,
+      - type: Action
+        content: >-
+          ALYOSHA smiles oddly and stares at the pidgeon.
+      - type: Character
+        content: Kolya
+      - type: Dialogue
+        content: >-
+          Are you listening to me Karamazov? Ah, if I could just see what you see, my friend. You are, I like to call you young! It's like a ship, Karamazov. Have you ever been on a ship. "On a ferry." And... Karamazov I struggle to say something profound to you. I struggle! Of course I think profound things too, Karamazov. I think these things while I'm on our bicycles, we are on our bicycles, riding beside the river, and we're passing families! Karamazov I watched you walk by, earlier, by the green behind the cafe, I saw you, by the statues that spot the water, I saw you walk before four fisherman, and look at their nets! Oh it was profound Karamazov. And I didn't know it then. But then we are riding. And I am seeing you once again look out at the water. And I see the , I know that you are thinking something great and then suddenly I realize... Karamazov walked alongside the fishermen, and looked at their nets! It is profound! And I think... and then I think of other profound things, of course, this ship... I'd like to tell you this thought, it was of a ship, or a tree! But it is gone to me. Or perhaps the thought is there but the pr, it is not profound, and I, I coward before you to speak it, for it w-
+      - type: Character
+        content: Alyosha
+      - type: Parenthetical
+        content: Turning to Kolya
+      - type: Dialogue
+        content: >-
+          Speak it, Kolya.
+      - type: Action
+        content: >-
+          A crab walks across the floor of the ocean.
+      - type: Character
+        content: Kolya
+      - type: Dialogue
+        content: >-
+          Okay, Karamazov! Karamazov says I will speak it, and so I will! I don't doubt! I don't doubt! Doubt, Karamazov. Was it not those who still doubted who were also healed? Was it not God who, Himself, doubted something in man and blotted it from the face of the Earth, and once again was inspired and said to man, I am sorry! I am sorry! You shall eat the meat but not th... I'm losing my point! I'm losing my point! Forgive me Karamazov.
+      - type: Action
+        content: >-
+          ALYOSHA thinks to look to KOLYA.
+      - type: Character
+        content: Kolya
+      - type: Dialogue
+        content: >-
+          Okay, okay! Ah Karamazov. Karamazov! I remember... "He says speak! He says speak!" But I am not on a bicycle. And the idea is not fresh. But I shall say that I thought of the trees. Of religion. Of the great tree that is our church. About those who rebel against it, too! Them too! Karamazov, is the doubter of the church unholy? Is he who walks from the church unholy? I must know what you think! Of course I have my own thoughts. But is he who walks from the church unholy? Is he who walks from the church, with the great shadow of the church behind him, an unholy man? Is he not holy for he has walked from the church? And taken wood and mortar and built something new? A new church? Karamazov! What are you looking at? Karamazov I feel terribly underconfident when I share these thoughts. Karamazov!
+      - type: Character
+        content: Alyosha
+      - type: Dialogue
+        content: >-
+          Speak! Speak! It's okay Kolya, speak, and perhaps then you will find enlightment in your words again! But, you must speak.
+      - type: Action
+        content: >-
+          ALYOSHA is not enjoying himself.
+      - type: Character
+        content: Kolya
+      - type: Dialogue
+        content: >-
+          Okay! He says speak! He says that I will find enlightment again. Perhaps! "Perhaps!" he says.
+      - type: Dialogue
+        content: >-
+          Well here's what I say. I
+      - type: Action
+        content: >-
+          (A white dove flies across the center of the Atlantic)
+      - type: Dialogue
+        content: >-
+          I say this: that he who walks away from the church in youth is but holier than he who stays inside the walls! And is it, I, on that bicycle, oh Karamazov I feel so unholy before you, I feel so unholy to speak words which were just, a moment ago, in the wind, so holy, and now I speak them and I ... I think of butchered organs on the table. I think of the doctor's shawl spread across the city! Oh Karamazov, I think of the cold surgical tools of the doctor, and I, assisting, giving him those tools, giving him those tools, as he butchers the body of a life once lived, the body of... Karamazov! Is it not in youth that the scattered image of God comes to us, of the life of the earth, is it not you who said that these images of the times when we were young will be good enough to stain us for a thousand years? With the life the heart the body of the soul, and I, Karamazov, handing, I handing these tools to the doctor, the doctor whose surgical robe has entrenched itself deep in the city, and has made the sky gray
+      - type: Character
+        content: Alyosha
+      - type: Dialogue
+        content: >-
+          It's blue! It's blue!
+      - type: Action
+        content: >-
+          Perhaps this is something that ALYOSHA only thinks to himself. KOLYA continues.
+      - type: Character
+        content: Kolya
+      - type: Dialogue
+        content: >-
+          I feel so unholy before you Karamazov. It's true. To me you are young. I think of being on a boat. And seeing the ferry passing by. And if you are at just the right distance Karmazov, the right distance, with enough God in between, Karamazov, everyone waves! And even at times when I haven't waved I look up, over the waves, over the waves and over the water and smile! I smile! And they know! Even if they cannot see my face they know! Karamazov, is that not holy? Do I appear unholy before you! Karamazov! Oh you a...
+      - type: Action
+        content: >-
+          Something makes ALYOSHA's stomach tight. There is a chafing of his mind.
+      - type: Character
+        content: Kolya
+      - type: Dialogue
+        content: >-
+          And here I am! Agh. Karamazov. I say that he who walks from the church in his youth is holy. Do you want to know why I say this? I think of... I think of this vision of the whole, is it not for the child to say that all of this is wrong? And to rebel then against the thing in which he sees his parents pray? In which has come to represent, does the child know that the church is his more than his fathers? That the church is his more than his parishioner? That the rabbi should bow before the boy! When children enter the church it is the rabbi, Karamazov, I am all mixed up. But it is the child who should know, and they do! They do! What child does not go into their temple and see the candle burning and say "this is a light which God has lit for me?" And then the child grows up. And sees the pain of the tendons of inter-personal pain. Of that hidden pain. I call you young Karamazov because you look into my eyes, at moments, with the same disarming love of a child on the street, who sees you, you are just walking down the street, with the "doctor's shawl" (I do think that is very profound, very profound!) covering you, every part of you, the shawl has covered and engulfed every part of you, until suddenly you look down, and a child h, a child who is gripping the hand of a mother, or is perhaps still even , on their bike, with three wheels! Or perhaps in a stroller. Accidentally you look down and then tendons of your mind brings your eyes right to them. Why is that Karamazov? It's like as if I were spun around with a blindfold on and told to throw a dart, and then the moment that the blindfold is taken off I throw the dart and it hits the bullseye every time, but I don't even know there is a dart board there! I don't even know! Then suddenly I move my head and my gaze and I am looking right into the eyes of a child. It is so strange. Is that not also what happens when we, walking down the street, look up, from whatever has been distracting us a moment ago and then look directly at someone? And we say "do not worry, dear friend, I will not look at you again!" and affix all of the muscles of our body to look away. Then we turn a corner. And we hear a sound. And we turn around. And he and I are looking right at each other in the eyes again. And we say "I'm so sorry! I'm so sorry! I did not mean to remind you that we are all here and together under the light of God! So brother, go on! Turn that corner so that we can never see each other again! This is the decency, the little gift that I give to you, to erase you from my mind and my eyes! This is the gift I give to you!"
+      - type: Action
+        content: >-
+          KOLYA poses for a moment. ALYOSHA is staring down at the cement and then, noticing KOLYA has stopped, grasps his right hand.
+      - type: Character
+        content: Alyosha
+      - type: Dialogue
+        content: >-
+          Go on! Go on!
+      - type: Character
+        content: Kolya
+      - type: Dialogue
+        content: >-
+          Oh! So it is to not speak... in which... oh perhaps I am saying something holy now, Karamazov. Am I not? Am I not?
+      - type: Dialogue
+        content: >-
+          Okay! Okay! So... as I was saying, perhaps it is the child. Oh Karamazov! I am walking and I have learned "the rules" in which we make the painful dissonance of this world bareable, I have learned to ignore the eyes of my brother, for it is not on me to remind him and remind myself of our pain and distractions. But then I see a child. And they see me. And I know that it is better to look a person in the eyes and love them than anything else in the world. And I know that! But what happens, between then and now? The string that separate the two is curved and bent and tied up and burnt and then we arrive here? And we say, to the child, where are you! We say: "how did you come from stroller to crawl to walk to run to work to read to all of this and end up here, at me?" And the child is too young to speak, of course, and then... I am feeling particularly unholy before you now, Karamazov. I am but an unenlightened fool, trying to...
+      - type: Dialogue
+        content: >-
+          Well here is my thought Karamazov: it is this. It is that the child must at some point grow, and they see the church, the community, and they say "well something is wrong! something is so wrong with this! for each person whose gaze i met in the stroller looked at me and we were brothers, and now i walked along a street of torture and thieves." Oh Karamazov. I have entirely lost the point... I have entirely lost the point... I have, entirely, lost the point...
+    meta:
+      song:
+        name: Certainty
+        artist: Big Thief
+        url: /audio/certainty.mp3
